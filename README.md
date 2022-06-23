@@ -1,6 +1,6 @@
 # Fiva Client Side
 
-This project is client side for the Fiva Electric and tech Consulting software.
+This project is the client side for the Fiva Electric and tech Consulting software.
 
 ## How to start
 
