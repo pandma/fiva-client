@@ -6,7 +6,7 @@ import { AuthContext } from "./../../context/auth.context"
 import { MessageContext } from "../../context/message.context"
 import "./LoginForm.css"
 
-const Loginform = ({ closeModal }) => {
+const Loginform = () => {
     const [loginData, setLoginData] = useState({
         password: "",
         email: "",
@@ -23,11 +23,11 @@ const Loginform = ({ closeModal }) => {
         authService
             .login(loginData)
             .then(({ data }) => {
-                storeToken(data.authToken)
+                console.log(data.jwt)
+                storeToken(data.jwt)
                 showMessage("Welcome", "Successfully logged in")
                 authenticateUser()
-                // navigate("/")
-                closeModal()
+                navigate("/")
             })
             .catch((err) => console.log(err))
     }
@@ -58,19 +58,6 @@ const Loginform = ({ closeModal }) => {
                     <input id="html" className="formInputField textInputClean textInputBig" type="password" name="password" value={password} placeholder="Write your password" onChange={handleInputChange} />
                 </form>
             </div>
-            {/* <Form.Group className="mb-3" controlId="email">
-                <Form.Label>Email</Form.Label>
-                <Form.Control type="email" onChange={handleInputChange} name="email" value={email} />
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="password">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" onChange={handleInputChange} name="password" value={password} />
-            </Form.Group> */}
-
-            {/* <Button variant="dark" type="submit">
-                Log In
-            </Button> */}
             <button className="bookVanButton mt-4 mb-3" variant="light">
                 <strong>Log In</strong>
             </button>

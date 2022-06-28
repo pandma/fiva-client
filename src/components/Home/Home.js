@@ -62,9 +62,9 @@ const Home = () => {
                         <Col id="ib2" lg={{ span: 6 }} md={{ span: 12 }}></Col>
 
                         <Col id="title" lg={{ span: 6 }} md={{ span: 12 }} style={{ padding: "0px 60px" }}>
-                            <h1>Not Sure yet? Please leave us any question</h1>
+                            <h1>¿No estas seguro aun? Preguntanos!</h1>
                             <button style={{ width: "250px" }} className="Button mb-4" variant="light">
-                                <strong>Leave us a Message</strong>
+                                <strong>Contactanos</strong>
                             </button>
 
                         </Col>

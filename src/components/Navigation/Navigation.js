@@ -15,9 +15,9 @@ const Navigation = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav id='info' className="me-auto">
                         <Nav.Link className='link' href="#home">Home</Nav.Link>
-                        <Nav.Link className='link' href="#home">About Fiva</Nav.Link>
-                        <Nav.Link className='link' href="#pricing">Products</Nav.Link>
-                        <Nav.Link className='link' href="#features">Clients Area</Nav.Link>
+                        <Nav.Link className='link' href="#home">Sobre Fiva</Nav.Link>
+                        <Nav.Link className='link' href="#pricing">Productos</Nav.Link>
+                        <Nav.Link className='link' href="#features">Area Cliente</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
