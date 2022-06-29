@@ -58,7 +58,7 @@ const Loginform = () => {
                     <input id="html" className="formInputField textInputClean textInputBig" type="password" name="password" value={password} placeholder="Write your password" onChange={handleInputChange} />
                 </form>
             </div>
-            <button className="bookVanButton mt-4 mb-3" variant="light">
+            <button className="Button mt-4 mb-3" variant="light">
                 <strong>Log In</strong>
             </button>
         </Form>

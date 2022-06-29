@@ -28,7 +28,8 @@ const Home = () => {
 
             <Container fluid>
                 <section id="section2">
-                    <h2>Qiuenes Somos!!</h2>
+                    <h2>¿A que nos dedicamos?</h2>
+                    <h4 id="t-h4">Ayudamos a empresas a ahorrar en su factura de la luz.</h4>
                     <Row>
                         <Col lg={{ span: 6 }} style={{ padding: "0px" }}>
                             <Image
@@ -49,8 +50,9 @@ const Home = () => {
                             />
                         </Col>
                         <Col id="sect3text" lg={{ span: 6 }} style={{ padding: "0px" }}>
-                            <h3>After two years renting our van we decided to quit our jobs and start our own business of campervan renting, it's been a long journey but are happy and free now</h3>
-                            <p>Petter an jule</p>
+                            <h3>Contactamos con Fiva porque nuestra factura habia aumentado un 30% desde 2020 y
+                                gracias a Fiva hemos ahorrado 2000€ en el ultimo año.</h3>
+                            <p>Julian</p>
                         </Col>
                     </Row>
                 </section>
@@ -62,8 +64,8 @@ const Home = () => {
                         <Col id="ib2" lg={{ span: 6 }} md={{ span: 12 }}></Col>
 
                         <Col id="title" lg={{ span: 6 }} md={{ span: 12 }} style={{ padding: "0px 60px" }}>
-                            <h1>¿No estas seguro aun? Preguntanos!</h1>
-                            <button style={{ width: "250px" }} className="Button mb-4" variant="light">
+                            <h1>¿Te sintes perdido? Preguntanos!</h1>
+                            <button style={{ width: "250px" }} className="Button2 mb-4" variant="light">
                                 <strong>Contactanos</strong>
                             </button>
 
