@@ -1,8 +1,6 @@
 import './Navigation.css'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { Link, NavLink } from 'react-router-dom'
+import { Nav, Container, Navbar, NavDropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom'
 import { AuthContext } from "../../context/auth.context"
 import { useContext } from 'react';
 import Button from 'react-bootstrap/Button'
@@ -23,30 +21,37 @@ const Navigation = () => {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav id='info' className="me-auto">
-                        <Nav.Link className='link' >Home</Nav.Link>
-                        <Nav.Link className='link' href="#home">Sobre Fiva</Nav.Link>
-                        <Nav.Link className='link' href="#pricing">Productos</Nav.Link>
-                        <Nav.Link className='link' href="#features">Area Cliente</Nav.Link>
+                        <Link to="/">
+                            <Button variant="ligth" className='butonLog'>Home</Button>
+                        </Link>
+                        <Link to="/about">
+                            <Button variant="ligth" className='butonLog'>Sobre Fiva</Button>
+                        </Link>
+                        <Link to="/">
+                            <Button variant="ligth" className='butonLog'>Area Cliente</Button>
+                        </Link>
+                        <NavDropdown variant="ligth" className='butonLog'
+                            title="Servicios"
+                            id={`offcanvasNavbarDropdown-expand-md`}
+                        >
+                            <NavDropdown.Item href="#action3">Pymes</NavDropdown.Item>
+                            <NavDropdown.Item href="#action4">Grandes consumidores</NavDropdown.Item>
+                            <NavDropdown.Item href="#action4">Administradore de fincas</NavDropdown.Item>
+                            <NavDropdown.Item href="#action4">Digitalizacion y soluciones IT</NavDropdown.Item>
+                        </NavDropdown >
+
                     </Nav>
                     <Nav id='info' className="me-auto">
                         {user &&
                             <Nav.Link className='link'>Hola, {user.name}</Nav.Link>
                         }
                         {isLoggedIn ?
-
                             <Nav.Link onClick={logOutUser}>Log out</Nav.Link>
-
                             :
-
                             <Link to="/login">
-
-                                <Button variant="ligth" className='butonLog'>
-                                    Log in
-                                </Button>
-
+                                <Button variant="ligth" className='butonLog'>Log in</Button>
                             </Link>
                         }
-
                     </Nav>
                 </Navbar.Collapse>
             </Container>
