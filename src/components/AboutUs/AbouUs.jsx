@@ -4,7 +4,7 @@ import { Container, Row, Col, Image, Button, Card } from 'react-bootstrap'
 const AboutUs = () => {
     return (
         <>
-            <section id="section1">
+            <section id="section1AB">
                 <Container fluid>
                     <Row>
                         <Col id="title" lg={{ span: 12 }} md={{ span: 12 }} style={{ padding: "0px 60px" }}>
@@ -13,7 +13,7 @@ const AboutUs = () => {
                     </Row>
                 </Container>
             </section>
-            <section id="section2">
+            <section id="section2AB">
                 <h2>¿Quienes somos?</h2>
                 <Container fluid>
                     <Row id='team'>
@@ -59,7 +59,7 @@ const AboutUs = () => {
                     </Row>
                 </Container>
             </section>
-            <section id="section3">
+            <section id="section3AB">
                 <h2>¿Que hacemos?</h2>
                 <Container fluid>
                     <Row id='work'>
