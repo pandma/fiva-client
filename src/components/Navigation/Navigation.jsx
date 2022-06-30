@@ -2,9 +2,10 @@ import './Navigation.css'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { AuthContext } from "../../context/auth.context"
 import { useContext } from 'react';
+import Button from 'react-bootstrap/Button'
 
 const Navigation = () => {
 
@@ -36,8 +37,13 @@ const Navigation = () => {
                             <Nav.Link onClick={logOutUser}>Log out</Nav.Link>
 
                             :
+
                             <Link to="/login">
-                                <Nav.Link className='link' >Log in</Nav.Link>
+
+                                <Button variant="ligth" className='butonLog'>
+                                    Log in
+                                </Button>
+
                             </Link>
                         }
 
