@@ -173,3 +173,65 @@
     display: flex;
     justify-content: center;
 }
+
+
+.animate {
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
+
+.animateImg {
+    animation-duration: 1.75s;
+    animation-delay: 0.5s;
+    animation-name: animate-fade;
+    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+    animation-fill-mode: backwards;
+}
+
+/* Glow In */
+.animate.glow {
+    animation-name: animate-glow;
+    animation-timing-function: ease;
+}
+
+.delay-1 {
+    animation-delay: 1.00s;
+}
+
+.delay-2 {
+    animation-delay: 1.50s;
+}
+
+.delay-3 {
+    animation-delay: 2.00s;
+}
+
+.delay-4 {
+    animation-delay: 2.50s;
+}
+
+@keyframes animate-glow {
+    0% {
+        opacity: 0;
+        filter: brightness(3) saturate(3);
+        transform: scale(0.8, 0.8);
+    }
+
+    100% {
+        opacity: 1;
+        filter: brightness(1) saturate(1);
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes animate-fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
