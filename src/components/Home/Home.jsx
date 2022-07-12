@@ -1,8 +1,7 @@
 import "./Home.css"
 import { Container, Row, Col } from "react-bootstrap"
 import Image from "react-bootstrap/Image"
-
-
+import ContactModal from "../ContactModal/ContactModal"
 
 const Home = () => {
 
@@ -14,11 +13,7 @@ const Home = () => {
                     <Row className="animate">
                         <Col id="title" lg={{ span: 6 }} md={{ span: 12 }} style={{ padding: "0px 60px" }}>
                             <h1>¿Cuanto Podemos bajar en tu factura de la luz?</h1>
-
-                            <button style={{ width: "250px" }} className="Button mb-4" variant="light">
-                                <strong>Contactanos</strong>
-                            </button>
-
+                            <ContactModal />
                         </Col>
 
                         <Col id="ib" lg={{ span: 6 }} md={{ span: 12 }}></Col>
@@ -65,10 +60,7 @@ const Home = () => {
 
                         <Col id="title" lg={{ span: 6 }} md={{ span: 12 }} style={{ padding: "0px 60px" }}>
                             <h1>¿Te sintes perdido? Preguntanos!</h1>
-                            <button style={{ width: "250px" }} className="Button2 mb-4" variant="light">
-                                <strong>Contactanos</strong>
-                            </button>
-
+                            <ContactModal />
                         </Col>
                     </Row>
                 </Container>
