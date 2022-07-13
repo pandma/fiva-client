@@ -26,13 +26,13 @@ const ContactModal = () => {
                     <Modal.Title>Que servicio necesitas</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <ContactForm />
+                    <ContactForm closeModal={handleClose} />
                 </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="outline-dark" className='ContactButton' onClick={handleClose}>
+                {/* <Modal.Footer>
+                    <Button variant="outline-dark" className='ContactButton' >
                         Enviar
                     </Button>
-                </Modal.Footer>
+                </Modal.Footer> */}
             </Modal>
         </>
     );

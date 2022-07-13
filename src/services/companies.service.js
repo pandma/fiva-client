@@ -7,15 +7,15 @@ class CompanyService {
     }
 
     getCompanies = () => {
-        return this.api.get(`/companies/`)
+        return this.api.get(`/companies`)
     }
 
     createCompany = (company) => {
-        return this.api.post("/companies/", company)
+        return this.api.post("/companies", company)
     }
 
     updateCompany = (companyname) => {
-        return this.api.put(`/companies/`, companyname)
+        return this.api.put(`/companies`, companyname)
     }
 
 }
