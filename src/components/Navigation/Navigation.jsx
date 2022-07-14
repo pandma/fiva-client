@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button'
 
 const Navigation = () => {
 
-    const { user, logOutUser, isLoggedIn } = useContext(AuthContext)
+    const { user, logOutUser, isLoggedIn, isAdmin } = useContext(AuthContext)
 
 
     return (
@@ -39,8 +39,13 @@ const Navigation = () => {
                             <NavDropdown.Item href="#action4">Administradore de fincas</NavDropdown.Item>
                             <NavDropdown.Item href="#action4">Digitalizacion y soluciones IT</NavDropdown.Item>
                         </NavDropdown >
-
+                        {isAdmin == true &&
+                            <Link to="/admin">
+                                <Button variant="ligth" className='butonLog'>Admin Area</Button>
+                            </Link>
+                        }
                     </Nav>
+
                     <Nav id='info' className="me-auto">
                         {user &&
                             <Nav.Link className='link'>Hola, {user.name}</Nav.Link>

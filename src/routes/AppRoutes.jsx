@@ -1,8 +1,10 @@
 import { Routes, Route } from "react-router-dom"
-import AboutUsPage from "../pages/AboutUsPage/AboutUsPage"
-import ErrorPage from "../pages/ErrorPage/ErrorPage"
 import HomePage from "../pages/HomePage/HomePage"
+import ErrorPage from "../pages/ErrorPage/ErrorPage"
 import LoginPage from "../pages/loginPage/loginPage"
+import AboutUsPage from "../pages/AboutUsPage/AboutUsPage"
+import AdminHomePage from "../pages/AdminHomePage/AdminHomePage"
+
 const AppRoutes = () => {
 
     return (
@@ -12,6 +14,7 @@ const AppRoutes = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/admin" element={<AdminHomePage />} />
 
         </Routes>
     )

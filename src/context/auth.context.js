@@ -8,6 +8,8 @@ function AuthProviderWrapper(props) {
     const [isLoggedIn, setIsLoggedIn] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
     const [user, setUser] = useState(null)
+    const [isAdmin, setIsAdmin] = useState(false)
+
 
     const storeToken = (token) => {
         localStorage.setItem("jwt", token)
@@ -35,6 +37,7 @@ function AuthProviderWrapper(props) {
                     setIsLoggedIn(true)
                     setIsLoading(false)
                     setUser(user)
+                    user.role == 'Admin' && setIsAdmin(true)
                 })
                 .catch(() => logOutUser())
         }
@@ -50,7 +53,7 @@ function AuthProviderWrapper(props) {
         authenticateUser()
     }, [])
 
-    return <AuthContext.Provider value={{ isLoggedIn, isLoading, user, storeToken, authenticateUser, logOutUser }}>{props.children}</AuthContext.Provider>
+    return <AuthContext.Provider value={{ isLoggedIn, isLoading, user, isAdmin, storeToken, authenticateUser, logOutUser }}>{props.children}</AuthContext.Provider>
 }
 
 export { AuthContext, AuthProviderWrapper }
