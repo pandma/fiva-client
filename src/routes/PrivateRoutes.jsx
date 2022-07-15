@@ -15,7 +15,7 @@ const PrivateRoutes = ({ requiredRoles }) => {
             showMessage("Unauthorized", "Please Log in ")
             return <Navigate to="/login" />
         } else {
-            if (requiredRoles.includes(user.role) || user.role === "ADMIN") {
+            if (requiredRoles.includes(user.role) || user.role === "Admin") {
                 return <Outlet />
             } else {
                 showMessage("Unauthorized")

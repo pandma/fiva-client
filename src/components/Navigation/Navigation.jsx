@@ -27,19 +27,25 @@ const Navigation = () => {
                         <Link to="/about">
                             <Button variant="ligth" className='butonLog'>Sobre Fiva</Button>
                         </Link>
-                        <Link to="/">
-                            <Button variant="ligth" className='butonLog'>Area Cliente</Button>
-                        </Link>
                         <NavDropdown variant="ligth" className='butonLog'
-                            title="Servicios"
+                            title="Clientes"
                             id={`offcanvasNavbarDropdown-expand-md`}
                         >
                             <NavDropdown.Item href="#action3">Pymes</NavDropdown.Item>
                             <NavDropdown.Item href="#action4">Grandes consumidores</NavDropdown.Item>
                             <NavDropdown.Item href="#action4">Administradore de fincas</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">Digitalizacion y soluciones IT</NavDropdown.Item>
                         </NavDropdown >
-                        {isAdmin == true &&
+                        <NavDropdown variant="ligth" className='butonLog'
+                            title="Servicios"
+                            id={`offcanvasNavbarDropdown-expand-md`}
+                        >
+                            <NavDropdown.Item href="#action3">Ajuste de optimización de potencia</NavDropdown.Item>
+                            <NavDropdown.Item href="#action3">Estudios de eficiencia energetica</NavDropdown.Item>
+                            <NavDropdown.Item href="#action3">Comparativa de tarifas</NavDropdown.Item>
+                            <NavDropdown.Item href="#action4">Soluciones de software</NavDropdown.Item>
+                            <NavDropdown.Item href="#action3">Digitalización</NavDropdown.Item>
+                        </NavDropdown >
+                        {isAdmin &&
                             <Link to="/admin">
                                 <Button variant="ligth" className='butonLog'>Admin Area</Button>
                             </Link>
