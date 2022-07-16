@@ -15,7 +15,7 @@ const Navigation = () => {
             <Container>
                 <Navbar.Brand >
                     <Link to="/">
-                        <img src='https://res.cloudinary.com/dzzkeb6xp/image/upload/v1656182281/FIVA_LOGO2_rovx00.png' width={110} />
+                        <img src='https://res.cloudinary.com/dzzkeb6xp/image/upload/v1657965369/FIVA_6_nibyh0.png' width={150} />
                     </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

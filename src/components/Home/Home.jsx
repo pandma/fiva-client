@@ -2,6 +2,7 @@ import "./Home.css"
 import { Container, Row, Col } from "react-bootstrap"
 import Image from "react-bootstrap/Image"
 import ContactModal from "../ContactModal/ContactModal"
+import OurService from "../OurService/OurService"
 
 const Home = () => {
 
@@ -21,10 +22,15 @@ const Home = () => {
                 </Container>
             </section>
 
-            <Container fluid>
-                <section id="section2">
-                    <h2>¿A que nos dedicamos?</h2>
-                    <h4 id="t-h4">Ayudamos a empresas a ahorrar en su factura de la luz.</h4>
+            <section className="OurService">
+                <OurService />
+            </section>
+
+            <section id="section2">
+                <Container fluid>
+                    <h2>Nuestra Labor</h2>
+                    <h4 id="t-h4">Nuestra plantilla se compone de abogados, administradores e ingenieros especializados en el sector
+                        eléctrico, para ofrecer así un servicio de gestión integral en energía</h4>
                     <Row>
                         <Col className="animateImg glow delay-1" lg={{ span: 6 }} style={{ padding: "0px" }}>
                             <Image
@@ -50,8 +56,9 @@ const Home = () => {
                             <p>Julian</p>
                         </Col>
                     </Row>
-                </section>
-            </Container>
+                </Container>
+            </section>
+
 
             <section id="section5">
                 <Container fluid>
