@@ -6,8 +6,7 @@ const LoginPage = () => {
         <Container id="fomrL">
             <Row>
                 <Col md={{ span: 6, offset: 3 }}>
-                    <h1>Log In</h1>
-                    <hr />
+                    <h1 className="logTitle">Inicia Sesión</h1>
                     <Loginform />
                 </Col>
             </Row>

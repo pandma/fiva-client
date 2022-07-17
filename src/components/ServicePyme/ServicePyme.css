@@ -1,0 +1,56 @@
+.ServicepymeSect1 {
+    background-image: url("https://res.cloudinary.com/dzzkeb6xp/image/upload/v1658086596/pexels-andrea-piacquadio-3769711_khi7qu.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 82vh;
+}
+
+.ServicepymeTitle {
+    text-align: center;
+    color: white;
+    margin-top: 12%;
+}
+
+.ServicepymeSect2 {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: black;
+    color: white;
+}
+
+.ServicepymeSect2Title {
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.circle {
+    background-color: rgb(48, 48, 218);
+    border-radius: 50%;
+    width: 10px;
+    height: 20px;
+}
+
+.contactImg {
+    background-image: url("https://res.cloudinary.com/dzzkeb6xp/image/upload/v1658090088/pexels-andrea-piacquadio-3783229_z2bbif.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+}
+
+.contactserviceTitle {
+    color: white;
+    margin-top: 10%;
+    margin-bottom: 12%;
+    text-align: center;
+}
+
+.ServicepymeSect3 {
+    background-color: black;
+
+}
+
+.space {
+    margin-bottom: 4%;
+}

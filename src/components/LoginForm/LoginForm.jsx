@@ -1,10 +1,11 @@
+import "./LoginForm.css"
 import { useContext, useState } from "react"
 import { Form, Button } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
 import authService from "../../services/auth.service"
 import { AuthContext } from "./../../context/auth.context"
 import { MessageContext } from "../../context/message.context"
-import "./LoginForm.css"
+
 
 const Loginform = () => {
     const [loginData, setLoginData] = useState({
@@ -40,29 +41,27 @@ const Loginform = () => {
     const { password, email } = loginData
 
     return (
+        <>
+            <Form className="fomLogin" onSubmit={handleSubmit}>
+                <Form.Group className="mb-3" controlId="formBasicEmail" >
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control type="email" placeholder="Enter email" name="email" value={email} onChange={handleInputChange} />
+                </Form.Group>
 
-        <Form id="fomLogin" onSubmit={handleSubmit}>
-            <label for="email">Email</label>
-            <br></br>
-            <div className="inputFieldContainer mt-2">
-                <form style={{ width: "100%" }} onSubmit={handleSubmit}>
-                    <input id="html" className="formInputField textInputClean textInputBig" type="email" name="email" value={email} placeholder="Write your email" onChange={handleInputChange} />
-                </form>
-            </div>
-            <br></br>
-            <label for="password">password</label>
-            <br></br>
-            <div className="inputFieldContainer mt-2">
-                <form style={{ width: "100%" }} onSubmit={handleSubmit}>
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" placeholder="Password" name="password" value={password} onChange={handleInputChange} />
+                </Form.Group>
 
-                    <input id="html" className="formInputField textInputClean textInputBig" type="password" name="password" value={password} placeholder="Write your password" onChange={handleInputChange} />
-                </form>
-            </div>
-            <button className="Button mt-4 mb-3" variant="light">
-                <strong>Log In</strong>
-            </button>
-        </Form>
+                <Button className="loginbuton" variant="light" type="submit">
+                    Log In
+                </Button>
+            </Form>
+        </>
     )
 }
 
 export default Loginform
+
+
+

@@ -15,7 +15,7 @@ const Navigation = () => {
             <Container>
                 <Navbar.Brand >
                     <Link to="/">
-                        <img src='https://res.cloudinary.com/dzzkeb6xp/image/upload/v1657965369/FIVA_6_nibyh0.png' width={150} />
+                        <img src='https://res.cloudinary.com/dzzkeb6xp/image/upload/v1658079723/FIVA_8_3_u0dayt.png' width={120} />
                     </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -41,6 +41,7 @@ const Navigation = () => {
                         >
                             <NavDropdown.Item href="#action3">Ajuste de optimización de potencia</NavDropdown.Item>
                             <NavDropdown.Item href="#action3">Estudios de eficiencia energetica</NavDropdown.Item>
+                            <NavDropdown.Item href="#action3">Transición a energía renovable</NavDropdown.Item>
                             <NavDropdown.Item href="#action3">Comparativa de tarifas</NavDropdown.Item>
                             <NavDropdown.Item href="#action4">Soluciones de software</NavDropdown.Item>
                             <NavDropdown.Item href="#action3">Digitalización</NavDropdown.Item>
@@ -60,7 +61,7 @@ const Navigation = () => {
                             <Nav.Link onClick={logOutUser}>Log out</Nav.Link>
                             :
                             <Link to="/login">
-                                <Button variant="ligth" className='butonLog'>Log in</Button>
+                                <Button variant="ligth" className='butonLog'>Inicia Sesión</Button>
                             </Link>
                         }
                     </Nav>

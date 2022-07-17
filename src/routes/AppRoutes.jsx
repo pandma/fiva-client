@@ -5,7 +5,7 @@ import LoginPage from "../pages/loginPage/loginPage"
 import AboutUsPage from "../pages/AboutUsPage/AboutUsPage"
 import AdminHomePage from "../pages/AdminHomePage/AdminHomePage"
 import PrivateRoutes from "./PrivateRoutes"
-
+import PymePage from "../pages/PymePage/PymePage"
 
 const AppRoutes = () => {
 
@@ -16,6 +16,8 @@ const AppRoutes = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutUsPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/pyme" element={<PymePage />} />
+
             <Route path="/admin" element={<PrivateRoutes requiredRoles={["Admin"]} />}>
                 <Route path="" element={<AdminHomePage />} />
             </Route>
