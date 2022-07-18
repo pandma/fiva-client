@@ -31,9 +31,21 @@ const Navigation = () => {
                             title="Clientes"
                             id={`offcanvasNavbarDropdown-expand-md`}
                         >
-                            <NavDropdown.Item href="#action3">Pymes</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">Grandes consumidores</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">Administradore de fincas</NavDropdown.Item>
+                            <NavDropdown.Item >
+                                <Link to="/pyme">
+                                    <p>Pymes</p>
+                                </Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item >
+                                <Link to="/bigconstumer">
+                                    <p>Grandes consumidores</p>
+                                </Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item >
+                                <Link to="/administrator">
+                                    <p>Administradores de fincas</p>
+                                </Link>
+                            </NavDropdown.Item>
                         </NavDropdown >
                         <NavDropdown variant="ligth" className='butonLog'
                             title="Servicios"
