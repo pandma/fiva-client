@@ -17,5 +17,6 @@ You may also see any lint errors in the console.
 <br/>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-
+## .env
+REACT_APP_API_URL=http://localhost:8000/api
 
