@@ -8,6 +8,14 @@ import AboutUsPage from "../pages/AboutUsPage/AboutUsPage"
 import AdminHomePage from "../pages/AdminHomePage/AdminHomePage"
 import BigServicePage from "../pages/BigServicePage/BigServicePage"
 import AdministratorServicePage from "../pages/AdministratorServicePage/AdministratorServicePage"
+import PowerOptimitationPage from "../pages/PowerOptimitationPage/PowerOpmtimitationPage"
+import EnergyEficyPage from "../pages/EnergyEficyPage/EnergyEficyPage"
+import EnergyTransitionPage from "../pages/EnergyTransitionPage/EnergyTransitionPage"
+import PriceRatePage from "../pages/PriceRatePage/PriceRatePage"
+import SoftwareSolutionsPage from "../pages/SoftwareSolutionsPage/SoftwareSolutionsPage"
+import DigitalitationPage from "../pages/DigitalitationPage/DigitalitationPage"
+
+
 
 const AppRoutes = () => {
 
@@ -21,6 +29,13 @@ const AppRoutes = () => {
             <Route path="/pyme" element={<PymePage />} />
             <Route path="/bigconstumer" element={<BigServicePage />} />
             <Route path="/administrator" element={<AdministratorServicePage />} />
+            <Route path="/power" element={<PowerOptimitationPage />} />
+            <Route path="/energy" element={<EnergyEficyPage />} />
+            <Route path="/transition" element={<EnergyTransitionPage />} />
+            <Route path="/price" element={<PriceRatePage />} />
+            <Route path="/solutions" element={<SoftwareSolutionsPage />} />
+            <Route path="/digitalitation" element={<DigitalitationPage />} />
+
 
             <Route path="/admin" element={<PrivateRoutes requiredRoles={["Admin"]} />}>
                 <Route path="" element={<AdminHomePage />} />
