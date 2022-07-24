@@ -51,12 +51,36 @@ const Navigation = () => {
                             title="Servicios"
                             id={`offcanvasNavbarDropdown-expand-md`}
                         >
-                            <NavDropdown.Item href="#action3">Ajuste de optimización de potencia</NavDropdown.Item>
-                            <NavDropdown.Item href="#action3">Estudios de eficiencia energetica</NavDropdown.Item>
-                            <NavDropdown.Item href="#action3">Transición a energía renovable</NavDropdown.Item>
-                            <NavDropdown.Item href="#action3">Comparativa de tarifas</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">Soluciones de software</NavDropdown.Item>
-                            <NavDropdown.Item href="#action3">Digitalización</NavDropdown.Item>
+                            <NavDropdown.Item >
+                                <Link to="/power">
+                                    <p>Ajuste de optimización de potencia</p>
+                                </Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item >
+                                <Link to="/energy">
+                                    <p>Estudios de eficiencia energetica</p>
+                                </Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item >
+                                <Link to="/transition">
+                                    <p>Transición a energía renovable</p>
+                                </Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item >
+                                <Link to="/price">
+                                    <p>Comparativa de tarifas</p>
+                                </Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item >
+                                <Link to="/solutions">
+                                    <p>Soluciones de software</p>
+                                </Link>
+                            </NavDropdown.Item>
+                            <NavDropdown.Item >
+                                <Link to="/digitalitation">
+                                    <p>Digitalización</p>
+                                </Link>
+                            </NavDropdown.Item>
                         </NavDropdown >
                         {isAdmin &&
                             <Link to="/admin">

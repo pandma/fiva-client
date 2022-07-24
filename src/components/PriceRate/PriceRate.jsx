@@ -6,10 +6,10 @@ import ContactModal from '../ContactModal/ContactModal'
 const PriceRate=()=>{
     return(
         <>
-        <Container className="ServiceAdmineSect1" fluid>
+        <Container className="PriceRateSect1" fluid>
             <Row>
                 <Col className='ServiceadminTitle' xs={{ span: 12 }} md={{ span: 12 }} >
-                    <h1>Administradores de Fincas</h1>
+                    <h1>Comparativa de Tarifas</h1>
                 </Col>
             </Row>
         </Container>
@@ -18,7 +18,7 @@ const PriceRate=()=>{
             <Row>
                 <Col className='ServicepymeSect2Title' xs={{ span: 12 }} md={{ span: 12 }}>
                     <h2>
-                        Servicios Para Administradores de Fincas
+                        Servicios De Comparativa de tarifas
                     </h2>
                 </Col>
             </Row>
@@ -26,7 +26,7 @@ const PriceRate=()=>{
                 <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                 <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                     <p>
-                        Si esta al cargo de una o varias comunidades o administra varios negocios, consulte nuestras ofertas colectivas multicif.
+                        Analizamos cual es la mejor oferta para su negocio realizando una comparativa con todas las ofertas y precios del mercado adaptados a sus necesidades.
                     </p>
                     <br />
                 </Col>
@@ -35,7 +35,7 @@ const PriceRate=()=>{
                 <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                 <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                     <p>
-                        Simplemente solicite un informe detallado de cuánto gastan al año, a que hora y que potencia debe contratar
+                        Las tarifas industriales son horarias, y por lo tanto es importante saber que campaña contratar según su perfil de cliente.
                     </p>
                     <br />
                 </Col>

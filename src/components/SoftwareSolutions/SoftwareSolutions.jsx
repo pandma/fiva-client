@@ -6,10 +6,10 @@ import ContactModal from '../ContactModal/ContactModal'
 const SoftwareSolutions=()=>{
     return(
         <>
-        <Container className="ServiceAdmineSect1" fluid>
+        <Container className="SolutionsSect1" fluid>
             <Row>
                 <Col className='ServiceadminTitle' xs={{ span: 12 }} md={{ span: 12 }} >
-                    <h1>Administradores de Fincas</h1>
+                    <h1> {"<Soluciones de Software>"} </h1>
                 </Col>
             </Row>
         </Container>
@@ -18,7 +18,7 @@ const SoftwareSolutions=()=>{
             <Row>
                 <Col className='ServicepymeSect2Title' xs={{ span: 12 }} md={{ span: 12 }}>
                     <h2>
-                        Servicios Para Administradores de Fincas
+                        Servicio de Soluciones basadas en Software
                     </h2>
                 </Col>
             </Row>
@@ -26,7 +26,8 @@ const SoftwareSolutions=()=>{
                 <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                 <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                     <p>
-                        Si esta al cargo de una o varias comunidades o administra varios negocios, consulte nuestras ofertas colectivas multicif.
+                        Contactanos y Nuestro equipo de desarrollo analizara tus necesidades y te ofrecerá la mejor solucion.
+
                     </p>
                     <br />
                 </Col>
@@ -35,7 +36,7 @@ const SoftwareSolutions=()=>{
                 <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                 <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                     <p>
-                        Simplemente solicite un informe detallado de cuánto gastan al año, a que hora y que potencia debe contratar
+                        Servicios de CRM, Customer Relationship Management.
                     </p>
                     <br />
                 </Col>
@@ -44,7 +45,7 @@ const SoftwareSolutions=()=>{
                 <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                 <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                     <p>
-                        Introduzca sus datos y un asesor se pondrá en contacto con ustedes para buscar la mejor oferta para vuestro administrados.
+                        Servicios de SAS, Statistical Analysis System.
                     </p>
                 </Col>
             </Row>
@@ -52,7 +53,7 @@ const SoftwareSolutions=()=>{
                 <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                 <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                     <p>
-                        Y si administra más de 30 comunidades, le regalamos la factura de su oficina del mes siguiente.
+                        Soluciones personalizadas.
                     </p>
                 </Col>
             </Row>

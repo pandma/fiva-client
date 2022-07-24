@@ -6,7 +6,7 @@ import ContactModal from '../ContactModal/ContactModal'
 const PowerOtimitation=()=>{
     return(
         <>
-         <Container className="ServiceAdmineSect1" fluid>
+         <Container className="PowerOptimitationSect1" fluid>
                 <Row>
                     <Col className='ServiceadminTitle' xs={{ span: 12 }} md={{ span: 12 }} >
                         <h1>Optimización de Potencia</h1>
@@ -26,7 +26,8 @@ const PowerOtimitation=()=>{
                     <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                     <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                         <p>
-                            Si esta al cargo de una o varias comunidades o administra varios negocios, consulte nuestras ofertas colectivas multicif.
+                            Os pedimos autorización para consultar vuestros datos en SIPS (Sistema de Intercambio de Punto de Suministro) 
+                            y con nuestra aplicación ajustamos la potencia contratada a la demanda real a lo largo del año.
                         </p>
                         <br />
                     </Col>
@@ -35,7 +36,7 @@ const PowerOtimitation=()=>{
                     <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                     <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                         <p>
-                            Simplemente solicite un informe detallado de cuánto gastan al año, a que hora y que potencia debe contratar
+                            Nuestros algoritmo a sido optimizado para optener el maximo ahorro posible.
                         </p>
                         <br />
                     </Col>
@@ -44,18 +45,11 @@ const PowerOtimitation=()=>{
                     <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                     <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                         <p>
-                            Introduzca sus datos y un asesor se pondrá en contacto con ustedes para buscar la mejor oferta para vuestro administrados.
+                            Confiamos tanto en nuestro Software que solo cobramos si consegimos ahorrar en su factura.
                         </p>
                     </Col>
                 </Row>
-                <Row className='space'>
-                    <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
-                    <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
-                        <p>
-                            Y si administra más de 30 comunidades, le regalamos la factura de su oficina del mes siguiente.
-                        </p>
-                    </Col>
-                </Row>
+               
             </Container>
 
             <Container className='ServicepymeSect3' fluid>

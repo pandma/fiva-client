@@ -5,10 +5,10 @@ import ContactModal from '../ContactModal/ContactModal'
 const Digitalitation=()=>{
     return(
         <>
-        <Container className="ServiceAdmineSect1" fluid>
+        <Container className="DigitalitataionSect1" fluid>
                 <Row>
                     <Col className='ServiceadminTitle' xs={{ span: 12 }} md={{ span: 12 }} >
-                        <h1>Administradores de Fincas</h1>
+                        <h1>Digitalización</h1>
                     </Col>
                 </Row>
             </Container>
@@ -17,7 +17,7 @@ const Digitalitation=()=>{
                 <Row>
                     <Col className='ServicepymeSect2Title' xs={{ span: 12 }} md={{ span: 12 }}>
                         <h2>
-                            Servicios Para Administradores de Fincas
+                            Servicios De Digitalización
                         </h2>
                     </Col>
                 </Row>
@@ -25,7 +25,7 @@ const Digitalitation=()=>{
                     <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                     <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                         <p>
-                            Si esta al cargo de una o varias comunidades o administra varios negocios, consulte nuestras ofertas colectivas multicif.
+                            Nuestro equipo de desarrollo analiza tus necesidades y te ofrecerá el mejor servicio posible
                         </p>
                         <br />
                     </Col>
@@ -34,7 +34,7 @@ const Digitalitation=()=>{
                     <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                     <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                         <p>
-                            Simplemente solicite un informe detallado de cuánto gastan al año, a que hora y que potencia debe contratar
+                            Un Diseño de Interfaces adecuado a las necesidades de tu negocio.
                         </p>
                         <br />
                     </Col>
@@ -43,7 +43,7 @@ const Digitalitation=()=>{
                     <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                     <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                         <p>
-                            Introduzca sus datos y un asesor se pondrá en contacto con ustedes para buscar la mejor oferta para vuestro administrados.
+                            Arquitectura de datos y mantenimineto de bases de datos.
                         </p>
                     </Col>
                 </Row>
@@ -51,7 +51,7 @@ const Digitalitation=()=>{
                     <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                     <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                         <p>
-                            Y si administra más de 30 comunidades, le regalamos la factura de su oficina del mes siguiente.
+                            Mantenimiento y desplienge en servidores.
                         </p>
                     </Col>
                 </Row>

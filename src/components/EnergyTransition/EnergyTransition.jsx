@@ -7,10 +7,10 @@ import ContactModal from '../ContactModal/ContactModal'
 const EnergyTransition=()=>{
     return(
         <>
-        <Container className="ServiceAdmineSect1" fluid>
+        <Container className="TransitionSect1" fluid>
                 <Row>
                     <Col className='ServiceadminTitle' xs={{ span: 12 }} md={{ span: 12 }} >
-                        <h1>Administradores de Fincas</h1>
+                        <h1>Transición a Energia Renovable</h1>
                     </Col>
                 </Row>
             </Container>
@@ -19,7 +19,7 @@ const EnergyTransition=()=>{
                 <Row>
                     <Col className='ServicepymeSect2Title' xs={{ span: 12 }} md={{ span: 12 }}>
                         <h2>
-                            Servicios Para Administradores de Fincas
+                            Servicios de Transición a Energia Renovable
                         </h2>
                     </Col>
                 </Row>
@@ -27,7 +27,7 @@ const EnergyTransition=()=>{
                     <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                     <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                         <p>
-                            Si esta al cargo de una o varias comunidades o administra varios negocios, consulte nuestras ofertas colectivas multicif.
+                            Estamos viviendo la modernización de la manera en la que obtendremos energías durante las próximas generaciones.
                         </p>
                         <br />
                     </Col>
@@ -36,7 +36,7 @@ const EnergyTransition=()=>{
                     <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                     <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                         <p>
-                            Simplemente solicite un informe detallado de cuánto gastan al año, a que hora y que potencia debe contratar
+                            Las tecnologías renovables han llegado para quedarse y ahora es el momento de dar el paso y fomentar el autoconsumo, aportando cada uno su grano de arena.
                         </p>
                         <br />
                     </Col>
@@ -45,7 +45,7 @@ const EnergyTransition=()=>{
                     <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                     <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                         <p>
-                            Introduzca sus datos y un asesor se pondrá en contacto con ustedes para buscar la mejor oferta para vuestro administrados.
+                            Tanto si su empresa necesita cubrir emisiones de CO2, cómo si le preocupa la calidad del aire que respiramos, instalar alternativas de autoconsumo aportará un grano de arena en esta carrera por la sostenibilidad ambinetal
                         </p>
                     </Col>
                 </Row>
@@ -53,7 +53,7 @@ const EnergyTransition=()=>{
                     <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                     <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                         <p>
-                            Y si administra más de 30 comunidades, le regalamos la factura de su oficina del mes siguiente.
+                            Disfrute de nuestras ofertas y precios y solicite ya mismo un presupuesto
                         </p>
                     </Col>
                 </Row>

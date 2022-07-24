@@ -5,11 +5,11 @@ import ContactModal from '../ContactModal/ContactModal'
 const EnergyEficy=()=>{
 
     return (
-        <>
-        <Container className="ServiceAdmineSect1" fluid>
+        <> 
+        <Container className="EnergyEficySect1" fluid>
                <Row>
                    <Col className='ServiceadminTitle' xs={{ span: 12 }} md={{ span: 12 }} >
-                       <h1>Optimización de Potencia</h1>
+                       <h1>Estudio De Eficiencia Energetica</h1>
                    </Col>
                </Row>
            </Container>
@@ -18,7 +18,7 @@ const EnergyEficy=()=>{
                <Row>
                    <Col className='ServicepymeSect2Title' xs={{ span: 12 }} md={{ span: 12 }}>
                        <h2>
-                           Servicio de Optimización de Potencia
+                           Servicio de Estudio De Eficiencia Energetica
                        </h2>
                    </Col>
                </Row>
@@ -26,7 +26,8 @@ const EnergyEficy=()=>{
                    <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                    <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                        <p>
-                           Si esta al cargo de una o varias comunidades o administra varios negocios, consulte nuestras ofertas colectivas multicif.
+                            Desde auditorias energéticas, para saber si aprovecha de la mejor manera la energia en su local,
+                            a baterias de condensación, contadores autogestionados e instalaciones de LEDs.
                        </p>
                        <br />
                    </Col>
@@ -35,7 +36,7 @@ const EnergyEficy=()=>{
                    <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                    <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                        <p>
-                           Simplemente solicite un informe detallado de cuánto gastan al año, a que hora y que potencia debe contratar
+                            Damos un soporte integral para que gaste la menor cantidad de energía posible para realizar la misma cantidad de trabajo.
                        </p>
                        <br />
                    </Col>
@@ -44,15 +45,7 @@ const EnergyEficy=()=>{
                    <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                    <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                        <p>
-                           Introduzca sus datos y un asesor se pondrá en contacto con ustedes para buscar la mejor oferta para vuestro administrados.
-                       </p>
-                   </Col>
-               </Row>
-               <Row className='space'>
-                   <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
-                   <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
-                       <p>
-                           Y si administra más de 30 comunidades, le regalamos la factura de su oficina del mes siguiente.
+                            Solicite que un técnico se ponga en contacto para tener mas información.
                        </p>
                    </Col>
                </Row>
