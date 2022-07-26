@@ -1,32 +1,27 @@
-import contactUserService from "../../services/contactUser.service"
 import { Button, Card } from 'react-bootstrap';
-import { useState } from "react";
-import { useEffect } from "react";
 
 
 
-
-const ContactList = () => {
-
-
-
-    useEffect(async () => {
-        const data = await contactUserService.getContacts()
-        console.log("data is ", data.data.Users)
-
-    });
+const ContactList = ({ name, email, message, state, phone }) => {
 
 
     return (
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
-                <Card.Title>Card Title</Card.Title>
+                <Card.Title>{name}</Card.Title>
                 <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                    {email}
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Card.Text>
+                    {phone}
+                </Card.Text>
+                <Card.Text>
+                    {message}
+                </Card.Text>
+                <Card.Text>
+                    {state}
+                </Card.Text>
+                <Button variant="primary">finalizar</Button>
             </Card.Body>
         </Card>
     );
