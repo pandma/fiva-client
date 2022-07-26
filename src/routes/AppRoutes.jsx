@@ -14,7 +14,8 @@ import EnergyTransitionPage from "../pages/EnergyTransitionPage/EnergyTransition
 import PriceRatePage from "../pages/PriceRatePage/PriceRatePage"
 import SoftwareSolutionsPage from "../pages/SoftwareSolutionsPage/SoftwareSolutionsPage"
 import DigitalitationPage from "../pages/DigitalitationPage/DigitalitationPage"
-
+import SingUpPage from "../pages/SingUpPage/SingUpPage"
+import ContactList from "../components/ContactList/ContactList"
 
 
 const AppRoutes = () => {
@@ -35,6 +36,8 @@ const AppRoutes = () => {
             <Route path="/price" element={<PriceRatePage />} />
             <Route path="/solutions" element={<SoftwareSolutionsPage />} />
             <Route path="/digitalitation" element={<DigitalitationPage />} />
+            <Route path="/register" element={<SingUpPage />} />
+            <Route path="/contact-list" element={<ContactList />} />
 
 
             <Route path="/admin" element={<PrivateRoutes requiredRoles={["Admin"]} />}>

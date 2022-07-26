@@ -27,7 +27,6 @@ const SoftwareSolutions=()=>{
                 <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                     <p>
                         Contactanos y Nuestro equipo de desarrollo analizara tus necesidades y te ofrecerá la mejor solucion.
-
                     </p>
                     <br />
                 </Col>

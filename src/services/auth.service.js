@@ -2,6 +2,7 @@ import axios from "axios"
 
 class AuthService {
     constructor() {
+        console.log("###",process.env.REACT_APP_API_URL)
         this.api = axios.create({ baseURL: `${process.env.REACT_APP_API_URL}` })
         this.api.interceptors.request.use((config) => {
             const token = localStorage.getItem("jwt")
