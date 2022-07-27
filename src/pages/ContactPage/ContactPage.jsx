@@ -1,8 +1,10 @@
-import ContactList from "../../components/ContactList/ContactList"
-import contactUserService from "../../services/contactUser.service"
+import './ContactPage.css'
 import { useEffect } from "react";
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import ContactList from "../../components/ContactList/ContactList"
+import contactUserService from "../../services/contactUser.service"
+
 
 
 const ContactPage = () => {
@@ -11,7 +13,6 @@ const ContactPage = () => {
     const getContact = async () => {
         const contacts = await contactUserService.getContacts()
         setData(contacts.data.Users)
-        console.log("data is ", contacts.data.Users)
 
     }
 
@@ -22,17 +23,17 @@ const ContactPage = () => {
 
     const contactlist = data.map((contact) => {
         return (
-            <ContactList {...contact} />
+            <Col md={4} xs={6}>
+                <ContactList {...contact} />
+            </Col>
         )
     })
 
     return <>
         <Container fluid>
-            <h1>List de contactos</h1>
-            <Row>
-                <Col>
-                    {contactlist}
-                </Col>
+            <h1 className="list-title">Lista de contactos</h1>
+            <Row className='list-row'>
+                {contactlist}
             </Row>
         </Container>
     </>

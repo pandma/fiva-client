@@ -24,10 +24,12 @@ const Navigation = () => {
                         <Link to="/">
                             <Button variant="ligth" className='butonLog'>Home</Button>
                         </Link>
-                        <Link to="/about">
-                            <Button variant="ligth" className='butonLog'>Sobre Fiva</Button>
-                        </Link>
-                        <NavDropdown variant="ligth" className='butonLog'
+                        {!user &&
+                            <Link to="/about">
+                                <Button variant="ligth" className='butonLog'>Sobre Fiva</Button>
+                            </Link>
+                        }
+                        <NavDropdown variant="ligth" className='butonLog-service'
                             title="Clientes"
                             id={`offcanvasNavbarDropdown-expand-md`}
                         >
@@ -47,7 +49,7 @@ const Navigation = () => {
                                 </Link>
                             </NavDropdown.Item>
                         </NavDropdown >
-                        <NavDropdown variant="ligth" className='butonLog'
+                        <NavDropdown variant="ligth" className='butonLog-service'
                             title="Servicios"
                             id={`offcanvasNavbarDropdown-expand-md`}
                         >
