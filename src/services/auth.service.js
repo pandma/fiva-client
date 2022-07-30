@@ -1,33 +1,39 @@
-import axios from "axios"
+import axios from "axios";
 
 class AuthService {
-    constructor() {
-        console.log("###",process.env.REACT_APP_API_URL)
-        this.api = axios.create({ baseURL: `${process.env.REACT_APP_API_URL}` })
-        this.api.interceptors.request.use((config) => {
-            const token = localStorage.getItem("jwt")
+  constructor() {
+    console.log("###", process.env.REACT_APP_API_URL);
+    this.api = axios.create({ baseURL: `${process.env.REACT_APP_API_URL}` });
+    this.api.interceptors.request.use((config) => {
+      const token = localStorage.getItem("jwt");
 
-            if (token) {
-                config.headers = { Authorization: `Bearer ${token}` }
-            }
+      if (token) {
+        config.headers = { Authorization: `Bearer ${token}` };
+      }
 
-            return config
-        })
-    }
+      return config;
+    });
+  }
 
-    signup = (user) => {
-        return this.api.post("/register", user)
-    }
+  signup = (user) => {
+    return this.api.post("/register", user);
+  };
 
-    login = (user) => {
-        return this.api.post("/login", user)
-    }
+  login = (user) => {
+    return this.api.post("/login", user);
+  };
 
-    verify = (token) => {
-        return this.api.post("/user", token)
-    }
+  verify = (token) => {
+    return this.api.post("/user", token);
+  };
+  getUsers = () => {
+    return this.api.get("/users");
+  };
+  updateUsers = (user) => {
+    return this.api.put("/user/update", user);
+  };
 }
 
-const authService = new AuthService()
+const authService = new AuthService();
 
-export default authService
+export default authService;

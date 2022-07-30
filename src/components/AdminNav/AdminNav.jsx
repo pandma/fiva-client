@@ -1,20 +1,30 @@
-import Nav from 'react-bootstrap/Nav';
+import './AdminNav.css'
+import { Nav, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 const AdminNav = () => {
     return (
-        <Nav justify variant="tabs" defaultActiveKey="/home">
+        <Nav className='admin-nav' justify variant="tabs" defaultActiveKey="/home">
             <Nav.Item>
-                <Nav.Link eventKey="link-1">Home</Nav.Link>
+                <Link to="/#">
+                    <Button variant="ligth" className=''>Fivanachi Ajuste Potencia</Button>
+                </Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link eventKey="link-1">Formularios de contacto</Nav.Link>
+                <Link to="/contact-list">
+                    <Button variant="ligth" className=''>Formularios de Contacto</Button>
+                </Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link eventKey="link-1">Usuarios</Nav.Link>
+                <Link to="/users">
+                    <Button variant="ligth" className=''>Usuarios</Button>
+                </Link>
             </Nav.Item>
             <Nav.Item>
-                <Nav.Link eventKey="link-1">Precios de Ajustes de potencia</Nav.Link>
+                <Link to="/#">
+                    <Button variant="ligth" className=''>Precios de potencia</Button>
+                </Link>
             </Nav.Item>
         </Nav>
     );

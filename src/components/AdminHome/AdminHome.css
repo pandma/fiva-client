@@ -1,34 +1,30 @@
 .AdminHomeSection1 {
-    padding-bottom: 30%;
-    background-image: url(https://res.cloudinary.com/dzzkeb6xp/image/upload/v1656244479/light-bulbs-g11f841558_1920_f75cnm.jpg);
+  padding-bottom: 30%;
+  background-image: url(https://res.cloudinary.com/dzzkeb6xp/image/upload/v1656244479/light-bulbs-g11f841558_1920_f75cnm.jpg);
 }
 
 .titleHome {
-    margin-top: 10%;
-    text-align: center;
+  margin-top: 10%;
+  text-align: center;
 }
 
 .AdminHomeSection2 {
-    background-color: black;
-}
-
-.imgback {
-    background-image: url(https://res.cloudinary.com/dzzkeb6xp/image/upload/v1657827269/istockphoto-1213497796-612x612_rrj3ke.jpg);
+  background-color: black;
 }
 
 .sect2Title {
-    margin-top: 20%;
-    margin-bottom: 25%;
-    text-align: center;
+  margin-top: 20%;
+  margin-bottom: 25%;
+  text-align: center;
 }
 
 .sect2Title h1 {
-    color: white;
-    display: flex;
-    justify-content: center;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .imgback {
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

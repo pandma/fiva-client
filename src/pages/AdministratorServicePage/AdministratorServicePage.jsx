@@ -4,7 +4,6 @@ const AdministratorServicePage = () => {
     return (
         <ServiceAdministrator />
     )
-
 }
 
 export default AdministratorServicePage

@@ -7,7 +7,6 @@ const AdminHomePage = () => {
         <>
             <AdminNav />
             <AdminHome />
-
         </>
     )
 }

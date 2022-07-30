@@ -1,6 +1,8 @@
+import './loginPage.css'
 import { Container, Row, Col } from "react-bootstrap"
 import Loginform from "../../components/LoginForm/LoginForm"
-import './loginPage.css'
+
+
 const LoginPage = () => {
     return (
         <Container id="fomrL">

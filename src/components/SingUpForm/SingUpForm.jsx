@@ -54,7 +54,7 @@ const SingUpForm = () => {
                 </Form.Group>
 
                 <Button className="loginbuton" variant="light" type="submit">
-                    Log In
+                    Sing Up
                 </Button>
             </Form>
         </>

@@ -16,6 +16,7 @@ import SoftwareSolutionsPage from "../pages/SoftwareSolutionsPage/SoftwareSoluti
 import DigitalitationPage from "../pages/DigitalitationPage/DigitalitationPage"
 import SingUpPage from "../pages/SingUpPage/SingUpPage"
 import ContactPage from "../pages/ContactPage/ContactPage"
+import UsersPage from "../pages/UsersPage/UsersPage"
 
 
 const AppRoutes = () => {
@@ -38,6 +39,7 @@ const AppRoutes = () => {
             <Route path="/digitalitation" element={<DigitalitationPage />} />
             <Route path="/register" element={<SingUpPage />} />
             <Route path="/contact-list" element={<ContactPage />} />
+            <Route path="/users" element={<UsersPage />} />
 
 
             <Route path="/admin" element={<PrivateRoutes requiredRoles={["Admin"]} />}>
