@@ -28,11 +28,6 @@ const ContactModal = () => {
                 <Modal.Body>
                     <ContactForm closeModal={handleClose} />
                 </Modal.Body>
-                {/* <Modal.Footer>
-                    <Button variant="outline-dark" className='ContactButton' >
-                        Enviar
-                    </Button>
-                </Modal.Footer> */}
             </Modal>
         </>
     );

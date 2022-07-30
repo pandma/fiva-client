@@ -21,9 +21,8 @@ const SingUpForm = () => {
 
         authService
             .signup(singData)
-            .then(({ data }) => {
-                console.log(data)
-                navigate("/")
+            .then(() => {
+                navigate("/users")
             })
             .catch((err) => console.log(err))
     }

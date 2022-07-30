@@ -1,9 +1,13 @@
 import './SingUpPage.css'
 import { Container, Row, Col } from "react-bootstrap"
 import SingUpForm from "../../components/SingUpForm/SingUpForm"
+import AdminNav from '../../components/AdminNav/AdminNav'
+import UsersNav from '../../components/UsersNav/UsersNav'
 
 const SingUpPage = () => {
-    return (
+    return (<>
+        <AdminNav />
+        <UsersNav />
         <Container>
             <Row>
                 <h1 className="New-user-title">
@@ -14,7 +18,7 @@ const SingUpPage = () => {
                 </Col>
             </Row>
         </Container>
-
+    </>
     )
 }
 

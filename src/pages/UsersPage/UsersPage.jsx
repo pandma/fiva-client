@@ -16,7 +16,6 @@ const UsersPage = () => {
     const getUsers = async () => {
         const users = await authService.getUsers()
         setData(users.data)
-
     }
 
     useEffect(() => {
@@ -37,7 +36,7 @@ const UsersPage = () => {
             <AdminNav />
             <UsersNav />
             <Container fluid>
-                <h1 className="list-title">Lista de usuarios</h1>
+                <h1 className="list-title">Lista de Usuarios</h1>
                 <Row className='list-row'>
                     {userslist}
                 </Row>

@@ -16,8 +16,6 @@ const UsersList = ({ id, name, email, role }) => {
             { id, name, email, role: "Admin" }
         )
         const oneUser = user.data[0][0]
-        console.log("working on progres", user, oneUser)
-
         setData({ ...oneUser })
 
     }

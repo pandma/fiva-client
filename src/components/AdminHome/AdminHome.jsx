@@ -1,6 +1,11 @@
 import './AdminHome.css'
 import { Container, Row, Col } from 'react-bootstrap'
+import { useContext } from 'react'
+import { AuthContext } from '../../context/auth.context'
+
+
 const AdminHome = () => {
+    const { user, logOutUser, isLoggedIn, isAdmin } = useContext(AuthContext)
 
     return (
         <>
@@ -8,7 +13,7 @@ const AdminHome = () => {
                 <Container fluid>
                     <Row className='HomeRow'>
                         <Col className='titleHome' lg={{ span: 12 }} md={{ span: 12 }} >
-                            <h1>Bienvenido administrador</h1>
+                            <h1>Bienvenido Admin, {user.name}</h1>
                         </Col>
                     </Row>
                 </Container>

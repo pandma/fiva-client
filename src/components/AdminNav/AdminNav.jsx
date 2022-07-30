@@ -22,7 +22,7 @@ const AdminNav = () => {
                 </Link>
             </Nav.Item>
             <Nav.Item>
-                <Link to="/#">
+                <Link to="/companies">
                     <Button variant="ligth" className=''>Precios de potencia</Button>
                 </Link>
             </Nav.Item>

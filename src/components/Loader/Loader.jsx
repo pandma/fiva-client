@@ -1,9 +1,9 @@
 import Spinner from 'react-bootstrap/Spinner';
-
+import './Loader.css'
 const Loader = () => {
 
     return (
-        <Spinner animation="grow" variant="dark" />
+        <Spinner className='spiner-loader' animation="grow" variant="dark" />
     )
 }
 export default Loader
