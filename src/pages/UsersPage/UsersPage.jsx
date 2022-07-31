@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import authService from '../../services/auth.service'
+import AdminNavigation from '../../components/AdminNavigation/AdminNavigation';
 
 
 
@@ -25,20 +26,29 @@ const UsersPage = () => {
 
     const userslist = data.map((user) => {
         return (
-            <Col md={4} xs={6}>
-                <UsersList {...user} />
-            </Col>
+            <UsersList {...user} />
         )
     })
 
     return (
         <>
-            <AdminNav />
-            <UsersNav />
+            {/* <AdminNav /> */}
+            {/* <UsersNav /> */}
             <Container fluid>
-                <h1 className="list-title">Lista de Usuarios</h1>
-                <Row className='list-row'>
-                    {userslist}
+                <Row className=''>
+                    <Col id='main-nav' md={2}>
+                        <AdminNavigation />
+                    </Col>
+                    <Col md={10} >
+                        <Container>
+                            <Row>
+                                <h1 className="">Lista de Usuarios</h1>
+                                <Col lg={2}>
+                                    {userslist}
+                                </Col>
+                            </Row>
+                        </Container>
+                    </Col>
                 </Row>
             </Container>
         </>
