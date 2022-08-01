@@ -36,7 +36,8 @@ const Footer = () => {
                     <div className='row mt-3'>
                         <div className='col-md-3 col-lg-4 col-xl-3 mx-auto mb-4'>
                             <h6 className='text-uppercase fw-bold mb-4'>
-                                <i className='fas fa-gem me-3'></i>Company name
+                                <i className='fas fa-gem me-3'></i>
+                                Fiva.
                             </h6>
                             <p>
                                 Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
@@ -45,25 +46,25 @@ const Footer = () => {
                         </div>
 
                         <div className='col-md-2 col-lg-2 col-xl-2 mx-auto mb-4'>
-                            <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
+                            <h6 className='text-uppercase fw-bold mb-4'>Servicios</h6>
                             <p>
-                                <a href='#!' className='text-reset'>
-                                    Angular
+                                <a href='/power' className='text-reset'>
+                                    Ajuste de optimización de potencia
                                 </a>
                             </p>
                             <p>
-                                <a href='#!' className='text-reset'>
-                                    React
+                                <a href='/energy' className='text-reset'>
+                                    Estudios de eficiencia energetica
                                 </a>
                             </p>
                             <p>
-                                <a href='#!' className='text-reset'>
-                                    Vue
+                                <a href='/transition' className='text-reset'>
+                                    Transición a energía renovable
                                 </a>
                             </p>
                             <p>
-                                <a href='#!' className='text-reset'>
-                                    Laravel
+                                <a href='/solutions' className='text-reset'>
+                                    Soluciones de software
                                 </a>
                             </p>
                         </div>

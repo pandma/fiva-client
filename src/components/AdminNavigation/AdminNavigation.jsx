@@ -17,8 +17,17 @@ const AdminNavigation = () => {
                 <NavDropdown.Item href="/users">Lista de Usuarios</NavDropdown.Item>
                 <NavDropdown.Item href="/register">Crear Usuario</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link eventKey="link-1">Link</Nav.Link>
-            <Nav.Link eventKey="link-2">Link</Nav.Link>
+            <NavDropdown title="Precios Electricas" id="navbarScrollingDropdown">
+                <NavDropdown.Item href="/companies">Lista de Precios</NavDropdown.Item>
+                <NavDropdown.Item href="/">Añadir Compañia Electrica</NavDropdown.Item>
+                <NavDropdown.Item href="/">Actualizar Precios</NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title="Gestion de Clientes" id="navbarScrollingDropdown">
+                <NavDropdown.Item href="/contact-list">Lista de Clientes</NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title="Ajustes de Potencia" id="navbarScrollingDropdown">
+                <NavDropdown.Item href="/">Calcular potencia</NavDropdown.Item>
+            </NavDropdown>
         </Nav>
     );
 }

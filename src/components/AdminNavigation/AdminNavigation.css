@@ -3,3 +3,7 @@
   color: white;
   background-color: rgba(27, 12, 39, 255);
 }
+
+#main-admin-component {
+  padding: 0;
+}

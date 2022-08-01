@@ -1,12 +1,21 @@
 import './AdminHomePage.css'
-import AdminNav from '../../components/AdminNav/AdminNav'
 import AdminHome from '../../components/AdminHome/AdminHome'
+import AdminNavigation from '../../components/AdminNavigation/AdminNavigation'
+import { Container, Row, Col } from 'react-bootstrap'
 
 const AdminHomePage = () => {
     return (
         <>
-            <AdminNav />
-            <AdminHome />
+            <Container fluid>
+                <Row >
+                    <Col id='main-nav' md={2}>
+                        <AdminNavigation />
+                    </Col>
+                    <Col id='main-admin-component' md={10} >
+                        <AdminHome />
+                    </Col>
+                </Row>
+            </Container>
         </>
     )
 }

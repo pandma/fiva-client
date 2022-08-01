@@ -1,5 +1,5 @@
+import { Card } from 'react-bootstrap'
 import './CompaniesPrice.css'
-
 const CompaniesPrice = ({ name, p1, p2, p3, p4, p5, p6 }) => {
 
     return (
