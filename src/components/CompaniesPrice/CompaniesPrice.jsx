@@ -1,6 +1,10 @@
-import { Card } from 'react-bootstrap'
+import { Card, Button } from 'react-bootstrap'
+import CompaniesPriceModal from '../CompaniesPriceModal/CompaniesPriceModal'
 import './CompaniesPrice.css'
+
+
 const CompaniesPrice = ({ name, p1, p2, p3, p4, p5, p6 }) => {
+
 
     return (
         <>
@@ -8,38 +12,26 @@ const CompaniesPrice = ({ name, p1, p2, p3, p4, p5, p6 }) => {
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>
-                        Precios Por Periodos:
+                        Periodo 1: {p1}€
                     </Card.Text>
                     <Card.Text>
-                        Periodo 1:
-                        <br />
-                        {p1}€
+                        Periodo 2: {p2}€
                     </Card.Text>
                     <Card.Text>
-                        Periodo 2:
-                        <br />
-                        {p2}€
+                        Periodo 3: {p3}€
                     </Card.Text>
                     <Card.Text>
-                        Periodo 3:
-                        <br />
-                        {p3}€
+                        Periodo 4: {p4}€
                     </Card.Text>
                     <Card.Text>
-                        Periodo 4:
-                        <br />
-                        {p4}€
+                        Periodo 5: {p5}€
                     </Card.Text>
                     <Card.Text>
-                        Periodo 5:
-                        <br />
-                        {p5}€
+                        Periodo 6: {p6}€
                     </Card.Text>
-                    <Card.Text>
-                        Periodo :
-                        <br />
-                        {p6}€
-                    </Card.Text>
+
+                    <CompaniesPriceModal />
+
                 </Card.Body>
             </Card>
         </>

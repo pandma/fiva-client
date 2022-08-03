@@ -13,7 +13,7 @@ const Home = () => {
                 <Container fluid>
                     <Row className="animate">
                         <Col id="title" lg={{ span: 6 }} md={{ span: 12 }} style={{ padding: "0px 60px" }}>
-                            <h1>¿Cuanto Podemos bajar en tu factura de la luz?</h1>
+                            <h1>¿Cuánto Podemos bajar en tu factura de la luz?</h1>
                             <ContactModal />
                         </Col>
 
