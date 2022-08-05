@@ -19,14 +19,13 @@ const AdminNavigation = () => {
             </NavDropdown>
             <NavDropdown title="Precios Electricas" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="/companies">Lista de Precios</NavDropdown.Item>
-                <NavDropdown.Item href="/">Añadir Compañia Electrica</NavDropdown.Item>
-                <NavDropdown.Item href="/">Actualizar Precios</NavDropdown.Item>
+                <NavDropdown.Item href="/newcompany">Añadir Compañia Electrica</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Gestion de Clientes" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="/contact-list">Lista de Clientes</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Ajustes de Potencia" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="/">Calcular potencia</NavDropdown.Item>
+                <NavDropdown.Item href="/admin">Calcular potencia</NavDropdown.Item>
             </NavDropdown>
         </Nav>
     );

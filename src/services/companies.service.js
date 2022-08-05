@@ -16,6 +16,10 @@ class CompanyService {
   updateCompany = (companyname) => {
     return this.api.put(`/companies`, companyname);
   };
+
+  getOneCompany = (conpanyname) => {
+    return this.api.post("/onecompany", conpanyname);
+  };
 }
 
 const companyService = new CompanyService();

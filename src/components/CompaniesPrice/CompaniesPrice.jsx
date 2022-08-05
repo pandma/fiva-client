@@ -8,9 +8,9 @@ const CompaniesPrice = ({ name, p1, p2, p3, p4, p5, p6 }) => {
 
     return (
         <>
-            <Card className='users-card' style={{ width: '18rem' }}>
+            <Card className='conpany-card' style={{ width: '18rem' }}>
                 <Card.Body>
-                    <Card.Title>{name}</Card.Title>
+                    <Card.Title className='companyCardTitle'>{name}</Card.Title>
                     <Card.Text>
                         Periodo 1: {p1}€
                     </Card.Text>
@@ -29,8 +29,9 @@ const CompaniesPrice = ({ name, p1, p2, p3, p4, p5, p6 }) => {
                     <Card.Text>
                         Periodo 6: {p6}€
                     </Card.Text>
+                    <hr />
 
-                    <CompaniesPriceModal />
+                    <CompaniesPriceModal nameProp={name} p1={p1} p2={p2} p3={p3} p4={p4} p5={p5} p6={p6} />
 
                 </Card.Body>
             </Card>

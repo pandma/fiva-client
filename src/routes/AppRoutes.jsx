@@ -18,6 +18,7 @@ import SingUpPage from "../pages/SingUpPage/SingUpPage"
 import ContactPage from "../pages/ContactPage/ContactPage"
 import UsersPage from "../pages/UsersPage/UsersPage"
 import CompaniesPage from "../pages/CompaniesPage/CompaniesPage"
+import CompanyAddPage from "../pages/CompanyAddPage/CompanyAddPage"
 
 
 const AppRoutes = () => {
@@ -42,6 +43,8 @@ const AppRoutes = () => {
             <Route path="/contact-list" element={<ContactPage />} />
             <Route path="/users" element={<UsersPage />} />
             <Route path="/companies" element={<CompaniesPage />} />
+            <Route path="/newcompany" element={<CompanyAddPage />} />
+
 
 
 
