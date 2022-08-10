@@ -19,6 +19,7 @@ import ContactPage from "../pages/ContactPage/ContactPage"
 import UsersPage from "../pages/UsersPage/UsersPage"
 import CompaniesPage from "../pages/CompaniesPage/CompaniesPage"
 import CompanyAddPage from "../pages/CompanyAddPage/CompanyAddPage"
+import CalculateMax50Page from "../pages/CalculateMax50Page/CalculateMax50Page"
 
 
 const AppRoutes = () => {
@@ -44,6 +45,8 @@ const AppRoutes = () => {
             <Route path="/users" element={<UsersPage />} />
             <Route path="/companies" element={<CompaniesPage />} />
             <Route path="/newcompany" element={<CompanyAddPage />} />
+            <Route path="/calculatemax50" element={<CalculateMax50Page />} />
+
 
 
 
