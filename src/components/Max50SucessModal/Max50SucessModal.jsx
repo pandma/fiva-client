@@ -1,15 +1,11 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { useState } from 'react';
-import CompaniePriceForm from '../CompaniePriceForm/CompaniePriceForm';
+import './Max50SucessModal.css'
 
 
 
-const Max50SucessModal = ({ direction, anual_consumption, optimal_anual_consumption, annual_savings, recomended_power }) => {
+const Max50SucessModal = ({ show, handleClose, direction, anual_consumption, optimal_anual_consumption, annual_savings, recomended_power }) => {
 
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
 
     return (
         <>
@@ -22,17 +18,25 @@ const Max50SucessModal = ({ direction, anual_consumption, optimal_anual_consumpt
                 centered
             >
                 <Modal.Header closeButton>
-                    <Modal.Title>Editar Precios</Modal.Title>
+                    <Modal.Title>Resultados</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <h2>Exito</h2>
+                    <h2 className='susessTitle'>Exito</h2>
+                    <h4>Potencia optima para <br /> {direction} </h4>
+                    <p>Consumo anual: {anual_consumption}</p>
+                    <p>Consumo anual optimo: {optimal_anual_consumption}</p>
+                    <p>Ahorro anual: {annual_savings}</p>
+                    <p>Potencia recomendada: {recomended_power}</p>
                 </Modal.Body>
-                <Button onClick={handleClose} variant="primary">
-                    <strong>Calcular Precio</strong>
-                </Button>
-                <Button onClick={handleClose} variant="secondary">
-                    <strong>Ver listado</strong>
-                </Button>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Calcular Mejor Precio
+                    </Button>
+                    <Button variant="primary" onClick={handleClose}>
+                        Ver listado
+                    </Button>
+                </Modal.Footer>
+
             </Modal>
         </>
     );

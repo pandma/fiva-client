@@ -8,6 +8,10 @@ class Max50Service {
   calculateMax50 = (max50) => {
     return this.api.post("/max50", max50);
   };
+
+  getMax50 = () => {
+    return this.api.get("/getmax50");
+  };
 }
 
 const max50Service = new Max50Service();

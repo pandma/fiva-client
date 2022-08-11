@@ -27,7 +27,7 @@ const AdminNavigation = () => {
             <NavDropdown title="Ajustes de Potencia" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="/admin">Calcular Potencia optima</NavDropdown.Item>
                 <NavDropdown.Item href="/admin">Calcular Precio optimo</NavDropdown.Item>
-                <NavDropdown.Item href="/admin">Potencias calculadas</NavDropdown.Item>
+                <NavDropdown.Item href="/getmax50">Lista de Potencias </NavDropdown.Item>
             </NavDropdown>
         </Nav>
     );

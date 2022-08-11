@@ -17,7 +17,9 @@ const CalculateMax50Page = () => {
                 </Col>
                 <Col id='main-admin-component' md={10} >
                     <Container fluid>
-                        <h1 className="newcompany-title">Añadir Comercializadora</h1>
+                        <h1 className="fivanacci-title">
+                            fivanacci <span className='dot'>.</span>
+                        </h1>
 
                         <Row className='new-company'>
                             <Col md={{ span: 6, offset: 3 }}>
