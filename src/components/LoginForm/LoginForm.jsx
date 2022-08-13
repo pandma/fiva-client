@@ -1,44 +1,45 @@
-import "./LoginForm.css"
-import { useContext, useState } from "react"
-import { Form, Button } from "react-bootstrap"
-import { useNavigate } from "react-router-dom"
-import authService from "../../services/auth.service"
-import { AuthContext } from "./../../context/auth.context"
-import { MessageContext } from "../../context/message.context"
+import "./LoginForm.css";
+import { useContext, useState } from "react";
+import { Form, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import authService from "../../services/auth.service";
+import { AuthContext } from "./../../context/auth.context";
+import { MessageContext } from "../../context/message.context";
 
 
 const Loginform = () => {
     const [loginData, setLoginData] = useState({
         password: "",
         email: "",
-    })
+    });
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
-    const { storeToken, authenticateUser } = useContext(AuthContext)
-    const { showMessage } = useContext(MessageContext)
+    const { storeToken, authenticateUser } = useContext(AuthContext);
+    const { showMessage } = useContext(MessageContext);
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const authToken = await authService.login(loginData);
+            console.log(authToken.data.jwt);
+            storeToken(authToken.data.jwt);
+            showMessage("Welcome", "Successfully logged in");
+            authenticateUser();
+            navigate("/");
 
-        authService
-            .login(loginData)
-            .then(({ data }) => {
-                console.log(data.jwt)
-                storeToken(data.jwt)
-                showMessage("Welcome", "Successfully logged in")
-                authenticateUser()
-                navigate("/")
-            })
-            .catch((err) => console.log(err))
-    }
+        } catch (error) {
+            console.error(error);
+            showMessage("Please Try Again", "Incorrect Password or User");
+        }
+    };
 
     const handleInputChange = (e) => {
-        const { value, name } = e.currentTarget
-        setLoginData({ ...loginData, [name]: value })
-    }
+        const { value, name } = e.currentTarget;
+        setLoginData({ ...loginData, [name]: value });
+    };
 
-    const { password, email } = loginData
+    const { password, email } = loginData;
 
     return (
         <>
@@ -58,10 +59,10 @@ const Loginform = () => {
                 </Button>
             </Form>
         </>
-    )
-}
+    );
+};
 
-export default Loginform
+export default Loginform;
 
 
 

@@ -1,4 +1,5 @@
-import { Card, Button } from "react-bootstrap"
+import { Card, Button } from "react-bootstrap";
+import CalculateMax50Price from "../CalculateMax50Price/CalculateMax50Price";
 
 const Max50List = ({ owner, direction, cups, nif,
     hired_power, hired_price, anual_consumption,
@@ -62,15 +63,13 @@ const Max50List = ({ owner, direction, cups, nif,
                         {annual_savings_optimal_price ? annual_savings_optimal_price : "Sin calcular"}
                     </Card.Text>
 
-                    <Button variant="success">
-                        Calcular Mejor Precio
-                    </Button>
+                    <CalculateMax50Price />
 
                 </Card.Body>
             </Card>
         </>
-    )
+    );
 
-}
+};
 
-export default Max50List
+export default Max50List;

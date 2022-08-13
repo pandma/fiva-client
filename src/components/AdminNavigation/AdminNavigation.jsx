@@ -1,4 +1,4 @@
-import './AdminNavigation.css'
+import './AdminNavigation.css';
 import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -11,26 +11,25 @@ const AdminNavigation = () => {
                 </Link>
             </Navbar.Brand>
             <br />
-            <Nav.Link href="/admin">Home</Nav.Link>
-            <Nav.Link href="/admin">Analiticas</Nav.Link>
-            <NavDropdown title="Usuarios" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="/users">Lista de Usuarios</NavDropdown.Item>
-                <NavDropdown.Item href="/register">Crear Usuario</NavDropdown.Item>
+            <Nav.Link className='adminNav' href="/admin">Home</Nav.Link>
+            <Nav.Link className='adminNav' href="/admin">Analiticas</Nav.Link>
+            <NavDropdown className='adminNav' title="Usuarios" id="navbarScrollingDropdown">
+                <NavDropdown.Item className='adminNav' href="/users">Lista de Usuarios</NavDropdown.Item>
+                <NavDropdown.Item className='adminNav' href="/register">Crear Usuario</NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Precios Electricas" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="/companies">Lista de Precios</NavDropdown.Item>
-                <NavDropdown.Item href="/newcompany">Añadir Compañia Electrica</NavDropdown.Item>
+            <NavDropdown className='adminNav' title="Precios Electricas" id="navbarScrollingDropdown">
+                <NavDropdown.Item className='adminNav' href="/companies">Lista de Precios</NavDropdown.Item>
+                <NavDropdown.Item className='adminNav' href="/newcompany">Añadir Compañia Electrica</NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Gestion de Clientes" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="/contact-list">Lista de Clientes</NavDropdown.Item>
+            <NavDropdown className='adminNav' title="Gestion de Clientes" id="navbarScrollingDropdown">
+                <NavDropdown.Item className='adminNav' href="/contact-list">Lista de Clientes</NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Ajustes de Potencia" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="/admin">Calcular Potencia optima</NavDropdown.Item>
-                <NavDropdown.Item href="/admin">Calcular Precio optimo</NavDropdown.Item>
-                <NavDropdown.Item href="/getmax50">Lista de Potencias </NavDropdown.Item>
+            <NavDropdown className='adminNav' title="Ajustes de Potencia" id="navbarScrollingDropdown">
+                <NavDropdown.Item className='adminNav' href="/admin">Calcular Potencia optima</NavDropdown.Item>
+                <NavDropdown.Item className='adminNav' href="/getmax50">Lista de Potencias </NavDropdown.Item>
             </NavDropdown>
         </Nav>
     );
-}
+};
 
-export default AdminNavigation
+export default AdminNavigation;

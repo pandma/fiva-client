@@ -9,6 +9,10 @@ class Max50Service {
     return this.api.post("/max50", max50);
   };
 
+  calculateMax50Price = (max50) => {
+    return this.api.post("/getoptimalmax50", max50);
+  };
+
   getMax50 = () => {
     return this.api.get("/getmax50");
   };
