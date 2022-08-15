@@ -1,28 +1,21 @@
 #navigation {
-    background-color: rgba(27, 12, 39, 255);
+  background-color: rgba(27, 12, 39, 255);
 }
 
 #info {
-    margin-left: 24%;
-}
-
-.link {
-    margin-right: 20px;
-
+  margin-left: 24%;
 }
 
 .butonLog {
-    color: rgba(255, 255, 255, .55);
-
+  color: rgba(255, 255, 255, 0.55);
 }
 
 @media screen and (max-width: 990px) {
-    #info {
-        margin-left: 0%;
-    }
-    
-   .butonLog-service{
+  #info {
+    margin-left: 0%;
+  }
+
+  .butonLog-service {
     margin-left: 2%;
-   }
-    
+  }
 }

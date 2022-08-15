@@ -1,6 +1,5 @@
-import './AboutUs.css'
-import { Container, Row, Col, Image, Button, Card } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import './AboutUs.css';
+import { Container, Row, Col, Image, Button, Card } from 'react-bootstrap';
 
 const AboutUs = () => {
     return (
@@ -67,9 +66,7 @@ const AboutUs = () => {
                                 <Card.Img id='im2' variant="top" src="https://res.cloudinary.com/dzzkeb6xp/image/upload/v1656590699/istockphoto-854354958-612x612_ole4ld.jpg" />
                                 <Card.Body>
                                     <Card.Title>Ajustes de optimizacion de potencia</Card.Title>
-                                    <Link to='/power'>
-                                        <Button className='Buttonsm' variant="secondary">ver más</Button>
-                                    </Link>
+                                    <Button href='/power' className='Buttonsm' variant="secondary">ver más</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -78,10 +75,7 @@ const AboutUs = () => {
                                 <Card.Img id='im2' variant="top" src="https://res.cloudinary.com/dzzkeb6xp/image/upload/v1656590691/ajuste_ysqjla.jpg" />
                                 <Card.Body>
                                     <Card.Title>Estudios de eficiencia energetica</Card.Title>
-                                    <Link to='/energy'>
-                                        <Button className='Buttonsm' variant="secondary">ver más</Button>
-                                    </Link>
-
+                                    <Button href='/energy' className='Buttonsm' variant="secondary">ver más</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -90,9 +84,7 @@ const AboutUs = () => {
                                 <Card.Img id='im2' variant="top" src="https://res.cloudinary.com/dzzkeb6xp/image/upload/v1656590702/istockphoto-1128549235-612x612_fk1ftr.jpg" />
                                 <Card.Body>
                                     <Card.Title>Digitalización y soluciones de software</Card.Title>
-                                    <Link to='/solutions'>
-                                        <Button className='Buttonsm' variant="secondary">ver más</Button>
-                                    </Link>
+                                    <Button href='/solutions' className='Buttonsm' variant="secondary">ver más</Button>
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -146,7 +138,7 @@ const AboutUs = () => {
 
         </>
 
-    )
-}
+    );
+};
 
-export default AboutUs
+export default AboutUs;

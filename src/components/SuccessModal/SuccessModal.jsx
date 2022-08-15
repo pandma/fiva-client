@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import Round from '../../utils/Round';
 
 const SuccsesModal = ({ show, handleClose, price }) => {
     return (
@@ -17,10 +18,10 @@ const SuccsesModal = ({ show, handleClose, price }) => {
                     </Modal.Header>
                     <Modal.Body>
                         <h2 className='centeredBody'>{price.direction} </h2>
-                        <p>Consumo anual: {price.anual_consumption}</p>
-                        <p>Consumo anual optimo: {price.optimal_anual_consumption}</p>
-                        <p>Ahorro anual: {price.annual_savings}</p>
-                        <p>Ahorro anual con el Mejor Precio: {price.annual_savings_optimal_price}</p>
+                        <p className='smallMargin'>Consumo anual: {Round(price.anual_consumption, 0)}</p>
+                        <p className='smallMargin'>Consumo anual optimo: {Round(price.optimal_anual_consumption, 0)}</p>
+                        <p className='smallMargin'>Ahorro anual: {Round(price.annual_savings, 0)}</p>
+                        <p className='smallMargin'>Ahorro anual con el Mejor Precio: {Round(price.annual_savings_optimal_price, 0)}</p>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button variant="primary" onClick={handleClose}>

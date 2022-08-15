@@ -1,13 +1,13 @@
-import './Navigation.css'
+import './Navigation.css';
 import { Nav, Container, Navbar, NavDropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom'
-import { AuthContext } from "../../context/auth.context"
+import { Link } from 'react-router-dom';
+import { AuthContext } from "../../context/auth.context";
 import { useContext } from 'react';
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
 
 const Navigation = () => {
 
-    const { user, logOutUser, isLoggedIn, isAdmin } = useContext(AuthContext)
+    const { user, logOutUser, isLoggedIn, isAdmin } = useContext(AuthContext);
 
 
     return (
@@ -107,7 +107,7 @@ const Navigation = () => {
             </Container>
         </Navbar>
     );
-}
+};
 
-export default Navigation
+export default Navigation;
 

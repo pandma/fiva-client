@@ -113,11 +113,9 @@ const CalculateMax50Price = ({ fiva_id, direction }) => {
                         </>
                     }
                 </Form>
-
             </Modal>
             <SuccsesModal show={showSuccess} handleClose={handleCloseSuccess} price={price} />
             <Max50FailModal show={showFail} handleClose={handleCloseFail} />
-
         </>
     );
 };
