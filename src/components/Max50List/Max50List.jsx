@@ -1,7 +1,7 @@
 import { Card, Button } from "react-bootstrap";
 import CalculateMax50Price from "../CalculateMax50Price/CalculateMax50Price";
 
-const Max50List = ({ owner, direction, cups, nif,
+const Max50List = ({ fiva_id, owner, direction, cups, nif,
     hired_power, hired_price, anual_consumption,
     optimal_anual_consumption, annual_savings,
     recomended_power, annual_savings_optimal_price }) => {
@@ -9,62 +9,49 @@ const Max50List = ({ owner, direction, cups, nif,
 
     return (
         <>
-            <Card className='users-card' style={{ width: '18rem' }}>
+            <Card>
+                <Card.Header>{direction}</Card.Header>
                 <Card.Body>
-                    <Card.Title>{direction}</Card.Title>
-                    <Card.Text>
-                        Nombre:
-                        <br />
-                        {owner}
-                    </Card.Text>
-                    <Card.Text>
-                        CUPS:
-                        <br />
-                        {cups}
-                    </Card.Text>
-                    <Card.Text>
-                        Nº/Identificación Fiscal:
-                        <br />
-                        {nif}
-                    </Card.Text>
-                    <Card.Text>
-                        Potencia Contratada:
-                        <br />
-                        {hired_power}
-                    </Card.Text>
-                    <Card.Text>
-                        Precio del Cliente:
-                        <br />
-                        {hired_price}
-                    </Card.Text>
-                    <Card.Text>
-                        Consumo anual:
-                        <br />
-                        {anual_consumption ? anual_consumption : "Sin calcular"}
-                    </Card.Text>
-                    <Card.Text>
-                        Consumo Optimo:
-                        <br />
-                        {optimal_anual_consumption ? optimal_anual_consumption : "Sin calcular"}
-                    </Card.Text>
-                    <Card.Text>
-                        Ahorro anual:
-                        <br />
-                        {annual_savings ? annual_savings : "Sin calcular"}
-                    </Card.Text>
-                    <Card.Text>
-                        Potencia recomendad:
-                        <br />
-                        {recomended_power ? recomended_power : "Sin calcular"}
-                    </Card.Text>
-                    <Card.Text>
-                        Mejor precio:
-                        <br />
-                        {annual_savings_optimal_price ? annual_savings_optimal_price : "Sin calcular"}
-                    </Card.Text>
+                    <blockquote className="blockquote mb-0">
+                        <p>
+                            Nombre: {owner}
+                        </p>
+                        <p>
+                            CUPS: {cups}
+                        </p>
+                        <p>
+                            Nº/Identificación Fiscal: {nif}
+                        </p>
+                        <p>
+                            Potencia Contratada: {hired_power}
+                        </p>
+                        <p>
+                            Precio del Cliente: {hired_price}
+                        </p>
+                        <p>
+                            Consumo anual: {anual_consumption ? anual_consumption : "Sin calcular"}
 
-                    <CalculateMax50Price />
+                        </p>
+                        <p>
+                            Consumo Optimo: {optimal_anual_consumption ? optimal_anual_consumption : "Sin calcular"}
 
+                        </p>
+                        <p>
+                            Ahorro anual: {annual_savings ? annual_savings : "Sin calcular"}
+
+                        </p>
+                        <p>
+                            Potencia recomendad: {recomended_power ? recomended_power : "Sin calcular"}
+
+                        </p>
+                        <p>
+                            Mejor precio: {annual_savings_optimal_price ? annual_savings_optimal_price : "Sin calcular"}
+                        </p>
+
+                        <footer >
+                            <CalculateMax50Price fiva_id={fiva_id} direction={direction} />
+                        </footer>
+                    </blockquote>
                 </Card.Body>
             </Card>
         </>

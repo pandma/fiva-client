@@ -13,12 +13,13 @@ class CompanyService {
     return this.api.post("/companies", company);
   };
 
-  updateCompany = (companyname) => {
-    return this.api.put(`/companies`, companyname);
+  updateCompany = (companyName) => {
+    return this.api.put(`/companies`, companyName);
   };
 
-  getOneCompany = (conpanyname) => {
-    return this.api.post("/onecompany", conpanyname);
+  getOneCompany = (companyName) => {
+    const req = { name: companyName };
+    return this.api.post("/onecompany", req);
   };
 }
 

@@ -1,6 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import './Max50SucessModal.css'
+import { Link } from 'react-router-dom';
+import './Max50SucessModal.css';
 
 
 
@@ -32,15 +33,18 @@ const Max50SucessModal = ({ show, handleClose, direction, anual_consumption, opt
                     <Button variant="secondary" onClick={handleClose}>
                         Calcular Mejor Precio
                     </Button>
-                    <Button variant="primary" onClick={handleClose}>
-                        Ver listado
-                    </Button>
+                    <Link to={'/getmax50'}>
+                        <Button variant="primary" onClick={handleClose}>
+                            Ver listado
+                        </Button>
+                    </Link>
+
                 </Modal.Footer>
 
             </Modal>
         </>
     );
 
-}
+};
 
-export default Max50SucessModal
+export default Max50SucessModal;

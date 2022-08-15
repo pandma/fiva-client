@@ -9,8 +9,12 @@ class Max50Service {
     return this.api.post("/max50", max50);
   };
 
-  calculateMax50Price = (max50) => {
-    return this.api.post("/getoptimalmax50", max50);
+  calculateMax50Price = ({ fivaId, companyId }) => {
+    const req = {
+      fiva_id: fivaId,
+      company_id: companyId,
+    };
+    return this.api.post("/getoptimalmax50", req);
   };
 
   getMax50 = () => {

@@ -59,7 +59,7 @@ const Max50ListPage = () => {
 
     const max50 = Data.map((max) => {
         return (
-            <Col md={4} xs={6}>
+            <Col md={10} xs={10}>
                 <Max50List {...max} />
             </Col>
         );
@@ -78,7 +78,7 @@ const Max50ListPage = () => {
                     </Col>
                     <Col id='main-admin-component' md={10} >
                         <Container fluid>
-                            <h1 className="list-title">Lista de Potencias Calculadas</h1>
+                            <h1 className="fivanacci-title" >Potencias Calculadas</h1>
                             <Row className='list-row'>
                                 {max50}
                             </Row>
