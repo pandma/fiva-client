@@ -8,7 +8,7 @@ import Max50FailModal from '../Max50FailModal/Max50FailModal';
 import SuccsesModal from '../SuccessModal/SuccessModal';
 
 
-const CalculateMax50Price = ({ fiva_id, direction }) => {
+const CalculateMax50Price = ({ setMax50data, fiva_id, direction }) => {
     const [showSuccess, setShowSuccess] = useState(false);
     const handleCloseSuccess = () => setShowSuccess(false);
     const handleShowSucess = () => setShowSuccess(true);
@@ -54,6 +54,7 @@ const CalculateMax50Price = ({ fiva_id, direction }) => {
             const optimalPrice = await max50Service.calculateMax50Price({ ...max50 });
             const optimalPriceRes = optimalPrice.data.maximeter;
             setPrice(optimalPriceRes);
+            setMax50data({ ...optimalPriceRes });
             setIsLoading(false);
             handleShowSucess();
             handleClose();

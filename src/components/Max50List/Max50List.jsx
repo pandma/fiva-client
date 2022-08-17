@@ -1,55 +1,73 @@
-import { Card, Button } from "react-bootstrap";
+import { useState } from "react";
+import { Card } from "react-bootstrap";
 import CalculateMax50Price from "../CalculateMax50Price/CalculateMax50Price";
+import Round from "../../utils/Round";
 
 const Max50List = ({ fiva_id, owner, direction, cups, nif,
     hired_power, hired_price, anual_consumption,
     optimal_anual_consumption, annual_savings,
     recomended_power, annual_savings_optimal_price }) => {
 
+    const [max50Data, setMax50data] = useState({
+        fiva_id: fiva_id,
+        owner: owner,
+        direction: direction,
+        cups: cups,
+        nif: nif,
+        hired_power: hired_power,
+        hired_price: hired_price,
+        anual_consumption: anual_consumption,
+        optimal_anual_consumption: optimal_anual_consumption,
+        annual_savings: annual_savings,
+        recomended_power: recomended_power,
+        annual_savings_optimal_price: annual_savings_optimal_price
+
+    });
+
 
     return (
         <>
             <Card>
-                <Card.Header>{direction}</Card.Header>
+                <Card.Header>{max50Data.direction}</Card.Header>
                 <Card.Body>
                     <blockquote className="blockquote mb-0">
                         <p>
-                            Nombre: {owner}
+                            Nombre: {max50Data.owner}
                         </p>
                         <p>
-                            CUPS: {cups}
+                            CUPS: {max50Data.cups}
                         </p>
                         <p>
-                            Nº/Identificación Fiscal: {nif}
+                            Nº/Identificación Fiscal: {max50Data.nif}
                         </p>
                         <p>
-                            Potencia Contratada: {hired_power}
+                            Potencia Contratada: {max50Data.hired_power}
                         </p>
                         <p>
-                            Precio del Cliente: {hired_price}
+                            Precio del Cliente: {max50Data.hired_price}
                         </p>
                         <p>
-                            Consumo anual: {anual_consumption ? anual_consumption : "Sin calcular"}
+                            Consumo anual: {max50Data.anual_consumption ? Round(max50Data.anual_consumption, 0) : "Sin calcular"}
 
                         </p>
                         <p>
-                            Consumo Optimo: {optimal_anual_consumption ? optimal_anual_consumption : "Sin calcular"}
+                            Consumo Optimo: {max50Data.optimal_anual_consumption ? Round(max50Data.optimal_anual_consumption, 0) : "Sin calcular"}
 
                         </p>
                         <p>
-                            Ahorro anual: {annual_savings ? annual_savings : "Sin calcular"}
+                            Ahorro anual: {max50Data.annual_savings ? Round(max50Data.annual_savings, 0) : "Sin calcular"}
 
                         </p>
                         <p>
-                            Potencia recomendad: {recomended_power ? recomended_power : "Sin calcular"}
+                            Potencia recomendad: {max50Data.recomended_power ? max50Data.recomended_power : "Sin calcular"}
 
                         </p>
                         <p>
-                            Mejor precio: {annual_savings_optimal_price ? annual_savings_optimal_price : "Sin calcular"}
+                            Mejor precio: {max50Data.annual_savings_optimal_price ? Round(max50Data.annual_savings_optimal_price, 0) : "Sin calcular"}
                         </p>
 
                         <footer >
-                            <CalculateMax50Price fiva_id={fiva_id} direction={direction} />
+                            <CalculateMax50Price setMax50data={setMax50data} fiva_id={fiva_id} direction={direction} />
                         </footer>
                     </blockquote>
                 </Card.Body>

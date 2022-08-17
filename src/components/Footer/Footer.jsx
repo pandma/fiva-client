@@ -6,7 +6,7 @@ const Footer = () => {
         <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
             <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
                 <div className='me-5 d-none d-lg-block'>
-                    <span>Get connected with us on social networks:</span>
+                    <span>Get connected with us:</span>
                 </div>
 
                 <div>
@@ -75,14 +75,19 @@ const Footer = () => {
                             <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
 
                             <p>
-                                <i className='fas fa-envelope me-3'></i>
-                                info@example.com
+                                <i className='fas fa-envelope me-3'>
+                                    fiva_support@proton.me
+                                </i>
                             </p>
                             <p>
-                                <i className='fas fa-phone me-3'></i> +34 624436442
+                                <i className='fas fa-phone me-3'>
+                                    Comercial team
+                                </i> +34 624436442
                             </p>
                             <p>
-                                <i className='fas fa-print me-3'></i> +34 601118739
+                                <i className='fas fa-print me-3'>
+                                    Technical team
+                                </i> +34 601118739
                             </p>
                         </div>
                     </div>
@@ -97,6 +102,6 @@ const Footer = () => {
             </div>
         </MDBFooter>
     );
-}
+};
 
-export default Footer
+export default Footer;

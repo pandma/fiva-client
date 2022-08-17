@@ -1,9 +1,9 @@
-import './CalculateMax50.css'
-import { useState } from 'react'
-import { Form, Button } from 'react-bootstrap'
-import max50Service from '../../services/max50.service'
-import Max50SucessModal from '../Max50SucessModal/Max50SucessModal'
-import Max50FailModal from '../Max50FailModal/Max50FailModal'
+import './CalculateMax50.css';
+import { useState } from 'react';
+import { Form, Button } from 'react-bootstrap';
+import max50Service from '../../services/max50.service';
+import Max50SucessModal from '../Max50SucessModal/Max50SucessModal';
+import Max50FailModal from '../Max50FailModal/Max50FailModal';
 import Loader from '../../components/Loader/Loader';
 
 const CalculateMax50 = () => {
@@ -16,8 +16,8 @@ const CalculateMax50 = () => {
     const handleCloseFail = () => setShowFail(false);
     const handleShowFail = () => setShowFail(true);
 
-    const [isLoading, setIsLoading] = useState(false)
-    const [serviceData, setServiceData] = useState({})
+    const [isLoading, setIsLoading] = useState(false);
+    const [serviceData, setServiceData] = useState({});
 
     const [max50Data, setMax50Data] = useState({
         owner: "",
@@ -29,41 +29,42 @@ const CalculateMax50 = () => {
         hired_power: "",
         hired_price: ""
 
-    })
+    });
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
         try {
-            setIsLoading(true)
-            const resultFromService = await max50Service.calculateMax50(max50Data)
+            setIsLoading(true);
+            const resultFromService = await max50Service.calculateMax50(max50Data);
+            console.log(resultFromService.data);
 
-            if (resultFromService.status === 200) {
-                const result = resultFromService.data.maximeter
-                setServiceData({ ...result })
-                setIsLoading(false)
-                handleShow()
+            if (resultFromService.status === 200 && resultFromService.data.message != 'Error') {
+                const result = resultFromService.data.maximeter;
+                setServiceData({ ...result });
+                setIsLoading(false);
+                handleShow();
             } else {
-                setIsLoading(false)
-                handleShowFail()
+                setIsLoading(false);
+                handleShowFail();
             }
         } catch (error) {
-            console.error(JSON.stringify(error))
-            setIsLoading(false)
-            handleShowFail()
+            console.error(JSON.stringify(error));
+            setIsLoading(false);
+            handleShowFail();
         }
-    }
+    };
 
     const handleInputChange = (e) => {
-        const { value, name } = e.currentTarget
-        setMax50Data({ ...max50Data, [name]: value })
-    }
+        const { value, name } = e.currentTarget;
+        setMax50Data({ ...max50Data, [name]: value });
+    };
 
-    const { owner, direction, postalcode, cups, nif, quarter_hour_curve, hired_power, hired_price } = max50Data
+    const { owner, direction, postalcode, cups, nif, quarter_hour_curve, hired_power, hired_price } = max50Data;
 
     if (isLoading) {
         return <>
             <Loader />
-        </>
+        </>;
     } else {
         return <>
             <Form className="companyForm" onSubmit={handleSubmit}>
@@ -117,10 +118,9 @@ const CalculateMax50 = () => {
                 <Max50FailModal show={showFail} handleClose={handleCloseFail} direction={direction} {...serviceData} />
 
             </Form>
-        </>
-
+        </>;
     }
-}
+};
 
-export default CalculateMax50
+export default CalculateMax50;
 
