@@ -1,13 +1,13 @@
 .ServiceAdmineSect1 {
-    background-image: url("https://res.cloudinary.com/dzzkeb6xp/image/upload/v1658167158/pexels-juan-sauras-3034363_ukqzjs.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 82vh;
+  background-image: url("https://res.cloudinary.com/dzzkeb6xp/image/upload/v1658167158/pexels-juan-sauras-3034363_ukqzjs.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 82vh;
 }
 
-.ServiceadminTitle {
-    text-align: center;
-    color: white;
-    margin-top: 12%;
+@media screen and (max-width: 550px) {
+  .ServiceAdmineSect1 {
+    height: 60vh;
+  }
 }

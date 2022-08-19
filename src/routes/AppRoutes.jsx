@@ -1,26 +1,26 @@
-import { Routes, Route } from "react-router-dom"
-import PrivateRoutes from "./PrivateRoutes"
-import PymePage from "../pages/PymePage/PymePage"
-import HomePage from "../pages/HomePage/HomePage"
-import LoginPage from "../pages/loginPage/loginPage"
-import ErrorPage from "../pages/ErrorPage/ErrorPage"
-import AboutUsPage from "../pages/AboutUsPage/AboutUsPage"
-import AdminHomePage from "../pages/AdminHomePage/AdminHomePage"
-import BigServicePage from "../pages/BigServicePage/BigServicePage"
-import AdministratorServicePage from "../pages/AdministratorServicePage/AdministratorServicePage"
-import PowerOptimitationPage from "../pages/PowerOptimitationPage/PowerOpmtimitationPage"
-import EnergyEficyPage from "../pages/EnergyEficyPage/EnergyEficyPage"
-import EnergyTransitionPage from "../pages/EnergyTransitionPage/EnergyTransitionPage"
-import PriceRatePage from "../pages/PriceRatePage/PriceRatePage"
-import SoftwareSolutionsPage from "../pages/SoftwareSolutionsPage/SoftwareSolutionsPage"
-import DigitalitationPage from "../pages/DigitalitationPage/DigitalitationPage"
-import SingUpPage from "../pages/SingUpPage/SingUpPage"
-import ContactPage from "../pages/ContactPage/ContactPage"
-import UsersPage from "../pages/UsersPage/UsersPage"
-import CompaniesPage from "../pages/CompaniesPage/CompaniesPage"
-import CompanyAddPage from "../pages/CompanyAddPage/CompanyAddPage"
-import CalculateMax50Page from "../pages/CalculateMax50Page/CalculateMax50Page"
-import Max50ListPage from "../pages/Max50ListPage/Max50ListPage"
+import { Routes, Route } from "react-router-dom";
+import PrivateRoutes from "./PrivateRoutes";
+import PymePage from "../pages/PymePage/PymePage";
+import HomePage from "../pages/HomePage/HomePage";
+import LoginPage from "../pages/loginPage/loginPage";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import AboutUsPage from "../pages/AboutUsPage/AboutUsPage";
+import AdminHomePage from "../pages/AdminHomePage/AdminHomePage";
+import BigServicePage from "../pages/BigServicePage/BigServicePage";
+import AdministratorServicePage from "../pages/AdministratorServicePage/AdministratorServicePage";
+import PowerOptimitationPage from "../pages/PowerOptimitationPage/PowerOpmtimitationPage";
+import EnergyEficyPage from "../pages/EnergyEficyPage/EnergyEficyPage";
+import EnergyTransitionPage from "../pages/EnergyTransitionPage/EnergyTransitionPage";
+import PriceRatePage from "../pages/PriceRatePage/PriceRatePage";
+import SoftwareSolutionsPage from "../pages/SoftwareSolutionsPage/SoftwareSolutionsPage";
+import DigitalitationPage from "../pages/DigitalitationPage/DigitalitationPage";
+import SingUpPage from "../pages/SingUpPage/SingUpPage";
+import ContactPage from "../pages/ContactPage/ContactPage";
+import UsersPage from "../pages/UsersPage/UsersPage";
+import CompaniesPage from "../pages/CompaniesPage/CompaniesPage";
+import CompanyAddPage from "../pages/CompanyAddPage/CompanyAddPage";
+import CalculateMax50Page from "../pages/CalculateMax50Page/CalculateMax50Page";
+import Max50ListPage from "../pages/Max50ListPage/Max50ListPage";
 
 const AppRoutes = () => {
 
@@ -40,20 +40,34 @@ const AppRoutes = () => {
             <Route path="/price" element={<PriceRatePage />} />
             <Route path="/solutions" element={<SoftwareSolutionsPage />} />
             <Route path="/digitalitation" element={<DigitalitationPage />} />
-            <Route path="/register" element={<SingUpPage />} />
-            <Route path="/contact-list" element={<ContactPage />} />
-            <Route path="/users" element={<UsersPage />} />
-            <Route path="/companies" element={<CompaniesPage />} />
-            <Route path="/newcompany" element={<CompanyAddPage />} />
-            <Route path="/calculatemax50" element={<CalculateMax50Page />} />
-            <Route path="/getmax50" element={<Max50ListPage />} />
 
-            <Route path="/admin" element={<PrivateRoutes requiredRoles={["Admin"]} />}>
+            <Route path="/admin" element={<PrivateRoutes requiredRoles={["User"]} />}>
                 <Route path="" element={<AdminHomePage />} />
+            </Route>
+            <Route path="/register" element={<PrivateRoutes requiredRoles={["User"]} />}>
+                <Route path="" element={<SingUpPage />} />
+            </Route>
+            <Route path="/contact-list" element={<PrivateRoutes requiredRoles={["User"]} />}>
+                <Route path="" element={<ContactPage />} />
+            </Route>
+            <Route path="/users" element={<PrivateRoutes requiredRoles={["User"]} />}>
+                <Route path="" element={<UsersPage />} />
+            </Route>
+            <Route path="/companies" element={<PrivateRoutes requiredRoles={["User"]} />}>
+                <Route path="" element={<CompaniesPage />} />
+            </Route>
+            <Route path="/newcompany" element={<PrivateRoutes requiredRoles={["User"]} />}>
+                <Route path="" element={<CompanyAddPage />} />
+            </Route>
+            <Route path="/calculatemax50" element={<PrivateRoutes requiredRoles={["User"]} />}>
+                <Route path="" element={<CalculateMax50Page />} />
+            </Route>
+            <Route path="/getmax50" element={<PrivateRoutes requiredRoles={["User"]} />}>
+                <Route path="" element={<Max50ListPage />} />
             </Route>
 
         </Routes>
-    )
-}
+    );
+};
 
-export default AppRoutes
+export default AppRoutes;

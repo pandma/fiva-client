@@ -1,7 +1,13 @@
-.SolutionsSect1{
-    background-image: url("https://res.cloudinary.com/dzzkeb6xp/image/upload/v1658689607/pexels-pixabay-276452_afiixb.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 82vh;
+.SolutionsSect1 {
+  background-image: url("https://res.cloudinary.com/dzzkeb6xp/image/upload/v1658689607/pexels-pixabay-276452_afiixb.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 82vh;
+}
+
+@media screen and (max-width: 550px) {
+  .SolutionsSect1 {
+    height: 60vh;
+  }
 }

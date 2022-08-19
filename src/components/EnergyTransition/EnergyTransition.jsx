@@ -1,15 +1,15 @@
-import './EnergyTransition.css'
-import { Container, Row, Col } from "react-bootstrap"
-import ContactModal from '../ContactModal/ContactModal'
+import './EnergyTransition.css';
+import { Container, Row, Col } from "react-bootstrap";
+import ContactModal from '../ContactModal/ContactModal';
 
 
 
-const EnergyTransition=()=>{
-    return(
+const EnergyTransition = () => {
+    return (
         <>
-        <Container className="TransitionSect1" fluid>
+            <Container className="TransitionSect1" fluid>
                 <Row>
-                    <Col className='ServiceadminTitle' xs={{ span: 12 }} md={{ span: 12 }} >
+                    <Col className='ServicepymeTitle' xs={{ span: 12 }} md={{ span: 12 }} >
                         <h1>Transición a Energia Renovable</h1>
                     </Col>
                 </Row>
@@ -69,10 +69,10 @@ const EnergyTransition=()=>{
                     </Col>
                 </Row>
             </Container>
-            </>
+        </>
 
-    )
-}
+    );
+};
 
 
-export default EnergyTransition
+export default EnergyTransition;

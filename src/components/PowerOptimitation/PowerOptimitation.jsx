@@ -1,14 +1,14 @@
-import './PowerOptimitation.css'
-import { Container, Row, Col } from "react-bootstrap"
-import ContactModal from '../ContactModal/ContactModal'
+import './PowerOptimitation.css';
+import { Container, Row, Col } from "react-bootstrap";
+import ContactModal from '../ContactModal/ContactModal';
 
 
-const PowerOtimitation=()=>{
-    return(
+const PowerOtimitation = () => {
+    return (
         <>
-         <Container className="PowerOptimitationSect1" fluid>
+            <Container className="PowerOptimitationSect1" fluid>
                 <Row>
-                    <Col className='ServiceadminTitle' xs={{ span: 12 }} md={{ span: 12 }} >
+                    <Col className='ServicepymeTitle' xs={{ span: 12 }} md={{ span: 12 }} >
                         <h1>Optimización de Potencia</h1>
                     </Col>
                 </Row>
@@ -26,7 +26,7 @@ const PowerOtimitation=()=>{
                     <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
                     <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                         <p>
-                            Os pedimos autorización para consultar vuestros datos en SIPS (Sistema de Intercambio de Punto de Suministro) 
+                            Os pedimos autorización para consultar vuestros datos en SIPS (Sistema de Intercambio de Punto de Suministro)
                             y con nuestra aplicación ajustamos la potencia contratada a la demanda real a lo largo del año.
                         </p>
                         <br />
@@ -49,7 +49,7 @@ const PowerOtimitation=()=>{
                         </p>
                     </Col>
                 </Row>
-               
+
             </Container>
 
             <Container className='ServicepymeSect3' fluid>
@@ -62,10 +62,10 @@ const PowerOtimitation=()=>{
                     </Col>
                 </Row>
             </Container>
-        
-        </>
-    )
-}
 
-export default PowerOtimitation
+        </>
+    );
+};
+
+export default PowerOtimitation;
 

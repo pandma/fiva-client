@@ -1,6 +1,6 @@
-import './ServicePyme.css'
-import { Container, Row, Col } from "react-bootstrap"
-import ContactModal from '../ContactModal/ContactModal'
+import './ServicePyme.css';
+import { Container, Row, Col } from "react-bootstrap";
+import ContactModal from '../ContactModal/ContactModal';
 
 const ServicePyme = () => {
     return (
@@ -60,7 +60,7 @@ const ServicePyme = () => {
                 </Row>
             </Container>
         </>
-    )
-}
+    );
+};
 
-export default ServicePyme
+export default ServicePyme;

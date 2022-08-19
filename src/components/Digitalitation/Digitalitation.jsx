@@ -1,13 +1,13 @@
-import './Digitalitation.css'
-import { Container, Row, Col } from "react-bootstrap"
-import ContactModal from '../ContactModal/ContactModal'
+import './Digitalitation.css';
+import { Container, Row, Col } from "react-bootstrap";
+import ContactModal from '../ContactModal/ContactModal';
 
-const Digitalitation=()=>{
-    return(
+const Digitalitation = () => {
+    return (
         <>
-        <Container className="DigitalitataionSect1" fluid>
+            <Container className="DigitalitataionSect1" fluid>
                 <Row>
-                    <Col className='ServiceadminTitle' xs={{ span: 12 }} md={{ span: 12 }} >
+                    <Col className='ServicepymeTitle' xs={{ span: 12 }} md={{ span: 12 }} >
                         <h1>Digitalización</h1>
                     </Col>
                 </Row>
@@ -67,8 +67,8 @@ const Digitalitation=()=>{
                     </Col>
                 </Row>
             </Container>
-            </>
-    )
-}
+        </>
+    );
+};
 
-export default Digitalitation
+export default Digitalitation;

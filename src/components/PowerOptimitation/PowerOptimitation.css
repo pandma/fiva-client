@@ -1,7 +1,13 @@
 .PowerOptimitationSect1 {
-    background-image: url("https://res.cloudinary.com/dzzkeb6xp/image/upload/v1658689608/pexels-saya-kimura-401107_kpup8q.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 82vh;
+  background-image: url("https://res.cloudinary.com/dzzkeb6xp/image/upload/v1658689608/pexels-saya-kimura-401107_kpup8q.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 82vh;
+}
+
+@media screen and (max-width: 550px) {
+  .PowerOptimitationSect1 {
+    height: 60vh;
+  }
 }

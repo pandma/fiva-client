@@ -1,8 +1,17 @@
-.EnergyEficySect1{
-    background-image: url("https://res.cloudinary.com/dzzkeb6xp/image/upload/v1658690876/pexels-led-supermarket-577514_gb870u.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 82vh;
+.EnergyEficySect1 {
+  background-image: url("https://res.cloudinary.com/dzzkeb6xp/image/upload/v1658690876/pexels-led-supermarket-577514_gb870u.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 82vh;
+}
 
+.EnergyEfficyTitle {
+  margin-top: 5%;
+  color: white;
+}
+@media screen and (max-width: 550px) {
+  .EnergyEficySect1 {
+    height: 60vh;
+  }
 }

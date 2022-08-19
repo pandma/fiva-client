@@ -1,13 +1,13 @@
-import './ServiceAdministrator.css'
-import { Container, Row, Col } from "react-bootstrap"
-import ContactModal from '../ContactModal/ContactModal'
+import './ServiceAdministrator.css';
+import { Container, Row, Col } from "react-bootstrap";
+import ContactModal from '../ContactModal/ContactModal';
 
 const ServiceAdministrator = () => {
     return (
         <>
             <Container className="ServiceAdmineSect1" fluid>
                 <Row>
-                    <Col className='ServiceadminTitle' xs={{ span: 12 }} md={{ span: 12 }} >
+                    <Col className='ServicepymeTitle' xs={{ span: 12 }} md={{ span: 12 }} >
                         <h1>Administradores de Fincas</h1>
                     </Col>
                 </Row>
@@ -68,8 +68,8 @@ const ServiceAdministrator = () => {
                 </Row>
             </Container>
         </>
-    )
+    );
 
-}
+};
 
-export default ServiceAdministrator
+export default ServiceAdministrator;

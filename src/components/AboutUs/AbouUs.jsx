@@ -1,5 +1,6 @@
 import './AboutUs.css';
 import { Container, Row, Col, Image, Button, Card } from 'react-bootstrap';
+import ContactModal from '../ContactModal/ContactModal';
 
 const AboutUs = () => {
     return (
@@ -23,7 +24,7 @@ const AboutUs = () => {
                         </Col>
                     </Row>
                     <Row className='space'>
-                        <Col className='circle' xs={{ span: 12 }} md={{ span: 6, offset: 3 }} />
+                        <Col className='circle' md={{ span: 6, offset: 3 }} />
                         <Col xs={{ span: 12 }} md={{ span: 6, offset: 0 }}  >
                             <p>
                                 Fiva se compone de profesionales especializados en el sector energetico y tecnologico pàra poder ofrecer los mejores servicios fiva cuenta con profesionales
@@ -131,6 +132,19 @@ const AboutUs = () => {
                         <Col id="sect3text" lg={{ span: 4 }} style={{ padding: "0px" }}>
                             <h3>CEO</h3>
                             <p>Pablo Andreu</p>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+
+            <section id="section5">
+                <Container fluid>
+                    <Row>
+                        <Col id="ib2" lg={{ span: 6 }} md={{ span: 12 }}></Col>
+
+                        <Col id="titlehome" lg={{ span: 6 }} md={{ span: 12 }} style={{ padding: "0px 60px" }}>
+                            <h1>¿Te sintes perdido? Preguntanos!</h1>
+                            <ContactModal />
                         </Col>
                     </Row>
                 </Container>

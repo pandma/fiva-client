@@ -1,38 +1,260 @@
 #section1 {
-    background-color: black;
+  background-color: black;
 }
 
 #section1 h1 {
-    color: white;
-    display: flex;
-    justify-content: center;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .Button {
-    color: white;
-    width: 100%;
-    height: 48px;
-    border-radius: 6px;
-    background-color: rgba(27, 12, 39, 255);
-    font-weight: bolder;
+  color: white;
+  width: 100%;
+  height: 48px;
+  border-radius: 6px;
+  background-color: rgba(27, 12, 39, 255);
+  font-weight: bolder;
 }
 
 .Button2 {
-    color: white;
-    width: 100%;
-    height: 48px;
-    border-radius: 6px;
-    background-color: black;
-    font-weight: bolder;
+  color: white;
+  width: 100%;
+  height: 48px;
+  border-radius: 6px;
+  background-color: black;
+  font-weight: bolder;
 }
 
 .addVanButton {
-    background-color: red;
-    width: 100%;
+  background-color: red;
+  width: 100%;
 }
 
-
 #section2 {
+  background-color: rgba(27, 12, 39, 255);
+  color: white;
+  align-items: center;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 5%;
+  padding-bottom: 7%;
+}
+#section2-small {
+  display: none;
+}
+
+.OurService {
+  margin-top: 5%;
+}
+
+#section2 h2 {
+  margin-bottom: 2%;
+  text-align: center;
+}
+
+#card1 {
+  margin: 4%;
+}
+
+#card2 {
+  margin: 4%;
+}
+
+#card3 {
+  margin-top: 10%;
+}
+
+#card4 {
+  margin-top: 10%;
+}
+
+#section3 {
+  margin-top: 3%;
+}
+
+.modal-content {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.948);
+}
+
+#ib {
+  background-image: url("https://res.cloudinary.com/dzzkeb6xp/image/upload/v1656184964/lightbulb-g19ea75f8f_1920_agufnq.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#titlehome {
+  margin-top: 15%;
+  margin-bottom: 12%;
+  text-align: center;
+}
+
+#titlehome h1 {
+  color: white;
+  margin-bottom: 5%;
+  text-align: center;
+}
+#title h1 {
+  color: white;
+  margin-bottom: 5%;
+  text-align: center;
+}
+#title {
+  margin-top: 15%;
+  margin-bottom: 12%;
+  text-align: center;
+}
+
+#btn {
+  font-size: 1.4em;
+}
+
+#im {
+  max-width: 800px;
+  padding: 6px;
+}
+
+#section2 h3 {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 15%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#t-h4 {
+  text-align: center;
+  margin-bottom: 4%;
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
+#section2 p {
+  text-align: center;
+}
+
+#im2 {
+  max-height: 600px;
+}
+
+#section4 {
+  background-image: url("https://images.pexels.com/photos/210010/pexels-photo-210010.jpeg?cs=srgb&dl=pexels-pixabay-210010.jpg&fm=jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 20%;
+  padding-bottom: 20%;
+}
+
+#section4 h2 {
+  text-align: center;
+}
+
+#section3 h2 {
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+#section3 {
+  margin-top: 4%;
+}
+
+#btn2 {
+  margin-top: 5%;
+}
+
+#div4 {
+  text-align: center;
+}
+
+#sect3text {
+  margin-bottom: 5%;
+}
+
+#section5 {
+  background-color: black;
+}
+
+#ib2 {
+  background-image: url("https://res.cloudinary.com/dzzkeb6xp/image/upload/v1656244480/light-bulb-g328f0124a_1920_jh5igs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right 0px;
+}
+
+#section5 h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.animate {
+  animation-duration: 0.5s;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+.animateImg {
+  animation-duration: 1.75s;
+  animation-delay: 0.5s;
+  animation-name: animate-fade;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+  animation-fill-mode: backwards;
+}
+
+/* Glow In */
+.animate.glow {
+  animation-name: animate-glow;
+  animation-timing-function: ease;
+}
+
+.delay-1 {
+  animation-delay: 1s;
+}
+
+.delay-2 {
+  animation-delay: 1.5s;
+}
+
+.delay-3 {
+  animation-delay: 2s;
+}
+
+.delay-4 {
+  animation-delay: 2.5s;
+}
+
+@keyframes animate-glow {
+  0% {
+    opacity: 0;
+    filter: brightness(3) saturate(3);
+    transform: scale(0.8, 0.8);
+  }
+
+  100% {
+    opacity: 1;
+    filter: brightness(1) saturate(1);
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #section2 {
+    display: none;
+  }
+
+  #section2-small {
+    display: block;
     background-color: rgba(27, 12, 39, 255);
     color: white;
     align-items: center;
@@ -40,202 +262,24 @@
     padding-right: 3%;
     padding-top: 5%;
     padding-bottom: 7%;
-}
-
-.OurService {
-    margin-top: 5%;
-
-}
-
-#section2 h2 {
-    margin-bottom: 2%;
+  }
+  #t-h4 {
     text-align: center;
-}
-
-#card1 {
-    margin: 4%;
-}
-
-#card2 {
-    margin: 4%;
-}
-
-#card3 {
-    margin-top: 10%;
-}
-
-#card4 {
-    margin-top: 10%;
-}
-
-#section3 {
-    margin-top: 3%;
-}
-
-.modal-content {
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.948);
-}
-
-#ib {
-    background-image: url("https://res.cloudinary.com/dzzkeb6xp/image/upload/v1656184964/lightbulb-g19ea75f8f_1920_agufnq.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#title {
-    margin-top: 15%;
-    margin-bottom: 12%;
-    text-align: center;
-
-}
-
-#title h1 {
-    color: white;
-    margin-bottom: 5%;
-    text-align: center;
-}
-
-#btn {
-    font-size: 1.4em;
-}
-
-#im {
-    max-width: 800px;
-    padding: 6px;
-}
-
-#section2 h3 {
-    text-align: center;
-    font-size: 25px;
-    margin-top: 15%;
-    margin-left: 5%;
-    margin-right: 5%;
-
-}
-
-#t-h4 {
-    text-align: center;
-    margin-bottom: 4%;
+    margin-bottom: 8%;
     margin-left: 12%;
     margin-right: 12%;
-}
+    line-height: 1.8;
+  }
 
-#section2 p {
+  .centered {
     text-align: center;
-}
+    margin-top: 8%;
+    margin-bottom: 4%;
+  }
 
-#im2 {
-    max-height: 600px;
-}
-
-#section4 {
-    background-image: url("https://images.pexels.com/photos/210010/pexels-photo-210010.jpeg?cs=srgb&dl=pexels-pixabay-210010.jpg&fm=jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 20%;
-    padding-bottom: 20%;
-}
-
-#section4 h2 {
+  #titlehome {
+    margin-top: 25%;
+    margin-bottom: 22%;
     text-align: center;
-}
-
-#section3 h2 {
-    text-align: center;
-    margin-bottom: 2%;
-}
-
-#section3 {
-    margin-top: 4%;
-}
-
-#btn2 {
-    margin-top: 5%;
-}
-
-#div4 {
-    text-align: center;
-}
-
-#sect3text {
-    margin-bottom: 5%;
-}
-
-#section5 {
-    background-color: black
-}
-
-#ib2 {
-    background-image: url("https://res.cloudinary.com/dzzkeb6xp/image/upload/v1656244480/light-bulb-g328f0124a_1920_jh5igs.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right 0px;
-}
-
-#section5 h1 {
-    display: flex;
-    justify-content: center;
-}
-
-
-.animate {
-    animation-duration: 0.5s;
-    animation-name: animate-fade;
-    animation-delay: 0.5s;
-    animation-fill-mode: backwards;
-}
-
-.animateImg {
-    animation-duration: 1.75s;
-    animation-delay: 0.5s;
-    animation-name: animate-fade;
-    animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
-    animation-fill-mode: backwards;
-}
-
-/* Glow In */
-.animate.glow {
-    animation-name: animate-glow;
-    animation-timing-function: ease;
-}
-
-.delay-1 {
-    animation-delay: 1.00s;
-}
-
-.delay-2 {
-    animation-delay: 1.50s;
-}
-
-.delay-3 {
-    animation-delay: 2.00s;
-}
-
-.delay-4 {
-    animation-delay: 2.50s;
-}
-
-@keyframes animate-glow {
-    0% {
-        opacity: 0;
-        filter: brightness(3) saturate(3);
-        transform: scale(0.8, 0.8);
-    }
-
-    100% {
-        opacity: 1;
-        filter: brightness(1) saturate(1);
-        transform: scale(1, 1);
-    }
-}
-
-@keyframes animate-fade {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
+  }
 }
