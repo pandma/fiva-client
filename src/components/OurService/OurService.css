@@ -15,4 +15,13 @@
   .title1 {
     text-align: center;
   }
+  .Servicetitle {
+    text-align: center;
+    margin-bottom: 8%;
+    margin-top: 8%;
+  }
+  .Servicerow {
+    align-items: center;
+    justify-content: center;
+  }
 }

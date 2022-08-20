@@ -34,17 +34,17 @@ const Navigation = () => {
                             id={`offcanvasNavbarDropdown-expand-md`}
                         >
                             <NavDropdown.Item >
-                                <Link to="/pyme">
+                                <Link to="/pyme" className='colored-fiva' style={{ textDecoration: 'none' }} >
                                     <p>Pymes</p>
                                 </Link>
                             </NavDropdown.Item>
                             <NavDropdown.Item >
-                                <Link to="/bigconstumer">
+                                <Link to="/bigconstumer" className='colored-fiva' style={{ textDecoration: 'none' }} >
                                     <p>Grandes consumidores</p>
                                 </Link>
                             </NavDropdown.Item>
                             <NavDropdown.Item >
-                                <Link to="/administrator">
+                                <Link to="/administrator" className='colored-fiva' style={{ textDecoration: 'none' }} >
                                     <p>Administradores de fincas</p>
                                 </Link>
                             </NavDropdown.Item>
@@ -54,32 +54,32 @@ const Navigation = () => {
                             id={`offcanvasNavbarDropdown-expand-md`}
                         >
                             <NavDropdown.Item >
-                                <Link to="/power">
+                                <Link to="/power" className='colored-fiva' style={{ textDecoration: 'none' }} >
                                     <p>Ajuste de optimización de potencia</p>
                                 </Link>
                             </NavDropdown.Item>
                             <NavDropdown.Item >
-                                <Link to="/energy">
+                                <Link to="/energy" className='colored-fiva' style={{ textDecoration: 'none' }} >
                                     <p>Estudios de eficiencia energetica</p>
                                 </Link>
                             </NavDropdown.Item>
                             <NavDropdown.Item >
-                                <Link to="/transition">
+                                <Link to="/transition" className='colored-fiva' style={{ textDecoration: 'none' }} >
                                     <p>Transición a energía renovable</p>
                                 </Link>
                             </NavDropdown.Item>
                             <NavDropdown.Item >
-                                <Link to="/price">
+                                <Link to="/price" className='colored-fiva' style={{ textDecoration: 'none' }} >
                                     <p>Comparativa de tarifas</p>
                                 </Link>
                             </NavDropdown.Item>
                             <NavDropdown.Item >
-                                <Link to="/solutions">
+                                <Link to="/solutions" className='colored-fiva' style={{ textDecoration: 'none' }} >
                                     <p>Soluciones de software</p>
                                 </Link>
                             </NavDropdown.Item>
                             <NavDropdown.Item >
-                                <Link to="/digitalitation">
+                                <Link to="/digitalitation" className='colored-fiva' style={{ textDecoration: 'none' }} >
                                     <p>Digitalización</p>
                                 </Link>
                             </NavDropdown.Item>
