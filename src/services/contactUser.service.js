@@ -16,6 +16,10 @@ class ContactUserService {
   updateContactState = (userName) => {
     return this.api.put(`/contact`, userName);
   };
+
+  addComments = (comment) => {
+    return this.api.post("/addcomments", comment);
+  };
 }
 
 const contactUserService = new ContactUserService();

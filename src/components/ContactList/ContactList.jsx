@@ -1,24 +1,34 @@
 
-import './ContactList.css'
-import { Button, Card } from 'react-bootstrap';
-import contactUserService from "../../services/contactUser.service"
+import './ContactList.css';
+import { Button, Card, ListGroup } from 'react-bootstrap';
+import contactUserService from "../../services/contactUser.service";
 import { useState } from 'react';
+import NewCommentForm from '../NewCommentForm/NewCommentForm';
 
 
 
-const ContactList = ({ name, email, message, state, phone }) => {
+const ContactList = ({ name, email, message, state, phone, comment, id }) => {
 
     const [data, setData] = useState(
-        { name, email, message, state, phone }
-    )
-
+        {
+            name, email, message, state, phone
+        }
+    );
+    const [commentsData, setCommnetsData] = useState(comment);
 
     const changeState = async () => {
-        const getUser = await contactUserService.updateContactState({ "name": name })
-        const oneUser = getUser.data.user
-        setData({ ...oneUser })
+        const getUser = await contactUserService.updateContactState({ "name": name });
+        const oneUser = getUser.data.user;
+        setData({ ...oneUser });
 
-    }
+    };
+
+    const comments = commentsData.map((oneComment) => {
+        return (
+            <ListGroup.Item>{oneComment}</ListGroup.Item>
+
+        );
+    });
 
 
     return (
@@ -45,6 +55,7 @@ const ContactList = ({ name, email, message, state, phone }) => {
                     <br />
                     {data.state === "Processed" ? "Finalizado" : "Pendiente"}
                 </Card.Text>
+
                 {data.state === "Processed" ?
                     <Button onClick={changeState} variant="success">
                         Finalizado
@@ -54,9 +65,17 @@ const ContactList = ({ name, email, message, state, phone }) => {
                     </Button>}
 
             </Card.Body>
+            <Card.Body>
+                <Card.Header>Comentarios</Card.Header>
+                <ListGroup variant="flush">
+                    {comments}
+                </ListGroup>
+                <br />
+                <NewCommentForm commentsData={commentsData} setCommnetsData={setCommnetsData} clientId={id} />
+            </Card.Body>
         </Card>
     );
-}
+};
 
 
-export default ContactList
+export default ContactList;
