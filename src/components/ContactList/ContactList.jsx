@@ -1,9 +1,14 @@
 
 import './ContactList.css';
-import { Button, Card, ListGroup } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import contactUserService from "../../services/contactUser.service";
 import { useState } from 'react';
+import CommentCard from '../CommentCard/CommentCard';
 import NewCommentForm from '../NewCommentForm/NewCommentForm';
+
+
+
+
 
 
 
@@ -23,16 +28,9 @@ const ContactList = ({ name, email, message, state, phone, comment, id }) => {
 
     };
 
-    const comments = commentsData.map((oneComment) => {
-        return (
-            <ListGroup.Item>{oneComment}</ListGroup.Item>
-
-        );
-    });
-
 
     return (
-        <Card className='contact-card' style={{ width: '18rem' }}>
+        <Card className='contact-card' style={{ width: '25rem' }}>
             <Card.Body>
                 <Card.Title>{data.name}</Card.Title>
                 <Card.Text>
@@ -67,9 +65,7 @@ const ContactList = ({ name, email, message, state, phone, comment, id }) => {
             </Card.Body>
             <Card.Body>
                 <Card.Header>Comentarios</Card.Header>
-                <ListGroup variant="flush">
-                    {comments}
-                </ListGroup>
+                <CommentCard commentsData={commentsData} />
                 <br />
                 <NewCommentForm commentsData={commentsData} setCommnetsData={setCommnetsData} clientId={id} />
             </Card.Body>
