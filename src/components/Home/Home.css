@@ -278,8 +278,16 @@
   }
 
   #titlehome {
-    margin-top: 25%;
-    margin-bottom: 22%;
+    margin-top: 15%;
+    margin-bottom: 12%;
     text-align: center;
+    height: 50vh;
+  }
+  #titlehome h1 {
+    color: white;
+    margin-bottom: 15%;
+    margin-top: 25%;
+    text-align: center;
+    line-height: 150%;
   }
 }
