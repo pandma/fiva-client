@@ -46,18 +46,21 @@ const CalculateMax50Price = ({ setMax50data, fiva_id, direction }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            setIsLoading(true);
-            const oneComp = await companyService.getOneCompany(formData.company);
-            const companyId = oneComp.data.company.id;
-            const fivaId = fiva_id;
-            const max50 = { companyId, fivaId };
-            const optimalPrice = await max50Service.calculateMax50Price({ ...max50 });
-            const optimalPriceRes = optimalPrice.data.maximeter;
-            setPrice(optimalPriceRes);
-            setMax50data({ ...optimalPriceRes });
-            setIsLoading(false);
-            handleShowSucess();
-            handleClose();
+            if (formData.company) {
+                setIsLoading(true);
+                const oneComp = await companyService.getOneCompany(formData.company);
+                const companyId = oneComp.data.company.id;
+                const fivaId = fiva_id;
+                const max50 = { companyId, fivaId };
+                const optimalPrice = await max50Service.calculateMax50Price({ ...max50 });
+                const optimalPriceRes = optimalPrice.data.maximeter;
+                setPrice(optimalPriceRes);
+                setMax50data({ ...optimalPriceRes });
+                setIsLoading(false);
+                handleShowSucess();
+                handleClose();
+            }
+
 
         } catch (error) {
             console.error(error);
@@ -102,6 +105,7 @@ const CalculateMax50Price = ({ setMax50data, fiva_id, direction }) => {
                                 <Form.Group className="mb-3">
                                     <Form.Label htmlFor="disabledSelect">Elige Comercializadora</Form.Label>
                                     <Form.Select id="company" name="company" onChange={handleInputChange} value={company}>
+                                        <option>Selecciona un proveedor</option>
                                         {electricComp}
                                     </Form.Select>
                                 </Form.Group>
