@@ -1,28 +1,36 @@
 
-import './ContactList.css'
+import './ContactList.css';
 import { Button, Card } from 'react-bootstrap';
-import contactUserService from "../../services/contactUser.service"
+import contactUserService from "../../services/contactUser.service";
 import { useState } from 'react';
+import CommentCard from '../CommentCard/CommentCard';
+import NewCommentForm from '../NewCommentForm/NewCommentForm';
 
 
 
-const ContactList = ({ name, email, message, state, phone }) => {
+
+
+
+
+const ContactList = ({ name, email, message, state, phone, comment, id }) => {
 
     const [data, setData] = useState(
-        { name, email, message, state, phone }
-    )
-
+        {
+            name, email, message, state, phone
+        }
+    );
+    const [commentsData, setCommnetsData] = useState(comment);
 
     const changeState = async () => {
-        const getUser = await contactUserService.updateContactState({ "name": name })
-        const oneUser = getUser.data.user
-        setData({ ...oneUser })
+        const getUser = await contactUserService.updateContactState({ "name": name });
+        const oneUser = getUser.data.user;
+        setData({ ...oneUser });
 
-    }
+    };
 
 
     return (
-        <Card className='contact-card' style={{ width: '18rem' }}>
+        <Card className='contact-card' style={{ width: '25rem' }}>
             <Card.Body>
                 <Card.Title>{data.name}</Card.Title>
                 <Card.Text>
@@ -45,6 +53,7 @@ const ContactList = ({ name, email, message, state, phone }) => {
                     <br />
                     {data.state === "Processed" ? "Finalizado" : "Pendiente"}
                 </Card.Text>
+
                 {data.state === "Processed" ?
                     <Button onClick={changeState} variant="success">
                         Finalizado
@@ -54,9 +63,15 @@ const ContactList = ({ name, email, message, state, phone }) => {
                     </Button>}
 
             </Card.Body>
+            <Card.Body>
+                <Card.Header>Comentarios</Card.Header>
+                <CommentCard commentsData={commentsData} />
+                <br />
+                <NewCommentForm commentsData={commentsData} setCommnetsData={setCommnetsData} clientId={id} />
+            </Card.Body>
         </Card>
     );
-}
+};
 
 
-export default ContactList
+export default ContactList;

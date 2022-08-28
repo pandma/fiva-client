@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
-import { Form, Button } from 'react-bootstrap'
-import companyService from '../../services/companies.service'
-import './CompaniePriceForm.css'
+import { useState } from 'react';
+import { Form, Button } from 'react-bootstrap';
+import companyService from '../../services/companies.service';
+import './CompaniePriceForm.css';
 
 const CompaniePriceForm = ({ handleClose, nameProp, prop1, prop2, prop3, prop4, prop5, prop6 }) => {
 
@@ -14,27 +14,26 @@ const CompaniePriceForm = ({ handleClose, nameProp, prop1, prop2, prop3, prop4, 
         p5: prop5,
         p6: prop6
 
-    })
+    });
+
     const refreshPage = () => {
         window.location.reload(false);
-    }
-
-
+    };
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
-        await companyService.updateCompany(companyData)
-        handleClose()
-        refreshPage()
+        e.preventDefault();
+        await companyService.updateCompany(companyData);
+        handleClose();
+        refreshPage();
 
-    }
+    };
 
     const handleInputChange = (e) => {
-        const { value, name } = e.currentTarget
-        setCompanyData({ ...companyData, [name]: value })
-    }
+        const { value, name } = e.currentTarget;
+        setCompanyData({ ...companyData, [name]: value });
+    };
 
-    const { name, p1, p2, p3, p4, p5, p6 } = companyData
+    const { name, p1, p2, p3, p4, p5, p6 } = companyData;
 
     return <>
         <Form className="companyForm" onSubmit={handleSubmit}>
@@ -70,8 +69,8 @@ const CompaniePriceForm = ({ handleClose, nameProp, prop1, prop2, prop3, prop4, 
                 Actualizar
             </Button>
         </Form>
-    </>
-}
+    </>;
+};
 
 
-export default CompaniePriceForm
+export default CompaniePriceForm;

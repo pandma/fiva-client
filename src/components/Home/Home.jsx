@@ -29,42 +29,71 @@ const Home = () => {
             <section id="section2">
                 <Container fluid>
                     <h2>Nuestra Labor</h2>
-                    <h4 id="t-h4">Nuestra plantilla se compone de abogados, administradores e ingenieros especializados en el sector
-                        eléctrico, para ofrecer así un servicio de gestión integral en energía</h4>
                     <Row>
-                        <Col className="animateImg glow delay-1" xs={12} lg={{ span: 6 }} style={{ padding: "0px" }}>
+                        <Col xs={12} md={12}>
+                            <h4 id="t-h4">
+                                Nuestra plantilla se compone de abogados, administradores e ingenieros especializados en el sector
+                                eléctrico, para ofrecer así un servicio de gestión integral en energía
+                            </h4>
+                        </Col>
+                    </Row>
+
+                    <Row>
+                        <Col className="animateImg glow delay-1" xs={12} md={6} style={{ padding: "0px" }}>
                             <Image
                                 id="im"
                                 src="https://res.cloudinary.com/dzzkeb6xp/image/upload/v1656244479/istockphoto-1185621229-612x612_jn7l5p.jpg"
                             />
                         </Col>
-                        <Col className="animateImg glow delay-2" xs={12} lg={{ span: 6 }} style={{ padding: "0px" }}>
+                        <Col className="animateImg glow delay-2" xs={12} md={6} style={{ padding: "0px" }}>
                             <Image
                                 id="im"
                                 src="https://res.cloudinary.com/dzzkeb6xp/image/upload/v1656244479/istockphoto-1164863397-612x612_w8ptfa.jpg"
                             />
                         </Col>
-                        <Col className="animateImg glow delay-3" lg={{ span: 6 }} style={{ padding: "0px" }}>
+                    </Row>
+                    <Row>
+                        <Col className="animateImg glow delay-3" xs={12} lg={{ span: 6 }} style={{ padding: "0px" }}>
                             <Image
                                 id="im"
                                 src="https://res.cloudinary.com/dzzkeb6xp/image/upload/v1656244479/istockphoto-1178152960-612x612_tifmzf.jpg"
                             />
                         </Col>
-                        <Col className="animateImg glow delay-4" id="sect3text" lg={{ span: 6 }} style={{ padding: "0px" }}>
+                        <Col className="animateImg glow delay-4" xs={12} id="sect3text" lg={{ span: 6 }} style={{ padding: "0px" }}>
                             <h3>Contactamos con Fiva porque nuestra factura habia aumentado un 30% desde 2020 y
                                 gracias a Fiva hemos ahorrado 2000€ en el ultimo año.</h3>
                             <p>Julian</p>
                         </Col>
                     </Row>
+
                 </Container>
             </section>
 
 
             <section id="section2-small">
                 <Container fluid>
-                    <h2 className="centered">Sobre Nosotros</h2>
-                    <h4 id="t-h4">Nuestra plantilla se compone de abogados, administradores e ingenieros especializados en el sector
-                        eléctrico, para ofrecer así un servicio de gestión integral en energía</h4>
+                    <h2 className="centered">Nuestra Labor</h2>
+                    <Row>
+                        <Col xs={12}>
+                            <h4 id="t-h4">
+                                Nuestra plantilla se compone de profesionales especializados en el sector
+                                eléctrico, para ofrecer así un servicio de gestión integral en energía.
+                            </h4>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col className="animateImg glow delay-3" xs={12} lg={{ span: 6 }} style={{ padding: "0px" }}>
+                            <Image
+                                id="im"
+                                src="https://res.cloudinary.com/dzzkeb6xp/image/upload/v1661269424/istockphoto-1327250710-612x612_avsklg.jpg"
+                            />
+                        </Col>
+                        <Col className="animateImg glow delay-4" xs={12} id="sect3text" lg={{ span: 6 }} style={{ padding: "0px" }}>
+                            <h3>Contactamos con Fiva porque nuestra factura habia aumentado un 30% desde 2020 y
+                                gracias a Fiva hemos ahorrado 2000€ en el ultimo año.</h3>
+                            <p>Maria</p>
+                        </Col>
+                    </Row>
                 </Container>
             </section>
 

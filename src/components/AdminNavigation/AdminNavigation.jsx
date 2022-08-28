@@ -11,22 +11,72 @@ const AdminNavigation = () => {
                 </Link>
             </Navbar.Brand>
             <br />
-            <Nav.Link className='adminNav' href="/admin">Home</Nav.Link>
-            <Nav.Link className='adminNav' href="/admin">Analiticas</Nav.Link>
+            <Nav.Link className='adminNav' >
+                <Link to="/admin" style={{ textDecoration: 'none' }}>
+                    Home
+                </Link>
+            </Nav.Link>
+            <Nav.Link className='adminNav' href="/admin">
+                <Link to="/admin" style={{ textDecoration: 'none' }}>
+                    Dashboard
+                </Link>
+            </Nav.Link>
             <NavDropdown className='adminNav' title="Usuarios" id="navbarScrollingDropdown">
-                <NavDropdown.Item className='adminNav' href="/users">Lista de Usuarios</NavDropdown.Item>
-                <NavDropdown.Item className='adminNav' href="/register">Crear Usuario</NavDropdown.Item>
+                <NavDropdown.Item >
+                    <Link to="/users" className='colored-fiva' style={{ textDecoration: 'none' }}>
+                        <p>
+                            Lista de Usuarios
+                        </p>
+                    </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item >
+                    <Link to="/register" className='colored-fiva' style={{ textDecoration: 'none' }}>
+                        <p>
+                            Crear Usuario
+                        </p>
+                    </Link>
+                </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown className='adminNav' title="Precios Electricas" id="navbarScrollingDropdown">
-                <NavDropdown.Item className='adminNav' href="/companies">Lista de Precios</NavDropdown.Item>
-                <NavDropdown.Item className='adminNav' href="/newcompany">Añadir Compañia Electrica</NavDropdown.Item>
+                <NavDropdown.Item c>
+                    <Link to="/companies" className='colored-fiva' style={{ textDecoration: 'none' }}>
+                        <p>
+                            Lista de Precios
+                        </p>
+                    </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item className='adminNav' >
+                    <Link to="/newcompany" className='colored-fiva' style={{ textDecoration: 'none' }}>
+                        <p>
+                            Añadir Compañia Electrica
+                        </p>
+                    </Link>
+                </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown className='adminNav' title="Gestion de Clientes" id="navbarScrollingDropdown">
-                <NavDropdown.Item className='adminNav' href="/contact-list">Lista de Clientes</NavDropdown.Item>
+                <NavDropdown.Item className='adminNav'>
+                    <Link to="/contact-list" className='colored-fiva' style={{ textDecoration: 'none' }}>
+                        <p>
+                            Lista de Clientes
+                        </p>
+                    </Link>
+                </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown className='adminNav' title="Ajustes de Potencia" id="navbarScrollingDropdown">
-                <NavDropdown.Item className='adminNav' href="/calculatemax50">Calcular Potencia optima</NavDropdown.Item>
-                <NavDropdown.Item className='adminNav' href="/getmax50">Lista de Potencias </NavDropdown.Item>
+                <NavDropdown.Item  >
+                    <Link to="/calculatemax50" className='colored-fiva' style={{ textDecoration: 'none' }}>
+                        <p>
+                            Calcular Potencia optima
+                        </p>
+                    </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item >
+                    <Link to="/getmax50" className='colored-fiva' style={{ textDecoration: 'none' }}>
+                        <p>
+                            Lista de Potencias
+                        </p>
+                    </Link>
+                </NavDropdown.Item>
             </NavDropdown>
         </Nav>
     );

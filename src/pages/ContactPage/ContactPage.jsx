@@ -1,29 +1,30 @@
-import './ContactPage.css'
+import './ContactPage.css';
 import { useEffect } from "react";
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import ContactList from "../../components/ContactList/ContactList"
-import contactUserService from "../../services/contactUser.service"
+import ContactList from "../../components/ContactList/ContactList";
+import contactUserService from "../../services/contactUser.service";
 import Loader from '../../components/Loader/Loader';
 import AdminNavigation from '../../components/AdminNavigation/AdminNavigation';
 
 
 
 const ContactPage = () => {
-    const [data, setData] = useState([])
-    const [isLoading, setIsLoading] = useState(true)
+    const [data, setData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
 
     const getContact = async () => {
-        const contacts = await contactUserService.getContacts()
-        setData(contacts.data.Users)
+        const contacts = await contactUserService.getContacts();
+        console.log(contacts.data.Users);
+        setData(contacts.data.Users);
 
-    }
+    };
 
     useEffect(() => {
-        getContact()
-        setIsLoading(false)
-    }, [])
+        getContact();
+        setIsLoading(false);
+    }, []);
 
 
     const contactlist = data.map((contact) => {
@@ -31,12 +32,12 @@ const ContactPage = () => {
             <Col md={4} xs={6}>
                 <ContactList {...contact} />
             </Col>
-        )
-    })
+        );
+    });
     if (isLoading) {
         return <>
             <Loader />
-        </>
+        </>;
     } else {
         return <>
             <Container fluid>
@@ -54,7 +55,7 @@ const ContactPage = () => {
                     </Col>
                 </Row>
             </Container>
-        </>
+        </>;
     }
-}
-export default ContactPage
+};
+export default ContactPage;

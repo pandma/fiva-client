@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 import CalculateMax50Price from "../CalculateMax50Price/CalculateMax50Price";
 import Round from "../../utils/Round";
 
-const Max50List = ({ fiva_id, owner, direction, cups, nif,
+const Max50List = ({ fiva_id, owner, tariff_type, direction, cups, nif,
     hired_power, hired_price, anual_consumption,
     optimal_anual_consumption, annual_savings,
     recomended_power, annual_savings_optimal_price }) => {
@@ -11,6 +11,7 @@ const Max50List = ({ fiva_id, owner, direction, cups, nif,
     const [max50Data, setMax50data] = useState({
         fiva_id: fiva_id,
         owner: owner,
+        tariff_type: tariff_type,
         direction: direction,
         cups: cups,
         nif: nif,
@@ -31,6 +32,9 @@ const Max50List = ({ fiva_id, owner, direction, cups, nif,
                 <Card.Header>{max50Data.direction}</Card.Header>
                 <Card.Body>
                     <blockquote className="blockquote mb-0">
+                        <p>
+                            Tarifa: {max50Data.tariff_type}
+                        </p>
                         <p>
                             Nombre: {max50Data.owner}
                         </p>

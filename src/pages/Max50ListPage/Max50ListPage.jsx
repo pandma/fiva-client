@@ -59,7 +59,7 @@ const Max50ListPage = () => {
 
     const max50 = Data.map((max) => {
         return (
-            <Col md={10} xs={10}>
+            <Col className='power-card' md={10} xs={10}>
                 <Max50List {...max} />
             </Col>
         );
