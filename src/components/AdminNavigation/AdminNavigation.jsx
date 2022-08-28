@@ -11,8 +11,12 @@ const AdminNavigation = () => {
                 </Link>
             </Navbar.Brand>
             <br />
-            <Nav.Link className='adminNav' href="/admin">Home</Nav.Link>
-            <Nav.Link className='adminNav' href="/admin">Analiticas</Nav.Link>
+            <Nav.Link className='adminNav' >
+                <Link to="/admin">
+                    <p>Home</p>
+                </Link>
+            </Nav.Link>
+            <Nav.Link className='adminNav' href="/admin">Dashboard</Nav.Link>
             <NavDropdown className='adminNav' title="Usuarios" id="navbarScrollingDropdown">
                 <NavDropdown.Item className='adminNav' href="/users">Lista de Usuarios</NavDropdown.Item>
                 <NavDropdown.Item className='adminNav' href="/register">Crear Usuario</NavDropdown.Item>

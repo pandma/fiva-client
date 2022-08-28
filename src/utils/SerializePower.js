@@ -16,14 +16,14 @@ const SerializePowers = (power) => {
       else if (i === 4) p5.push(elm);
       else if (i === 5) p6.push(elm);
     });
-    const powers = {
-      p1: p1.join(""),
-      p2: p2.join(""),
-      p3: p3.join(""),
-      p4: p4.join(""),
-      p5: p5.join(""),
-      p6: p6.join(""),
-    };
+    const powers = [
+      p1.join(""),
+      p2.join(""),
+      p3.join(""),
+      p4.join(""),
+      p5.join(""),
+      p6.join(""),
+    ];
     return powers;
   }
 

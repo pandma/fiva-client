@@ -8,7 +8,6 @@ const DotInBetween = (num) => {
   const intArr = Array.from(String(num), myFunc);
   let arr = [];
   intArr.forEach((elm, i) => {
-    console.log(i);
     if (i % 3 === 0 && i != 0 && i != intArr.length) arr.push(".", elm);
     else arr.push(elm);
   });
