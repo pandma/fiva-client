@@ -1,4 +1,4 @@
-import './ContactForm.css'
+import './ContactForm.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
@@ -14,27 +14,27 @@ const ContactForm = ({ closeModal }) => {
         phone: "",
         product: "",
         message: ""
-    })
-    const { showMessage } = useContext(MessageContext)
+    });
+    const { showMessage } = useContext(MessageContext);
 
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
         try {
-            await contactUserService.createContact(registerData)
-            closeModal()
-            showMessage('Enviado correctamente', 'Nuestro equipo se pondra en contacto lo antes posible')
+            await contactUserService.createContact(registerData);
+            closeModal();
+            showMessage('Enviado correctamente', 'Nuestro equipo se pondra en contacto lo antes posible');
 
         } catch (error) {
-            console.error(error)
+            console.error(error);
         }
-    }
+    };
     const handleInputChange = (e) => {
-        const { value, name } = e.currentTarget
-        setRegisterData({ ...registerData, [name]: value })
-    }
+        const { value, name } = e.currentTarget;
+        setRegisterData({ ...registerData, [name]: value });
+    };
 
-    const { name, email, phone, product, message } = registerData
+    const { name, email, phone, product, message } = registerData;
 
     return (
         <Form onSubmit={handleSubmit}>
@@ -56,6 +56,7 @@ const ContactForm = ({ closeModal }) => {
             <Form.Group className="mb-3">
                 <Form.Label htmlFor="disabledSelect">Que servicio buscas</Form.Label>
                 <Form.Select id="product" name="product" onChange={handleInputChange} value={product}>
+                    <option>Selecciona que servico buscas</option>
                     <option>Ajuste de optimización de potencia</option>
                     <option>Estudios de eficiencia energetica</option>
                     <option>Transición a energía renovable</option>
@@ -75,7 +76,7 @@ const ContactForm = ({ closeModal }) => {
 
         </Form>
     );
-}
+};
 
 
-export default ContactForm
+export default ContactForm;

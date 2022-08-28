@@ -15,11 +15,10 @@ const CompaniePriceForm = ({ handleClose, nameProp, prop1, prop2, prop3, prop4, 
         p6: prop6
 
     });
+
     const refreshPage = () => {
         window.location.reload(false);
     };
-
-
 
     const handleSubmit = async (e) => {
         e.preventDefault();
