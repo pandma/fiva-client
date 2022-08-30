@@ -1,13 +1,13 @@
 import './Max50ListPage.css';
 import { useEffect } from "react";
 import { useState } from "react";
-import { Col, Container, Row, Button } from "react-bootstrap";
+import { Col, Container, Row, Button, Dropdown } from "react-bootstrap";
 import AdminNavigation from "../../components/AdminNavigation/AdminNavigation";
 import Max50List from '../../components/Max50List/Max50List';
 import Loader from '../../components/Loader/Loader';
 import max50Service from '../../services/max50.service';
-
-
+import Max50Pdf from '../../components/Max50Pdf/Max50Pdf';
+import { PDFDownloadLink } from "@react-pdf/renderer";
 
 const Max50ListPage = () => {
     const postsPerPage = 9;
@@ -61,7 +61,17 @@ const Max50ListPage = () => {
         return (
             <Col className='power-card' md={10} xs={10}>
                 <Max50List {...max} />
-            </Col>
+                <PDFDownloadLink
+                    document={<Max50Pdf {...max} />}
+                    fileName="AjustePotencia.pdf"
+                >
+                    <Dropdown>
+                        <Dropdown.Toggle className='rigth-pdf' variant="secondary" id="dropdown-basic">
+                            Descargar PDF
+                        </Dropdown.Toggle>
+                    </Dropdown>
+                </PDFDownloadLink>
+            </Col >
         );
     });
 
