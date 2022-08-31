@@ -90,7 +90,7 @@ const Max50Pdf = ({ owner, tariff_type, nif, hired_power,
                 <View style={styles.section}>
                     <Text>Para:</Text>
                     <Text style={styles.space}>{owner && owner}</Text>
-                    <Text style={styles.space}>Nº de Identificación Fiscal:{nif && nif}</Text>
+                    <Text style={styles.space}>Nº de Identificación Fiscal: {nif && nif}</Text>
                     <Text style={styles.space}>Con Tarifa: {tariff_type && tariff_type}</Text>
                     <Text style={styles.space}>Potencia Contratada:</Text>
                     {powers ?
@@ -107,14 +107,14 @@ const Max50Pdf = ({ owner, tariff_type, nif, hired_power,
                             </Text>
                         </> : null
                     }
-                    <Text style={styles.space}>Tine un consumo anual de: {Round(anual_consumption, 0)}€</Text>
+                    <Text style={styles.space}>Tine un consumo anual de: {Round(anual_consumption, 0)} €</Text>
                     <Text style={styles.spacePlus}>Con la Información obtenida el resultado optimo seria:</Text>
-                    <Text style={styles.space}>Consumo anual de: {Round(optimal_anual_consumption, 0)}€</Text>
-                    <Text style={styles.space}>Ahorro anual de:{Round(annual_savings, 0)}€ </Text>
+                    <Text style={styles.space}>Consumo anual de: {Round(optimal_anual_consumption, 0)} €</Text>
+                    <Text style={styles.space}>Ahorro anual de: {Round(annual_savings, 0)} € </Text>
                     {annual_savings_optimal_price ?
                         <>
                             <Text style={styles.space}>Consumo anual con el mejor precio + Ajuste de potencia:</Text>
-                            <Text style={styles.priceTitle} >{Round(annual_savings_optimal_price, 0)}€</Text>
+                            <Text style={styles.priceTitle} >{Round(annual_savings_optimal_price, 0)} €</Text>
                         </> : null
                     }
                     <Text style={styles.space}>Potencia recomendada:</Text>

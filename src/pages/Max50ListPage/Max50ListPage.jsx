@@ -63,7 +63,7 @@ const Max50ListPage = () => {
                 <Max50List {...max} />
                 <PDFDownloadLink
                     document={<Max50Pdf {...max} />}
-                    fileName="AjustePotencia.pdf"
+                    fileName={`AjustePotencia_${max.owner}.pdf`}
                 >
                     <Dropdown>
                         <Dropdown.Toggle className='rigth-pdf' variant="secondary" id="dropdown-basic">
