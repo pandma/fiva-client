@@ -6,9 +6,8 @@ import {
     StyleSheet,
     Image
 } from "@react-pdf/renderer";
-import { useState } from "react";
 import SerializePowers from '../../utils/SerializePower';
-
+import Round from "../../utils/Round";
 
 const styles = StyleSheet.create({
     page: {
@@ -16,13 +15,22 @@ const styles = StyleSheet.create({
         color: "black",
         fontStyle: "Verdana, sans-serif",
         fontSize: "14px",
+        paddingTop: "2%"
     },
     title: {
         color: "black",
         fontStyle: "Verdana, sans-serif",
         fontSize: "16px",
+        fontStyle: "bold",
         marginTop: "6%",
-        marginLeft: "6%"
+        marginLeft: "8%"
+    },
+    priceTitle: {
+        marginTop: "4%",
+        color: "black",
+        fontStyle: "Verdana, sans-serif",
+        fontSize: "16px",
+        textAlign: "center"
     },
     section: {
         margin: "20%",
@@ -44,15 +52,15 @@ const styles = StyleSheet.create({
         marginTop: "6%",
     },
     footer: {
-        margin: 0,
-        padding: 0,
+        marginLeft: "15%",
+        marginRight: "15%",
         bottom: 0,
-        backgroundColor: "grey",
-        color: "white",
+        color: "purple",
         clear: "both",
         position: "relative",
         height: "100px",
-
+        textAlign: "center",
+        fontSize: "10px",
     }
 });
 
@@ -65,7 +73,6 @@ const Max50Pdf = ({ owner, tariff_type, nif, hired_power,
     const recomended = SerializePowers(recomended_power);
 
 
-    //maquetar y limpiar numeros 
     return (
         <Document>
             <Page size="A4" style={styles.page}>
@@ -85,7 +92,7 @@ const Max50Pdf = ({ owner, tariff_type, nif, hired_power,
                     <Text style={styles.space}>{owner && owner}</Text>
                     <Text style={styles.space}>Nº de Identificación Fiscal:{nif && nif}</Text>
                     <Text style={styles.space}>Con Tarifa: {tariff_type && tariff_type}</Text>
-                    <Text style={styles.space}>Potencia Contratada de:</Text>
+                    <Text style={styles.space}>Potencia Contratada:</Text>
                     {powers ?
                         <>
                             < Text style={styles.space}>
@@ -100,18 +107,17 @@ const Max50Pdf = ({ owner, tariff_type, nif, hired_power,
                             </Text>
                         </> : null
                     }
-
-                    <Text style={styles.space}>Tine un consumo anual de: {anual_consumption}</Text>
+                    <Text style={styles.space}>Tine un consumo anual de: {Round(anual_consumption, 0)}€</Text>
                     <Text style={styles.spacePlus}>Con la Información obtenida el resultado optimo seria:</Text>
-                    <Text style={styles.space}>Consumo anual de: {optimal_anual_consumption}</Text>
-                    <Text style={styles.space}>Ahorro anual de:{annual_savings} </Text>
+                    <Text style={styles.space}>Consumo anual de: {Round(optimal_anual_consumption, 0)}€</Text>
+                    <Text style={styles.space}>Ahorro anual de:{Round(annual_savings, 0)}€ </Text>
                     {annual_savings_optimal_price ?
                         <>
-                            <Text>Consumo anual con el mejor precio + Ajuste de potencia</Text>
-                            <Text style={styles.title} >{annual_savings_optimal_price}</Text>
+                            <Text style={styles.space}>Consumo anual con el mejor precio + Ajuste de potencia:</Text>
+                            <Text style={styles.priceTitle} >{Round(annual_savings_optimal_price, 0)}€</Text>
                         </> : null
                     }
-                    <Text style={styles.space}>Potencia recomendada de:</Text>
+                    <Text style={styles.space}>Potencia recomendada:</Text>
                     {
                         recomended ?
                             <>
@@ -126,15 +132,13 @@ const Max50Pdf = ({ owner, tariff_type, nif, hired_power,
                                     Periodo 6: {recomended[5]} KW
                                 </Text>
                             </> : null
-
                     }
                 </View>
                 <View style={styles.footer}>
                     <Text >
-                        Fiva.    fiva_support@proton.me
-                    </Text>
-                    <Text>
-                        contacto: +34 601118739
+                        Documento creado por el soporte informativo de fiva®,
+                        se ruega que el uso de este documento sea meramente informativo, para más
+                        información sobre las estructuras de las tarifas contactar con soporte de fiva.
                     </Text>
                 </View>
             </Page>
