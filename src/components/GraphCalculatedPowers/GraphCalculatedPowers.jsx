@@ -26,7 +26,7 @@ export const options = {
         },
         title: {
             display: false,
-            text: 'Relacion de Usuarios activos',
+            text: 'Calculos de potencia realizados',
         },
     },
 };
@@ -40,14 +40,15 @@ export const data = {
     labels,
     datasets: [
         {
-            label: 'Usuarios',
+            label: 'Calculos de potencia realizados',
             data: test,
             backgroundColor: 'rgba(255, 99, 132, 0.5)',
         },
     ],
 };
 
-export const GraphUsersByMonth = () => {
+export const GraphCalculatedPowers = () => {
     return <Bar options={options} data={data} />;
 
-};
+}
+

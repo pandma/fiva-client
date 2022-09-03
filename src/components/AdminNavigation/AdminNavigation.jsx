@@ -17,7 +17,7 @@ const AdminNavigation = () => {
                 </Link>
             </Nav.Link>
             <Nav.Link className='adminNav' href="/admin">
-                <Link to="/admin" style={{ textDecoration: 'none' }}>
+                <Link to="/dash" style={{ textDecoration: 'none' }}>
                     Dashboard
                 </Link>
             </Nav.Link>
