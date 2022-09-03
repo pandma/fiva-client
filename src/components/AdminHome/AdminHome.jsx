@@ -5,7 +5,7 @@ import { AuthContext } from '../../context/auth.context';
 
 
 const AdminHome = () => {
-    const { user, logOutUser, isLoggedIn, isAdmin } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     return (
         <>
@@ -18,7 +18,7 @@ const AdminHome = () => {
                     </Row>
                 </Container>
             </section>
-
+            {/* 
             <section className="AdminHomeSection2">
                 <Container fluid>
                     <Row className="animate">
@@ -27,7 +27,7 @@ const AdminHome = () => {
                         </Col>
                     </Row>
                 </Container>
-            </section>
+            </section> */}
         </>
     );
 
