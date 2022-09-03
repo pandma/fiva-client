@@ -7,3 +7,9 @@
 .power-card {
   margin-bottom: 3%;
 }
+.rigth-pdf {
+  float: right;
+  margin-right: 1%;
+  max-width: 200px;
+  max-height: 100px;
+}
