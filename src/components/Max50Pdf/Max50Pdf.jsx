@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
         position: "absolute",
         left: "350px",
         width: "200px",
-        height: "100px",
+        height: "90px",
     },
     space: {
         marginTop: "3%",
@@ -111,12 +111,6 @@ const Max50Pdf = ({ owner, tariff_type, nif, hired_power,
                     <Text style={styles.spacePlus}>Con la Información obtenida el resultado optimo seria:</Text>
                     <Text style={styles.space}>Consumo anual de: {Round(optimal_anual_consumption, 0)} €</Text>
                     <Text style={styles.space}>Ahorro anual de: {Round(annual_savings, 0)} € </Text>
-                    {annual_savings_optimal_price ?
-                        <>
-                            <Text style={styles.space}>Consumo anual con el mejor precio + Ajuste de potencia:</Text>
-                            <Text style={styles.priceTitle} >{Round(annual_savings_optimal_price, 0)} €</Text>
-                        </> : null
-                    }
                     <Text style={styles.space}>Potencia recomendada:</Text>
                     {
                         recomended ?
@@ -132,6 +126,12 @@ const Max50Pdf = ({ owner, tariff_type, nif, hired_power,
                                     Periodo 6: {recomended[5]} KW
                                 </Text>
                             </> : null
+                    }
+                    {annual_savings_optimal_price ?
+                        <>
+                            <Text style={styles.space}>Consumo anual con el mejor precio + Ajuste de potencia:</Text>
+                            <Text style={styles.priceTitle} >{Round(annual_savings_optimal_price, 0)} €</Text>
+                        </> : null
                     }
                 </View>
                 <View style={styles.footer}>
