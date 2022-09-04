@@ -111,8 +111,9 @@
 }
 
 #im {
-  max-width: 800px;
   padding: 6px;
+  max-width: 100%;
+  height: auto;
 }
 
 #section2 h3 {

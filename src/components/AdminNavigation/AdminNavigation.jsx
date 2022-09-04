@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 const AdminNavigation = () => {
     return (
         <Nav defaultActiveKey="/home" className="flex-column">
-            <Navbar.Brand >
+            <Navbar.Brand className='adminLogo'>
                 <Link to="/">
-                    <img src='https://res.cloudinary.com/dzzkeb6xp/image/upload/v1658079723/FIVA_8_2_uwwowr.png' width={240} />
+                    <img className='adminLogo' src='https://res.cloudinary.com/dzzkeb6xp/image/upload/v1658079723/FIVA_8_2_uwwowr.png' />
                 </Link>
             </Navbar.Brand>
             <br />

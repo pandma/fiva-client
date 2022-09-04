@@ -27,7 +27,9 @@ const DashboardPage = () => {
                                     textAlign: 'center',
                                     marginTop: "2%"
                                 }}>Usuarios activos</h3>
-                                <GraphUsersByMonth />
+                                <div className='graphSize'>
+                                    <GraphUsersByMonth />
+                                </div>
                             </Col>
                         </Row>
                         <Row className='fadedboard'>
@@ -36,7 +38,9 @@ const DashboardPage = () => {
                                     textAlign: 'center',
                                     marginTop: "2%"
                                 }}>Calculos de potencia realizados</h3>
-                                <GraphCalculatedPowers />
+                                <div className='graphSize'>
+                                    <GraphCalculatedPowers />
+                                </div>
                             </Col>
                         </Row>
                         <Row className='fadedboard'>

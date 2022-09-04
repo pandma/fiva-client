@@ -6,7 +6,6 @@
 .mainboard {
   padding: 0;
 }
-
 .fadedboard {
   background-color: rgb(235, 235, 235);
   margin-right: 1%;
@@ -21,4 +20,8 @@
 .powersGraph {
   margin-top: 10%;
   padding-bottom: 3%;
+}
+.graphSize {
+  width: 100% !important;
+  height: 87% !important;
 }
