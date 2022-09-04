@@ -45,18 +45,22 @@ const DashboardPage = () => {
                         </Row>
                         <Row className='fadedboard'>
                             <Col className='powersGraph' md={6}>
-                                <h3 style={{
-                                    textAlign: 'center',
-                                    marginTop: "2%"
-                                }}>Ahorro por cada tipo de tarifa</h3>
-                                <GraphTariffTypeSave />
+                                <div className='graphDouL'>
+                                    <h3 style={{
+                                        textAlign: 'center',
+                                        marginTop: "2%"
+                                    }}>Ahorro por cada tipo de tarifa</h3>
+                                    <GraphTariffTypeSave />
+                                </div>
                             </Col>
                             <Col className='powersGraph' md={6}>
-                                <h3 style={{
-                                    textAlign: 'center',
-                                    marginTop: "2%"
-                                }}>Total de cada tipo detarifa</h3>
-                                <GraphNumOfTariff />
+                                <div className='graphDou'>
+                                    <h3 style={{
+                                        textAlign: 'center',
+                                        marginTop: "2%"
+                                    }}>Total de cada tipo detarifa</h3>
+                                    <GraphNumOfTariff />
+                                </div>
                             </Col>
                         </Row>
                     </Container>
