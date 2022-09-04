@@ -18,6 +18,7 @@ const CalculateMax50 = () => {
 
     const [isLoading, setIsLoading] = useState(false);
     const [serviceData, setServiceData] = useState({});
+    const [errorMessage, setErrorMessage] = useState("");
 
     const [max50Data, setMax50Data] = useState({
         owner: "",
@@ -40,10 +41,17 @@ const CalculateMax50 = () => {
             console.log(resultFromService.data);
 
             if (resultFromService.status === 200 && resultFromService.data.message != 'Error') {
-                const result = resultFromService.data.maximeter;
-                setServiceData({ ...result });
-                setIsLoading(false);
-                handleShow();
+                const result = resultFromService.data.data;
+                console.log(result);
+                if (result === "negative annual_savings") {
+                    setErrorMessage("ahorro anual negativo");
+                    setIsLoading(false);
+                    handleShowFail();
+                } else {
+                    setServiceData({ ...result });
+                    setIsLoading(false);
+                    handleShow();
+                }
             } else {
                 setIsLoading(false);
                 handleShowFail();
@@ -127,7 +135,7 @@ const CalculateMax50 = () => {
                 </Button>
 
                 <Max50SucessModal show={show} handleClose={handleClose} direction={direction} {...serviceData} />
-                <Max50FailModal show={showFail} handleClose={handleCloseFail} direction={direction} {...serviceData} />
+                <Max50FailModal show={showFail} handleClose={handleCloseFail} direction={direction} errorMessage={errorMessage} {...serviceData} />
 
             </Form>
         </>;

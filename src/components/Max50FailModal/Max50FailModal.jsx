@@ -1,8 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import './Max50FailModal.css'
+import './Max50FailModal.css';
 
-const Max50FailModal = ({ show, handleClose }) => {
+const Max50FailModal = ({ show, handleClose, errorMessage }) => {
     return (
         <>
             <Modal
@@ -16,7 +16,11 @@ const Max50FailModal = ({ show, handleClose }) => {
                     <Modal.Title>Resultados</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <h2 className='susessTitle'>Algo ha salido mal</h2>
+                    <h2 className='failTitle'>Algo ha salido mal</h2>
+                    {errorMessage ?
+                        <h4>{errorMessage}</h4>
+                        : null
+                    }
                     <h4>Comprueba los valores y vuelve a probar</h4>
                 </Modal.Body>
                 <Modal.Footer>
@@ -29,7 +33,7 @@ const Max50FailModal = ({ show, handleClose }) => {
         </>
     );
 
-}
+};
 
 
-export default Max50FailModal
+export default Max50FailModal;
