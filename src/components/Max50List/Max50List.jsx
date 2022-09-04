@@ -51,15 +51,15 @@ const Max50List = ({ fiva_id, owner, tariff_type, direction, cups, nif,
                             Precio del Cliente: {max50Data.hired_price}
                         </p>
                         <p>
-                            Consumo anual: {max50Data.anual_consumption ? Round(max50Data.anual_consumption, 0) : "Sin calcular"}
+                            Consumo anual: {max50Data.anual_consumption ? Round(max50Data.anual_consumption, 0) : "Sin calcular"} €
 
                         </p>
                         <p>
-                            Consumo Optimo: {max50Data.optimal_anual_consumption ? Round(max50Data.optimal_anual_consumption, 0) : "Sin calcular"}
+                            Consumo Optimo: {max50Data.optimal_anual_consumption ? Round(max50Data.optimal_anual_consumption, 0) : "Sin calcular"} €
 
                         </p>
                         <p>
-                            Ahorro anual: {max50Data.annual_savings ? Round(max50Data.annual_savings, 0) : "Sin calcular"}
+                            Ahorro anual: {max50Data.annual_savings ? Round(max50Data.annual_savings, 0) : "Sin calcular"} €
 
                         </p>
                         <p>
@@ -67,7 +67,7 @@ const Max50List = ({ fiva_id, owner, tariff_type, direction, cups, nif,
 
                         </p>
                         <p>
-                            Mejor precio: {max50Data.annual_savings_optimal_price ? Round(max50Data.annual_savings_optimal_price, 0) : "Sin calcular"}
+                            Mejor precio: {max50Data.annual_savings_optimal_price ? Round(max50Data.annual_savings_optimal_price, 0) : "Sin calcular"} €
                         </p>
 
                         <footer >

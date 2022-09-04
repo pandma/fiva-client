@@ -31,8 +31,8 @@ const Max50SucessModal = ({ show, handleClose, direction, anual_consumption, opt
                 </Modal.Header>
                 <Modal.Body>
                     <h2 className='centeredBody'>{direction}</h2>
-                    <p className='smallMargin'>Consumo anual: <strong>{Round(anual_consumption, 0)} KW</strong> </p>
-                    <p className='smallMargin'>Consumo anual optimo: <strong>{Round(optimal_anual_consumption, 0)} KW</strong> </p>
+                    <p className='smallMargin'>Consumo anual: <strong>{Round(anual_consumption, 0)} €</strong> </p>
+                    <p className='smallMargin'>Consumo anual optimo: <strong>{Round(optimal_anual_consumption, 0)} €</strong> </p>
                     <p className='smallMargin'>Ahorro anual:<strong>{Round(annual_savings, 0)} €</strong> </p>
                     {recomended_power &&
                         <p className='smallMargin'>
