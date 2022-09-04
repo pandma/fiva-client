@@ -21,6 +21,7 @@ import CompaniesPage from "../pages/CompaniesPage/CompaniesPage";
 import CompanyAddPage from "../pages/CompanyAddPage/CompanyAddPage";
 import CalculateMax50Page from "../pages/CalculateMax50Page/CalculateMax50Page";
 import Max50ListPage from "../pages/Max50ListPage/Max50ListPage";
+import DashboardPage from "../pages/DashboardPage/DashboardPage";
 
 const AppRoutes = () => {
 
@@ -40,6 +41,7 @@ const AppRoutes = () => {
             <Route path="/price" element={<PriceRatePage />} />
             <Route path="/solutions" element={<SoftwareSolutionsPage />} />
             <Route path="/digitalitation" element={<DigitalitationPage />} />
+
 
             <Route path="/admin" element={<PrivateRoutes requiredRoles={["User"]} />}>
                 <Route path="" element={<AdminHomePage />} />
@@ -64,6 +66,10 @@ const AppRoutes = () => {
             </Route>
             <Route path="/getmax50" element={<PrivateRoutes requiredRoles={["User"]} />}>
                 <Route path="" element={<Max50ListPage />} />
+            </Route>
+
+            <Route path="/dash" element={<PrivateRoutes requiredRoles={["User"]} />}>
+                <Route path="" element={<DashboardPage />} />
             </Route>
 
         </Routes>
