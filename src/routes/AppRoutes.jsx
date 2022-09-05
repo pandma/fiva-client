@@ -22,6 +22,7 @@ import CompanyAddPage from "../pages/CompanyAddPage/CompanyAddPage";
 import CalculateMax50Page from "../pages/CalculateMax50Page/CalculateMax50Page";
 import Max50ListPage from "../pages/Max50ListPage/Max50ListPage";
 import DashboardPage from "../pages/DashboardPage/DashboardPage";
+import NewClientForm from "../pages/NewClientForm/NewClientForm";
 
 const AppRoutes = () => {
 
@@ -67,9 +68,14 @@ const AppRoutes = () => {
             <Route path="/getmax50" element={<PrivateRoutes requiredRoles={["User"]} />}>
                 <Route path="" element={<Max50ListPage />} />
             </Route>
-
             <Route path="/dash" element={<PrivateRoutes requiredRoles={["User"]} />}>
                 <Route path="" element={<DashboardPage />} />
+            </Route>
+            <Route path="/dash" element={<PrivateRoutes requiredRoles={["User"]} />}>
+                <Route path="" element={<DashboardPage />} />
+            </Route>
+            <Route path="/newclient" element={<PrivateRoutes requiredRoles={["User"]} />}>
+                <Route path="" element={<NewClientForm />} />
             </Route>
 
         </Routes>

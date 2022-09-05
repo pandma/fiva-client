@@ -6,7 +6,7 @@ import contactUserService from '../../services/contactUser.service';
 import { useContext } from 'react';
 import { MessageContext } from '../../context/message.context';
 
-const ContactForm = ({ closeModal }) => {
+const ContactForm = ({ closeModal, isPage }) => {
 
     const [registerData, setRegisterData] = useState({
         name: "",
@@ -22,8 +22,12 @@ const ContactForm = ({ closeModal }) => {
         e.preventDefault();
         try {
             await contactUserService.createContact(registerData);
-            closeModal();
-            showMessage('Enviado correctamente', 'Nuestro equipo se pondra en contacto lo antes posible');
+            if (closeModal) {
+                closeModal();
+                showMessage('Enviado correctamente', 'Nuestro equipo se pondra en contacto lo antes posible');
+            } else if (isPage) {
+                showMessage('Nuevo cliente añadido correctamente');
+            }
 
         } catch (error) {
             console.error(error);

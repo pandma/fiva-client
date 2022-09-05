@@ -38,7 +38,7 @@ const AdminNavigation = () => {
                 </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown className='adminNav' title="Precios Electricas" id="navbarScrollingDropdown">
-                <NavDropdown.Item c>
+                <NavDropdown.Item >
                     <Link to="/companies" className='colored-fiva' style={{ textDecoration: 'none' }}>
                         <p>
                             Lista de Precios
@@ -54,10 +54,17 @@ const AdminNavigation = () => {
                 </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown className='adminNav' title="Gestion de Clientes" id="navbarScrollingDropdown">
-                <NavDropdown.Item className='adminNav'>
+                <NavDropdown.Item >
                     <Link to="/contact-list" className='colored-fiva' style={{ textDecoration: 'none' }}>
                         <p>
                             Lista de Clientes
+                        </p>
+                    </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item >
+                    <Link to="/newclient" className='colored-fiva' style={{ textDecoration: 'none' }}>
+                        <p>
+                            Añadir Cliente
                         </p>
                     </Link>
                 </NavDropdown.Item>
