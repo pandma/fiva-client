@@ -86,9 +86,9 @@ const Max50ListPage = () => {
                     <Col id='main-nav' md={2}>
                         <AdminNavigation />
                     </Col>
-                    <Col id='main-admin-component' md={10} >
+                    <Col id='main-admin-component' className='adminBody' md={10} >
                         <Container fluid>
-                            <h1 className="fivanacci-title" >Potencias Calculadas</h1>
+                            <h1 className="DashTitle" >Potencias Calculadas</h1>
                             <Row className='list-row'>
                                 {max50}
                             </Row>

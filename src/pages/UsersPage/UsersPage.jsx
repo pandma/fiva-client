@@ -1,32 +1,32 @@
-import './UsersPage.css'
-import UsersList from '../../components/UsersList/UsersList'
+import './UsersPage.css';
+import UsersList from '../../components/UsersList/UsersList';
 import { useEffect } from "react";
 import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import authService from '../../services/auth.service'
+import authService from '../../services/auth.service';
 import AdminNavigation from '../../components/AdminNavigation/AdminNavigation';
 
 
 
 const UsersPage = () => {
 
-    const [data, setData] = useState([])
+    const [data, setData] = useState([]);
 
     const getUsers = async () => {
-        const users = await authService.getUsers()
-        setData(users.data)
-    }
+        const users = await authService.getUsers();
+        setData(users.data);
+    };
 
     useEffect(() => {
-        getUsers()
-    }, [])
+        getUsers();
+    }, []);
 
 
     const userslist = data.map((user) => {
         return (
             <UsersList {...user} />
-        )
-    })
+        );
+    });
 
     return (
         <>
@@ -35,9 +35,9 @@ const UsersPage = () => {
                     <Col id='main-nav' md={2}>
                         <AdminNavigation />
                     </Col>
-                    <Col md={10} >
+                    <Col md={10} className="adminBody" >
                         <Container fluid>
-                            <h1 className="list-title">Lista de Usuarios</h1>
+                            <h1 className="DashTitle">Lista de Usuarios</h1>
                             <Row className='list-row'>
                                 {userslist}
                             </Row>
@@ -46,8 +46,8 @@ const UsersPage = () => {
                 </Row>
             </Container>
         </>
-    )
-}
+    );
+};
 
 export default UsersPage
 

@@ -8,15 +8,15 @@ import { MessageContext } from '../../context/message.context';
 
 const ContactForm = ({ closeModal, isPage }) => {
 
-    const [registerData, setRegisterData] = useState({
+    const formShape = {
         name: "",
         email: "",
         phone: "",
         product: "",
         message: ""
-    });
+    };
+    const [registerData, setRegisterData] = useState({ ...formShape });
     const { showMessage } = useContext(MessageContext);
-
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -27,6 +27,7 @@ const ContactForm = ({ closeModal, isPage }) => {
                 showMessage('Enviado correctamente', 'Nuestro equipo se pondra en contacto lo antes posible');
             } else if (isPage) {
                 showMessage('Nuevo cliente añadido correctamente');
+                setRegisterData({ ...formShape });
             }
 
         } catch (error) {
@@ -44,23 +45,23 @@ const ContactForm = ({ closeModal, isPage }) => {
         <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="name">
                 <Form.Label>Nombre/ Empresa</Form.Label>
-                <Form.Control type="text" placeholder="Nombre" name="name" onChange={handleInputChange} value={name} />
+                <Form.Control type="text" placeholder="Nombre" name="name" onChange={handleInputChange} value={name} required />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="email">
                 <Form.Label>Email </Form.Label>
-                <Form.Control type="email" placeholder="Email" name="email" onChange={handleInputChange} value={email} />
+                <Form.Control type="email" placeholder="Email" name="email" onChange={handleInputChange} value={email} required />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="phone">
                 <Form.Label>Numero de contacto</Form.Label>
-                <Form.Control type="text" placeholder="Numero" name="phone" maxLength={9} onChange={handleInputChange} value={phone} />
+                <Form.Control type="text" placeholder="Numero" name="phone" maxLength={9} onChange={handleInputChange} value={phone} required />
             </Form.Group>
 
             <Form.Group className="mb-3">
                 <Form.Label htmlFor="disabledSelect">Que servicio buscas</Form.Label>
-                <Form.Select id="product" name="product" onChange={handleInputChange} value={product}>
-                    <option>Selecciona que servico buscas</option>
+                <Form.Select id="product" name="product" onChange={handleInputChange} value={product} required>
+                    <option value="">Selecciona que servico buscas</option>
                     <option>Ajuste de optimización de potencia</option>
                     <option>Estudios de eficiencia energetica</option>
                     <option>Transición a energía renovable</option>

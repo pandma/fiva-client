@@ -50,7 +50,7 @@ const AppRoutes = () => {
             <Route path="/register" element={<PrivateRoutes requiredRoles={["User"]} />}>
                 <Route path="" element={<SingUpPage />} />
             </Route>
-            <Route path="/contact-list" element={<PrivateRoutes requiredRoles={["User"]} />}>
+            <Route path="/contactlist" element={<PrivateRoutes requiredRoles={["User"]} />}>
                 <Route path="" element={<ContactPage />} />
             </Route>
             <Route path="/users" element={<PrivateRoutes requiredRoles={["User"]} />}>

@@ -17,7 +17,6 @@ const NewClientForm = () => {
                             textAlign: "center",
                             marginBottom: "2%"
                         }}>Añade nuevo Cliente</h1>
-
                         <Row>
                             <Col md={{ span: 4, offset: 4 }}>
                                 <ContactForm isPage={true} />
