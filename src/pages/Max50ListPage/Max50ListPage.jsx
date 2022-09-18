@@ -1,7 +1,7 @@
 import './Max50ListPage.css';
 import { useEffect } from "react";
 import { useState } from "react";
-import { Col, Container, Row, Button, Dropdown } from "react-bootstrap";
+import { Col, Container, Row, Button, Dropdown, Form } from "react-bootstrap";
 import AdminNavigation from "../../components/AdminNavigation/AdminNavigation";
 import Max50List from '../../components/Max50List/Max50List';
 import Loader from '../../components/Loader/Loader';
@@ -12,11 +12,14 @@ import { PDFDownloadLink } from "@react-pdf/renderer";
 const Max50ListPage = () => {
     const postsPerPage = 9;
     let handlindData = [];
-
     const [maxData, setMaxData] = useState([]);
     const [Data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [next, setNext] = useState(9);
+    const [searchData, setSearchData] = useState("");
+    const [newData, setNewData] = useState([]);
+    const [isSearching, setIsSearching] = useState(false);
+
     const isLast = next === maxData.length;
     const isFirst = next === postsPerPage;
 
@@ -51,11 +54,45 @@ const Max50ListPage = () => {
     const scrollUpwards = () => {
         window.scrollTo(0, 0);
     };
+    const handSearchData = (event) => {
+
+        setSearchData(event.target.value);
+
+        if (event.target.getAttribute("value")) {
+            const searchBy = event.target.getAttribute("value");
+            let res = [];
+            Data.filter(val => {
+                if (val.owner.toLowerCase().includes(searchBy.toLowerCase())) {
+                    res.push(val);
+                }
+            });
+
+            if (res.length) {
+                setNewData(res);
+                setIsLoading(true);
+                console.log("no funciona");
+            }
+        }
+    };
     useEffect(() => {
+        if (isSearching) {
+            console.log("hey");
+            setData(newData);
+            setIsLoading(false);
+            setIsSearching(false);
+        }
         getMax50();
         loopWithSlice(0, postsPerPage);
         setIsLoading(false);
     }, []);
+
+    useEffect(() => {
+        console.log("hey");
+        setData(newData);
+        setIsLoading(false);
+        setIsSearching(true);
+
+    }, [isSearching == true]);
 
     const max50 = Data.map((max) => {
         return (
@@ -88,7 +125,44 @@ const Max50ListPage = () => {
                     </Col>
                     <Col id='main-admin-component' className='adminBody' md={10} >
                         <Container fluid>
-                            <h1 className="DashTitle" >Potencias Calculadas</h1>
+                            <Row style={{
+                                marginTop: "2%",
+                                marginBottom: "2%"
+                            }}>
+                                <Col md={{ span: 4 }} style={{
+                                    marginLeft: "2%"
+                                }}>
+                                    <h1 className="DashTitle">Potencias Calculadas</h1>
+                                </Col>
+                                <Col md={{ span: 4, offset: 2 }} style={{
+                                    marginTop: "1%",
+                                }}>
+                                    <div>
+                                        <Form.Control type="text"
+                                            placeholder="Search"
+                                            name="search"
+                                            onChange={handSearchData} />
+
+                                        {searchData ?
+                                            <div className='searchs' >
+                                                {
+                                                    Data.filter(val => {
+                                                        if (!searchData) {
+                                                            return null;
+                                                        } else if (val.owner.toLowerCase().startsWith(searchData.toLowerCase())) {
+                                                            return val.owner;
+                                                        }
+                                                    }).map((val, key) => {
+                                                        return <div className='listItem' value={val.owner} onClick={handSearchData} key={key}>
+                                                            <p>{val.owner}</p>
+                                                        </div>;
+                                                    })
+                                                }
+                                            </div> : null
+                                        }
+                                    </div>
+                                </Col>
+                            </Row>
                             <Row className='list-row'>
                                 {max50}
                             </Row>
@@ -108,6 +182,7 @@ const Max50ListPage = () => {
         </>;
     }
 };
+
 
 export default Max50ListPage;
 
