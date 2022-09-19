@@ -1,24 +1,27 @@
 import './Max50ListPage.css';
 import { useEffect } from "react";
 import { useState } from "react";
-import { Col, Container, Row, Button, Dropdown, Form } from "react-bootstrap";
+import { Col, Container, Row, Button, Dropdown } from "react-bootstrap";
 import AdminNavigation from "../../components/AdminNavigation/AdminNavigation";
 import Max50List from '../../components/Max50List/Max50List';
 import Loader from '../../components/Loader/Loader';
 import max50Service from '../../services/max50.service';
 import Max50Pdf from '../../components/Max50Pdf/Max50Pdf';
 import { PDFDownloadLink } from "@react-pdf/renderer";
+import SearchBar from '../SearchBar/SearchBar';
 
 const Max50ListPage = () => {
+
     const postsPerPage = 9;
     let handlindData = [];
     const [maxData, setMaxData] = useState([]);
     const [Data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [next, setNext] = useState(9);
-    const [searchData, setSearchData] = useState("");
     const [newData, setNewData] = useState([]);
     const [isSearching, setIsSearching] = useState(false);
+
+
+    const [next, setNext] = useState(9);
 
     const isLast = next === maxData.length;
     const isFirst = next === postsPerPage;
@@ -54,63 +57,33 @@ const Max50ListPage = () => {
     const scrollUpwards = () => {
         window.scrollTo(0, 0);
     };
-    const handSearchData = (event) => {
 
-        setSearchData(event.target.value);
-
-        if (event.target.getAttribute("value")) {
-            const searchBy = event.target.getAttribute("value");
-            let res = [];
-            Data.filter(val => {
-                if (val.owner.toLowerCase().includes(searchBy.toLowerCase())) {
-                    res.push(val);
-                }
-            });
-
-            if (res.length) {
-                setNewData(res);
-                setIsLoading(true);
-                console.log("no funciona");
-            }
-        }
-    };
     useEffect(() => {
-        if (isSearching) {
-            console.log("hey");
-            setData(newData);
-            setIsLoading(false);
-            setIsSearching(false);
-        }
         getMax50();
         loopWithSlice(0, postsPerPage);
         setIsLoading(false);
-    }, []);
+    }, [setData]);
+    let max50;
+    if (Data && Data.length) {
+        max50 = Data.map((max) => {
+            return (
+                <Col className='power-card' md={10} xs={10}>
+                    <Max50List {...max} />
+                    <PDFDownloadLink
+                        document={<Max50Pdf {...max} />}
+                        fileName={`AjustePotencia_${max.owner}.pdf`}
+                    >
+                        <Dropdown>
+                            <Dropdown.Toggle className='rigth-pdf' variant="secondary" id="dropdown-basic">
+                                Descargar PDF
+                            </Dropdown.Toggle>
+                        </Dropdown>
+                    </PDFDownloadLink>
+                </Col >
+            );
+        });
+    } else max50 = null;
 
-    useEffect(() => {
-        console.log("hey");
-        setData(newData);
-        setIsLoading(false);
-        setIsSearching(true);
-
-    }, [isSearching == true]);
-
-    const max50 = Data.map((max) => {
-        return (
-            <Col className='power-card' md={10} xs={10}>
-                <Max50List {...max} />
-                <PDFDownloadLink
-                    document={<Max50Pdf {...max} />}
-                    fileName={`AjustePotencia_${max.owner}.pdf`}
-                >
-                    <Dropdown>
-                        <Dropdown.Toggle className='rigth-pdf' variant="secondary" id="dropdown-basic">
-                            Descargar PDF
-                        </Dropdown.Toggle>
-                    </Dropdown>
-                </PDFDownloadLink>
-            </Col >
-        );
-    });
 
     if (isLoading) {
         return <>
@@ -137,30 +110,7 @@ const Max50ListPage = () => {
                                 <Col md={{ span: 4, offset: 2 }} style={{
                                     marginTop: "1%",
                                 }}>
-                                    <div>
-                                        <Form.Control type="text"
-                                            placeholder="Search"
-                                            name="search"
-                                            onChange={handSearchData} />
-
-                                        {searchData ?
-                                            <div className='searchs' >
-                                                {
-                                                    Data.filter(val => {
-                                                        if (!searchData) {
-                                                            return null;
-                                                        } else if (val.owner.toLowerCase().startsWith(searchData.toLowerCase())) {
-                                                            return val.owner;
-                                                        }
-                                                    }).map((val, key) => {
-                                                        return <div className='listItem' value={val.owner} onClick={handSearchData} key={key}>
-                                                            <p>{val.owner}</p>
-                                                        </div>;
-                                                    })
-                                                }
-                                            </div> : null
-                                        }
-                                    </div>
+                                    <SearchBar setNewData={setNewData} newData={newData} setIsSearching={setIsSearching} data={Data} setState={setData} />
                                 </Col>
                             </Row>
                             <Row className='list-row'>
