@@ -18,9 +18,6 @@ const Max50ListPage = () => {
     const [Data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [newData, setNewData] = useState([]);
-    const [isSearching, setIsSearching] = useState(false);
-
-
     const [next, setNext] = useState(9);
 
     const isLast = next === maxData.length;
@@ -32,7 +29,6 @@ const Max50ListPage = () => {
         setData(handlindData);
         scrollUpwards();
     };
-
     const loopWithSliceRevers = (start, end) => {
         const slicedPosts = maxData.slice(end, start);
         handlindData = [...handlindData, ...slicedPosts];
@@ -57,33 +53,30 @@ const Max50ListPage = () => {
     const scrollUpwards = () => {
         window.scrollTo(0, 0);
     };
-
     useEffect(() => {
         getMax50();
         loopWithSlice(0, postsPerPage);
         setIsLoading(false);
-    }, [setData]);
-    let max50;
-    if (Data && Data.length) {
-        max50 = Data.map((max) => {
-            return (
-                <Col className='power-card' md={10} xs={10}>
-                    <Max50List {...max} />
-                    <PDFDownloadLink
-                        document={<Max50Pdf {...max} />}
-                        fileName={`AjustePotencia_${max.owner}.pdf`}
-                    >
-                        <Dropdown>
-                            <Dropdown.Toggle className='rigth-pdf' variant="secondary" id="dropdown-basic">
-                                Descargar PDF
-                            </Dropdown.Toggle>
-                        </Dropdown>
-                    </PDFDownloadLink>
-                </Col >
-            );
-        });
-    } else max50 = null;
+    }, []);
+    const max50 = Data?.map((max) => {
+        console.log(max);
 
+        return (
+            <Col className='power-card' md={10} xs={10}>
+                <Max50List {...max} />
+                <PDFDownloadLink
+                    document={<Max50Pdf {...max} />}
+                    fileName={`AjustePotencia_${max.owner}.pdf`}
+                >
+                    <Dropdown>
+                        <Dropdown.Toggle className='rigth-pdf' variant="secondary" id="dropdown-basic">
+                            Descargar PDF
+                        </Dropdown.Toggle>
+                    </Dropdown>
+                </PDFDownloadLink>
+            </Col >
+        );
+    });
 
     if (isLoading) {
         return <>
@@ -110,7 +103,7 @@ const Max50ListPage = () => {
                                 <Col md={{ span: 4, offset: 2 }} style={{
                                     marginTop: "1%",
                                 }}>
-                                    <SearchBar setNewData={setNewData} newData={newData} setIsSearching={setIsSearching} data={Data} setState={setData} />
+                                    <SearchBar postsPerPage={postsPerPage} loopWithSlice={loopWithSlice} setNewData={setNewData} newData={newData} data={Data} setState={setData} />
                                 </Col>
                             </Row>
                             <Row className='list-row'>

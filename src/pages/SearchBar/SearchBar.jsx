@@ -4,8 +4,7 @@ import { useState } from "react";
 import { useCallback } from 'react';
 
 
-const SearchBar = ({ data, setState, newData, setNewData,
-    setIsSearching, setIsLoading }) => {
+const SearchBar = ({ data, setState, newData, setNewData, setIsLoading }) => {
     const [searchData, setSearchData] = useState("");
 
     const handSearchData = (event) => {
@@ -18,27 +17,17 @@ const SearchBar = ({ data, setState, newData, setNewData,
                     res.push(val);
                 }
             });
-            if (res.length) {
-                console.log(res);
-                setState(prev => {
-                    prev.push(...res);
-                });
-                console.log(data);
-            }
+            // if (res.length) {}
+            setState(res);
+            console.log(res);
+
+            // setState((prev) => {
+            //     console.log(res);
+            //     // prev.filter().includes(res);
+            //     return [...res];
+            // });
         }
     };
-
-    // function setSomeState(res) {
-    //     setState(prev => {
-    //         console.log(prev);
-    //         console.log(res);
-    //         prev = res;
-    //         console.log(prev);
-    //         return prev;
-    //     }, () => {
-    //         setState(prev);
-    //     });
-    // }
 
     return <div>
         <Form.Control type="text"
