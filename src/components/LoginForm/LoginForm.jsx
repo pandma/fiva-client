@@ -22,7 +22,6 @@ const Loginform = () => {
         e.preventDefault();
         try {
             const authToken = await authService.login(loginData);
-            console.log(authToken.data.jwt);
             storeToken(authToken.data.jwt);
             showMessage("Welcome", "Successfully logged in");
             authenticateUser();

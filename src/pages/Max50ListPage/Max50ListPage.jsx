@@ -8,16 +8,16 @@ import Loader from '../../components/Loader/Loader';
 import max50Service from '../../services/max50.service';
 import Max50Pdf from '../../components/Max50Pdf/Max50Pdf';
 import { PDFDownloadLink } from "@react-pdf/renderer";
-import SearchBar from '../SearchBar/SearchBar';
+import SearchBar from '../../components/SearchBar/SearchBar';
 
 const Max50ListPage = () => {
 
     const postsPerPage = 9;
     let handlindData = [];
+    const [allData, setAllData] = useState([]);
     const [maxData, setMaxData] = useState([]);
     const [Data, setData] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [newData, setNewData] = useState([]);
     const [next, setNext] = useState(9);
 
     const isLast = next === maxData.length;
@@ -38,6 +38,7 @@ const Max50ListPage = () => {
     const getMax50 = async () => {
         const serviceData = await max50Service.getMax50();
         const result = serviceData.data;
+        setAllData(result);
         setMaxData(result);
         const copy = [...result];
         setData(copy.slice(0, postsPerPage));
@@ -59,8 +60,6 @@ const Max50ListPage = () => {
         setIsLoading(false);
     }, []);
     const max50 = Data?.map((max) => {
-        console.log(max);
-
         return (
             <Col className='power-card' md={10} xs={10}>
                 <Max50List {...max} />
@@ -103,7 +102,7 @@ const Max50ListPage = () => {
                                 <Col md={{ span: 4, offset: 2 }} style={{
                                     marginTop: "1%",
                                 }}>
-                                    <SearchBar postsPerPage={postsPerPage} loopWithSlice={loopWithSlice} setNewData={setNewData} newData={newData} data={Data} setState={setData} />
+                                    <SearchBar postsPerPage={postsPerPage} loopWithSlice={loopWithSlice} data={allData} setState={setData} />
                                 </Col>
                             </Row>
                             <Row className='list-row'>

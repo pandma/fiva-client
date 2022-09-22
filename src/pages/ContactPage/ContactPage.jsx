@@ -16,7 +16,6 @@ const ContactPage = () => {
 
     const getContact = async () => {
         const contacts = await contactUserService.getContacts();
-        console.log(contacts.data.Users);
         setData(contacts.data.Users);
 
     };
