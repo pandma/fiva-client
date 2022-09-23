@@ -90,13 +90,8 @@ const Max50ListPage = () => {
                     </Col>
                     <Col id='main-admin-component' className='adminBody' md={10} >
                         <Container fluid>
-                            <Row style={{
-                                marginTop: "2%",
-                                marginBottom: "2%"
-                            }}>
-                                <Col md={{ span: 4 }} style={{
-                                    marginLeft: "2%"
-                                }}>
+                            <Row className="calculateMainRow">
+                                <Col md={{ span: 4 }} className="titleCalculation" >
                                     <h1 className="DashTitle">Potencias Calculadas</h1>
                                 </Col>
                                 <Col md={{ span: 4, offset: 2 }} style={{
@@ -105,8 +100,13 @@ const Max50ListPage = () => {
                                     <SearchBar postsPerPage={postsPerPage} loopWithSlice={loopWithSlice} data={allData} setState={setData} />
                                 </Col>
                             </Row>
-                            <Row className='list-row'>
-                                {max50}
+                            <Row className='list-row' >
+                                <Col xs={{ offset: 1, span: 11 }}>
+                                    <Row>
+                                        {max50}
+
+                                    </Row>
+                                </Col>
                             </Row>
                             {isLast ?
                                 <Button className='see-more' variant="secondary" >No hay mas resultados</Button>
