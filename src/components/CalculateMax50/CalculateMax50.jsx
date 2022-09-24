@@ -38,11 +38,9 @@ const CalculateMax50 = () => {
         try {
             setIsLoading(true);
             const resultFromService = await max50Service.calculateMax50(max50Data);
-            console.log(resultFromService.data);
 
             if (resultFromService.status === 200 && resultFromService.data.message != 'Error') {
                 const result = resultFromService.data.data;
-                console.log(result);
                 if (result === "negative annual_savings") {
                     setErrorMessage("ahorro anual negativo");
                     setIsLoading(false);

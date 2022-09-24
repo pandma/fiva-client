@@ -16,7 +16,6 @@ const ContactPage = () => {
 
     const getContact = async () => {
         const contacts = await contactUserService.getContacts();
-        console.log(contacts.data.Users);
         setData(contacts.data.Users);
 
     };
@@ -45,9 +44,9 @@ const ContactPage = () => {
                     <Col id='main-nav' md={2}>
                         <AdminNavigation />
                     </Col>
-                    <Col id='main-admin-component' md={10} >
+                    <Col id='main-admin-component' className="adminBody" md={10} >
                         <Container fluid>
-                            <h1 className="list-title">Lista de contactos</h1>
+                            <h1 className="DashTitle">Lista de contactos</h1>
                             <Row className='list-row'>
                                 {contactlist}
                             </Row>

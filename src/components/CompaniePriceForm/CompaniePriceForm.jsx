@@ -3,9 +3,10 @@ import { Form, Button } from 'react-bootstrap';
 import companyService from '../../services/companies.service';
 import './CompaniePriceForm.css';
 
-const CompaniePriceForm = ({ handleClose, nameProp, prop1, prop2, prop3, prop4, prop5, prop6 }) => {
+const CompaniePriceForm = ({ id, handleClose, nameProp, prop1, prop2, prop3, prop4, prop5, prop6, setData }) => {
 
     const [companyData, setCompanyData] = useState({
+        id: id,
         name: nameProp,
         p1: prop1,
         p2: prop2,
@@ -16,15 +17,13 @@ const CompaniePriceForm = ({ handleClose, nameProp, prop1, prop2, prop3, prop4, 
 
     });
 
-    const refreshPage = () => {
-        window.location.reload(false);
-    };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        await companyService.updateCompany(companyData);
+        const update = await companyService.updateCompany(companyData);
+        const res = update.data.data;
         handleClose();
-        refreshPage();
+        setData(res);
 
     };
 

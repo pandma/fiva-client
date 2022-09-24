@@ -55,7 +55,7 @@ const AdminNavigation = () => {
             </NavDropdown>
             <NavDropdown className='adminNav' title="Gestion de Clientes" id="navbarScrollingDropdown">
                 <NavDropdown.Item >
-                    <Link to="/contact-list" className='colored-fiva' style={{ textDecoration: 'none' }}>
+                    <Link to="/contactlist" className='colored-fiva' style={{ textDecoration: 'none' }}>
                         <p>
                             Lista de Clientes
                         </p>
@@ -70,17 +70,17 @@ const AdminNavigation = () => {
                 </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown className='adminNav' title="Ajustes de Potencia" id="navbarScrollingDropdown">
-                <NavDropdown.Item  >
-                    <Link to="/calculatemax50" className='colored-fiva' style={{ textDecoration: 'none' }}>
-                        <p>
-                            Calcular Potencia optima
-                        </p>
-                    </Link>
-                </NavDropdown.Item>
                 <NavDropdown.Item >
                     <Link to="/getmax50" className='colored-fiva' style={{ textDecoration: 'none' }}>
                         <p>
                             Lista de Potencias
+                        </p>
+                    </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item  >
+                    <Link to="/calculatemax50" className='colored-fiva' style={{ textDecoration: 'none' }}>
+                        <p>
+                            Calcular Potencia optima
                         </p>
                     </Link>
                 </NavDropdown.Item>

@@ -13,3 +13,16 @@
   max-width: 200px;
   max-height: 100px;
 }
+.titleCalculation {
+  margin-left: 2%;
+}
+.calculateMainRow {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+@media screen and (max-width: 550px) {
+  .titleCalculation {
+    text-align: center;
+    margin-left: 0;
+  }
+}

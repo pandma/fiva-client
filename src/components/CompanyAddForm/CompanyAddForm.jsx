@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react'
-import { Form, Button } from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom'
-import companyService from '../../services/companies.service'
-import './CompanyAddForm.css'
+import { useEffect, useState } from 'react';
+import { Form, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import companyService from '../../services/companies.service';
+import './CompanyAddForm.css';
 
 
 const CompanyAddForm = () => {
@@ -15,30 +15,29 @@ const CompanyAddForm = () => {
         p5: "",
         p6: ""
 
-    })
+    });
 
     const refreshPage = () => {
         window.location.reload(false);
-    }
+    };
 
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
-        const newCompany = await companyService.createCompany(companyData)
-        navigate('/companies')
-        console.log(newCompany)
+        e.preventDefault();
+        await companyService.createCompany(companyData);
+        navigate('/companies');
 
-    }
+    };
 
     const handleInputChange = (e) => {
-        const { value, name } = e.currentTarget
-        setCompanyData({ ...companyData, [name]: value })
-    }
+        const { value, name } = e.currentTarget;
+        setCompanyData({ ...companyData, [name]: value });
+    };
 
-    const { name, p1, p2, p3, p4, p5, p6 } = companyData
+    const { name, p1, p2, p3, p4, p5, p6 } = companyData;
 
     return <>
         <Form className="newcompanyForm" onSubmit={handleSubmit}>
@@ -74,8 +73,8 @@ const CompanyAddForm = () => {
                 Añadir
             </Button>
         </Form>
-    </>
+    </>;
 
-}
+};
 
-export default CompanyAddForm
+export default CompanyAddForm;

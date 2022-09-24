@@ -1,4 +1,4 @@
-import './UsersList.css'
+import './UsersList.css';
 import { Button, Card } from 'react-bootstrap';
 import { useState } from 'react';
 import authService from '../../services/auth.service';
@@ -8,20 +8,20 @@ const UsersList = ({ id, name, email, role }) => {
 
     const [data, setData] = useState(
         { id, name, email, role }
-    )
+    );
 
 
     const changeState = async () => {
         const user = await authService.updateUsers(
             { id, name, email, role: "Admin" }
-        )
-        const oneUser = user.data[0][0]
-        setData({ ...oneUser })
+        );
+        const oneUser = user.data[0][0];
+        setData({ ...oneUser });
 
-    }
+    };
     return (
         <>
-            <Card className='users-card' style={{ width: '18rem' }}>
+            <Card className='users-card' style={{ width: '25rem' }}>
                 <Card.Body>
                     <Card.Title>{data.name}</Card.Title>
                     <Card.Text>
@@ -44,8 +44,8 @@ const UsersList = ({ id, name, email, role }) => {
                 </Card.Body>
             </Card>
         </>
-    )
-}
+    );
+};
 
 export default UsersList
 

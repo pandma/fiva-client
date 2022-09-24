@@ -1,8 +1,8 @@
-import './SingUpForm.css'
-import { useState } from "react"
-import { Form, Button } from "react-bootstrap"
-import { useNavigate } from "react-router-dom"
-import authService from "../../services/auth.service"
+import './SingUpForm.css';
+import { useState } from "react";
+import { Form, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import authService from "../../services/auth.service";
 
 
 
@@ -12,27 +12,27 @@ const SingUpForm = () => {
         email: "",
         name: ""
 
-    })
+    });
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
         authService
             .signup(singData)
             .then(() => {
-                navigate("/users")
+                navigate("/users");
             })
-            .catch((err) => console.log(err))
-    }
+            .catch((err) => console.error(err));
+    };
 
     const handleInputChange = (e) => {
-        const { value, name } = e.currentTarget
-        setSingData({ ...singData, [name]: value })
-    }
+        const { value, name } = e.currentTarget;
+        setSingData({ ...singData, [name]: value });
+    };
 
-    const { password, email, name } = singData
+    const { password, email, name } = singData;
 
     return (
         <>
@@ -57,7 +57,7 @@ const SingUpForm = () => {
                 </Button>
             </Form>
         </>
-    )
-}
+    );
+};
 
-export default SingUpForm
+export default SingUpForm;
