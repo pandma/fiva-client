@@ -71,11 +71,8 @@ const CommentCard = ({ commentsData }) => {
                     {dropDownItems}
                 </DropdownButton>
                 <br />
-
             </>
         }
-
-
     </>
     );
 };

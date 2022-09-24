@@ -22,7 +22,6 @@ const CompaniePriceForm = ({ id, handleClose, nameProp, prop1, prop2, prop3, pro
         e.preventDefault();
         const update = await companyService.updateCompany(companyData);
         const res = update.data.data;
-        console.log(update, "update");
         handleClose();
         setData(res);
 

@@ -55,12 +55,11 @@ const CalculateMax50Price = ({ setMax50data, fiva_id, direction }) => {
                 const optimalPrice = await max50Service.calculateMax50Price({ ...max50 });
                 const optimalPriceRes = optimalPrice.data.maximeter;
                 setPrice(optimalPriceRes);
-                setMax50data({ ...optimalPriceRes });
+                setMax50data(() => optimalPriceRes.annual_savings_optimal_price);
                 setIsLoading(false);
                 handleShowSucess();
                 handleClose();
             }
-
 
         } catch (error) {
             console.error(error);
